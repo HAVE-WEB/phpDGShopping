@@ -1,0 +1,3 @@
+<?php
+//000000000000a:22:{s:2:"id";s:1:"1";s:3:"uid";s:1:"1";s:11:"public_name";s:11:"LiuLiang123";s:9:"public_id";s:15:"gh_44386ecd745b";s:6:"wechat";s:16:"LiuLiangKaiFaGZH";s:13:"interface_url";N;s:12:"headface_url";N;s:4:"area";N;s:12:"addon_config";s:59:"{"Wecome":{"stype":"text:1"},"NoAnswer":{"stype":"text:1"}}";s:12:"addon_status";N;s:5:"token";s:15:"gh_44386ecd745b";s:6:"is_use";s:1:"0";s:4:"type";s:1:"0";s:5:"appid";s:18:"wx51d427176d6600d3";s:6:"secret";s:32:"a52d7aa19534ae00db4071370b7f9e75";s:8:"group_id";s:1:"0";s:14:"encodingaeskey";s:43:"B1eh4UyzfvdkvCBx31mdNcrHyAmqKTAt6uJ23VdoTYs";s:8:"tips_url";N;s:6:"domain";N;s:7:"is_bind";s:1:"0";s:5:"cTime";N;s:24:"authorizer_refresh_token";N;}
+?>

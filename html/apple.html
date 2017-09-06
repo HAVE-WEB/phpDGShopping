@@ -1,0 +1,415 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>商品详情</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- Amaze UI CSS -->
+    <link rel="stylesheet" href="../assets/css/amazeui.css">
+    <link rel="stylesheet" href="../assets/css/sl.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.js"></script>
+    <script src="../assets/js/myFirst.js"></script>
+    <style>
+        div.am-tabs-bd button{
+            /*border: 6px solid red;*/
+            padding: 0.2rem 0.6rem;
+            color: white;
+            background-color: red;
+            /*-webkit-border-radius: 2px;*/
+            /*-moz-border-radius: 2px;*/
+            border-radius: 0.8rem;
+        }
+        ::-webkit-scrollbar{
+            width: 0.1rem;
+        }
+
+    </style>
+
+</head>
+<body >
+<div class="top-div" style="width: 100%;position:fixed;top: 0px;left: 0px;z-index: 10001">
+    <div class="sl-flex-row-center-flex-start " style="background-color: red;height: 3rem;padding-left: 0.8rem;">
+        <img src="../assets/images/back.png" alt="" style="width: 1.5rem;height: 1.5rem;" onclick="goBack()">
+        <div style="color: white;" class="title">商品详情</div>
+    </div>
+</div>
+<div style=";margin-top: 3rem;">
+    <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}'  >
+        <ul class="am-slides">
+            <li><img src="../assets/images/fruits/pg/0/slider/pg_1.jpg" /></li>
+            <li><img src="../assets/images/fruits/pg/0/slider/pg_2.jpg" /></li>
+            <li><img src="../assets/images/fruits/pg/0/slider/pg_3.jpg" /></li>
+        </ul>
+    </div>
+</div>
+<div style="padding: 0.3rem;color: #AEAEAE;" id="info">
+    <div class="am-text-truncate" style="color: black;">智利嘎啦果6个115g以上/个</div>
+    <!--<span style="color: black;font-size: 1.2rem"> Canon/佳能 EOS 80D套机(18-135mm)中<br>高端专业数码单反相机</span>-->
+    <div class="sl-flex-row-center-space-between" style="font-size: 0.8rem;">
+        <div class="sl-flex-row-center-flex-start" style="margin-left: 0.4rem;width: 33%;text-align: left">
+            <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+            <span style="color: red;font-size: 1.4rem;">10</span>
+            <span> &nbsp;积分</span>
+        </div>
+        <div class="sl-width-33percent">
+            <span style="margin-right: 0.2rem;">已兑换<b>10</b><span>笔</span></span>
+        </div>
+        <div class="sl-width-33percent-align-right">
+            <span>由</span><b style="color: #44b549;">易批购商城</b><span>提供</span>
+        </div>
+    </div>
+    <div class="sl-flex-row-center-space-between" style="font-size: 0.8rem;">
+        <div style="margin-left: 0.4rem;width: 33%;text-align: left;">
+            <span>您的积分: </span><b></b>
+        </div>
+        <div class="sl-width-33percent">
+            <span>库存: </span><b style="color: red;"></b>
+        </div>
+        <div class="sl-width-33percent-align-right">
+            <span>可兑换数: </span><b style="color: red;margin-right: 0.2rem;"></b>
+        </div>
+    </div>
+</div>
+<div style="width: 100%;height: 0.4rem;background: #D1D1D1;"></div>
+<div class="sl-flex-row-center-space-between" style="padding: 0.5rem 0.2rem;border-bottom: 1px solid #CACACA;" id="commodityInfo">
+    <span>商品参数</span>
+    <span><img src="../assets/images/省略号.png" alt="" style="width: 1rem;height: 1rem;margin-right:0.2rem;"></span>
+</div>
+<div class="sl-flex-row-center-space-between" style="padding: 0.5rem 0.2rem;border-bottom: 1px solid #CACACA;" >
+    <span>商品介绍</span>
+    <!--<span><img src="../assets/images/省略号.png" alt="" style="width: 1rem;height: 1rem;margin-right:0.2rem;"></span>-->
+</div>
+<div class="sl-flex-column-center-center" id="detailList">
+    <div class="">
+        <img src="../assets/images/fruits/pg/0/detail/pg_1.jpg" alt="" style="width: 100%;height: 100%;">
+    </div>
+    <div class="">
+        <img src="../assets/images/fruits/pg/0/detail/pg_2.jpg" alt="" style="width: 100%;height: 100%;">
+    </div>
+    <div class="">
+        <img src="../assets/images/fruits/pg/0/detail/pg_3.jpg" alt="" style="width: 100%;height: 100%;">
+    </div>
+    <div class="">
+        <img src="../assets/images/fruits/pg/0/detail/pg_4.jpg" alt="" style="width: 100%;height: 100%;">
+    </div>
+    <div class="">
+        <img src="../assets/images/fruits/pg/0/detail/pg_5.jpg" alt="" style="width: 100%;height: 100%;">
+    </div>
+    <div class="">
+        <img src="../assets/images/fruits/pg/0/detail/pg_6.jpg" alt="" style="width: 100%;height: 100%;">
+    </div>
+    <div class="">
+        <img src="../assets/images/fruits/pg/0/detail/pg_7.jpg" alt="" style="width: 100%;height: 100%;">
+    </div>
+</div>
+
+
+<div class="sl-flex-column-center-center" style="width: 100%;background-color: white" id="translate">
+    <div style="width: 100%;text-align: center;">商品参数</div>
+    <div style="width: 100%;overflow: scroll;height: 12rem">
+        <div class="am-g sl-flex-row-center-flex-start sl-margin-05rem" style="border-bottom: 1px solid #CACACA;">
+            <div class="am-u-sm-4 am-u-md-4 am-u-lg-4">
+                单果规格
+            </div>
+            <div class="am-u-sm-8 am-u-md-8 am-u-lg-8">
+                115g以上/个
+            </div>
+        </div>
+        <div class="am-g sl-flex-row-center-flex-start sl-margin-05rem" style="border-bottom: 1px solid #CACACA;">
+            <div class="am-u-sm-4 am-u-md-4 am-u-lg-4">
+                商品状态
+            </div>
+            <div class="am-u-sm-8 am-u-md-8 am-u-lg-8">
+                冷藏
+            </div>
+        </div>
+    </div>
+    <div style="background-color: red;color: white;width: 100%;text-align: center;padding: 0.3rem;">完成</div>
+</div>
+
+
+
+<!--灰色层-->
+<div id="grayTier" class="sl-width-percent100 sl-height-percent100"></div>
+
+<div id="bottomNav" style="width: 100%;" class="sl-flex-row-center-space-between sl-navbar">
+    <div style="width: 70%;background-color: white;height:3rem;color: black;" class="sl-flex-row-center-flex-start">
+        <span style="font-size: 0.8rem;color: black;margin-left: .8rem;">花费的积分&nbsp;&nbsp;:</span><b style="font-size: 0.8rem;color: red;margin-left: .8rem;">0</b>
+    </div>
+    <div style="width: 30%;background-color: red;text-align: center;color: white;height: 3rem;" class="sl-flex-column-center-center">
+        <span>立即兑换</span>
+    </div>
+</div>
+<div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
+    <div class="am-modal-dialog" style="background-color: white">
+        <div class="am-modal-hd">请输入兑换的数量</div>
+        <div class="am-modal-bd sl-flex-column-center-center">
+            <div class="sl-flex-row-center-space-around" style="width: 100%;">
+                <span>数量:</span>
+                <div class="sl-flex-row-flex-end-flex-end">
+                    <div style="background-color: #F4F4F4;margin-right: 0.4rem;" class="sl-flex-row-center-center" id="minus">
+                        <img src="../assets/images/减.png" alt="" class="sl-width-2rem sl-height-2rem">
+                    </div>
+                    <div style="background-color: #F4F4F4;" class="sl-width-2rem sl-height-2rem">
+                        <input type="number" oninput="checkVal(this)" id="inputNum" value="1"  class="am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;background-color: #F4F4F4;font-weight: bold;">
+                    </div>
+                    <div style="background-color: #F4F4F4;margin-left: 0.4rem" class="sl-flex-row-center-center" id="add">
+                        <img src="../assets/images/加.png" alt=""  class="sl-width-2rem sl-height-2rem">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+            <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    //全局变量
+    var rem = new Rem();
+    var canBuy = 0;
+    var KC = 0;
+    var price= 0;
+    var $needJF = $('#bottomNav').children('div:eq(0)').find('b');
+    var wH = screen.height;
+
+    //将列表页面上的数据移动到本页面
+    $(function () {
+       var yourJF = parseInt(sessionStorage.getItem('yourJF'));
+       price  = parseInt(sessionStorage.getItem('price'));
+       KC = parseInt(sessionStorage.getItem('KC'));
+       canBuy = parseInt(yourJF / price)
+       var $tr = $('#info');
+       $tr.children().eq(1).find('span').eq(0).html(price);
+       $tr.children().eq(2).children('div').eq(0).find('b').eq(0).html(yourJF);
+        $tr.children('div:eq(2)').children('div:eq(1)').find('b:eq(0)').html(KC);
+//       $tr.children().eq(2).children('div').eq(0).find('b').eq(1).html(KC);
+        $tr.children('div:eq(2)').children('div:eq(2)').find('b:eq(0)').html(canBuy);
+    });
+    //将商品信息隐藏
+    $(function () {
+        var dH = $('#translate').outerHeight();
+       $("#translate").css({
+           position: 'fixed',
+           left: 0,
+           bottom: -dH,
+           right: 0,
+           zIndex:10005,
+       })
+    });
+    //灰色一层
+    $(function () {
+        var wW = screen.width;
+        $('#grayTier').css({
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+            backgroundColor: '#A5A4A5',
+            zIndex: 10002,
+            display: 'none',
+            opacity: 0.5
+
+        })
+    });
+    //点击商品信息
+    $('#commodityInfo').click(function () {
+        var dH = $('#translate').outerHeight();
+        $('#grayTier').show();
+        $('#translate').animate({
+            bottom: 0
+        },300);
+    });
+    //点击商品信息完成按钮
+    $("#translate").children('div:eq(2)').click(function () {
+       hideTied();
+    });
+    //点击灰色层隐藏
+    $('#grayTier').click(function () {
+        hideTied();
+    }) ;
+    function hideTied() {
+        $('#grayTier').hide();
+        $('#translate').animate({
+            bottom: -$('#translate').outerHeight()
+        },300);
+    }
+    //
+    $(function () {
+        var h = $('#bottomNav').outerHeight();
+        $('#detailList').css({
+            marginBottom: h,
+        })
+    });
+    //标题文字居中
+    $(function () {
+        rem.titleCenter();
+    });
+
+
+
+    //回顶部
+    $("#up").click(function () {
+        $('html, body').animate({scrollTop: 0}, '500');
+    })
+
+    //排序
+    $('ul.am-dropdown-content li').click(function () {
+        $(this).addClass('am-active').siblings('li').removeClass('am-active');
+    })
+
+//    时时刻刻检查输入框中的值
+    function checkVal(self) {
+        var flag =true;
+        var f = $(self).val();
+        if(f === ''){
+            $needJF.html(0);
+            return;
+        }
+
+        var n = parseInt($(self).val());
+        console.log(f)
+        console.log(f.indexOf('.') > 0);
+        if(isNaN(n) || n <= 0  ){
+            rem.alertInfoByState('请输入正整数',1)
+            $(self).val('');
+            flag = false;
+        }
+        if(canBuy > KC){
+            if( n > KC ){
+                rem.alertInfoByState('库存不足',1)
+                $(self).val('');
+                flag = false;
+            }
+        }else{
+            if( n > canBuy ){
+                rem.alertInfoByState('积分不足',1)
+                $(self).val('');
+                flag = false;
+            }
+        }
+        var needJF = n * price;
+        if(flag){
+
+            $needJF.html(needJF);
+        }else{
+            $needJF.html(0);
+        }
+
+    }
+    $("#bottomNav div:eq(1)").click(function () {
+        $(window).resize(function() {
+            $('.main').height(HEIGHT);
+        });
+        var n = parseInt($.trim($("#inputNum").val()));
+        if(isNaN(n)){
+            $needJF.html(0);
+        }else{
+            $needJF.html(n * price);
+        }
+        $("#inputNum").val('');
+        $("#inputNum").val(n);
+//        $("#inputNum").blur;
+        $('#my-prompt').modal({
+            relatedTarget: this,
+            onConfirm: function(e) {
+                var v = $.trim(e.data);
+                console.log("v："+v);
+//                var tempNum =parseInt($.trim(e.data)) ;
+                if(v === ''){
+                    rem.alertInfoImgByState('兑换失败',1)
+                }else{
+                    rem.alertInfoImgByState('兑换成功',0)
+                    $needJF.html(0);
+                }
+            },
+            onCancel: function(e) {
+                $needJF.html(0);
+            }
+        });
+    })
+    //点击减按钮
+    $("#minus").click(function () {
+        var $input=  $(this).next().find('input');
+       var v = $input.val();
+       var f = rem.inputVal($input);
+       if(typeof f === 'boolean' && f == true){
+           var n  = parseInt($.trim(v)) -1;
+           if(n >= 1){
+               $input.val(n);
+               $needJF.html(n * price);
+           }else{
+               rem.alertInfoByState('兑换数至少一个',1);
+               $input.val(1);
+               $needJF.html(price);
+           }
+
+
+       }
+    });
+    //加按钮
+    $("#add").click(function () {
+        var $input=  $(this).prev().find('input');
+        var v = $input.val();
+        var f = rem.inputVal($input);
+        if(typeof f === 'boolean' && f == true){
+            var n  = parseInt($.trim(v)) + 1;
+            if(canBuy > KC){
+                if(n > KC){
+                    rem.alertInfoByState('库存不足',1);
+                    $input.val(KC);
+                    $needJF.html(KC * price);
+                }else{
+                    $input.val(n);
+                    $needJF.html(n * price);
+                }
+            }else{
+                if(n > canBuy){
+                    rem.alertInfoByState('积分不足',1);
+                    $input.val(canBuy);
+                    $needJF.html(canBuy * price);
+                }else{
+                    $input.val(n);
+                    $needJF.html(n * price);
+                }
+            }
+        }
+    });
+//    $('.am-modal').css('di')
+    function goBack() {
+        history.back();
+    }
+
+</script>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>我的页面</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- Amaze UI CSS -->
+    <link rel="stylesheet" href="../assets/css/amazeui.css">
+    <link rel="stylesheet" href="../assets/css/sl.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.js"></script>
+    <script src="../assets/js/myFirst.js"></script>
+    <style>
+        .sl-background-color{
+            background-color: red;
+
+        }
+        .sl-background-color-height-common{
+            height:40px;
+        }
+        .sl-background-color-height-common-2{
+            height:80px;
+        }
+        /*图标也是字体*/
+        .sl-icon-size-color{
+            color: #FFFFFF;
+        }
+    </style>
+</head>
+<body style="background-color: #EEEEF3">
+<!--<div data-am-sticky class="sl-background-color-red sl-background-color-height-common sl-grid-flex-row-around">-->
+    <!--&lt;!&ndash;<i class="am-icon-gear am-icon-sm  sl-icon-size-color sl-margin-left"></i>&ndash;&gt;-->
+    <!--&lt;!&ndash;<i class="am-icon-comment-o am-icon-sm  sl-icon-size-color sl-margin-right"></i>&ndash;&gt;-->
+<!--</div>-->
+
+<!--登录成功后的现实的个人信息-->
+<!--<div class="am-g sl-background-color sl-background-color-height-common-2 sl-grid-row-center sl-font-color-white">-->
+    <!--<div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0px sl-grid-row-center">-->
+        <!--<img src="../assets/images/self_info.png" class="am-img-responsive" style="width: 60px;height: 60px;padding: auto auto"/>-->
+    <!--</div>-->
+    <!--<div class="am-u-sm-5 am-u-md-5 am-u-lg-5 sl-grid sl-padding-0px">-->
+         <!--<span>捂着嘴眼泪掉下来</span>-->
+         <!--<div class="sl-background-color-yellow sl-border-radius-1000px sl-font-size-12px sl-padding-2px-5px" >-->
+             <!--<i class="am-icon-graduation-cap"></i>-->
+             <!--<span class="sl-font-color-gray">M1会员</span>-->
+             <!--<i class="am-icon-angle-right am-icon-sm sl-font-color-gray" ></i>-->
+         <!--</div>-->
+    <!--</div>-->
+    <!--<div class="am-u-sm-4 am-u-md-4 am-u-lg-4 sl-grid-row-center  sl-padding-0px ">-->
+        <!--<a href="#" class="sl-font sl-font-color-white">账户管理</a>-->
+        <!--<i class="am-icon-angle-right am-icon-sm sl-margin-left-5px" ></i>-->
+    <!--</div>-->
+<!--</div>-->
+<div class="am-g sl-background-color-red sl-background-color-height-common-2 sl-grid-row-center sl-font-color-white sl-flex-row-center-flex-start">
+    <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0px sl-grid-row-center">
+        <img src="../assets/images/self_info.png" class="am-img-responsive" style="width: 60px;height: 60px;padding: auto auto"/>
+    </div>
+    <div class="am-u-sm-5 am-u-md-5 am-u-lg-5 sl-grid sl-padding-0px sl-flex-column-flex-start-center">
+        <span>捂着嘴眼泪掉下来</span>
+        <div class="">
+            <span class="sl-font-size-14px">积分 :</span>
+            <span>100</span>
+        </div>
+    </div>
+</div>
+
+<ul class="am-avg-sm-2 am-avg-md-2 am-avg-lg-2 sl-background-color-white sl-margin-08rem-08rem-0rem-08rem sl-font-color-gray sl-padding-08rem sl-border-bottom-1px-solid-D3D3D3 sl-border-radius-08rem-08rem-0rem-0rem">
+    <li style="">
+        <span>我的订单</span>
+    </li>
+    <li data-index="0" class="sl-bought-list">
+        <div class="sl-flex-row-center-flex-end sl-font-size-14px">
+            <span class="sl-margin-right-5px">历史兑换</span>
+            <div><img src="../assets/images/方向右.png" alt="" style="width: 1rem;height: 1rem;"></div>
+        </div>
+    </li>
+</ul>
+<ul class="am-avg-sm-2 am-avg-md-2 am-avg-lg-2 sl-background-color-white sl-margin-0rem-08rem sl-border-radius-0rem-0rem-08rem-08rem" id="boughtItem">
+    <li data-index="1" class="sl-bought-list">
+        <div class="sl-flex-column-center-center sl-padding-10px-0px">
+           <i class="am-icon-paypal sl-icon-color-red am-icon-sm"></i>
+            <span class="sl-font-color-gray sl-font-size-14px">待发货</span>
+        </div>
+    </li>
+    <li data-index="2" class="sl-bought-list">
+        <div class="sl-flex-column-center-center  sl-padding-10px-0px">
+           <i class="am-icon-truck sl-icon-color-red am-icon-sm"></i>
+            <span class="sl-font-color-gray sl-font-size-14px">待收货</span>
+        </div>
+    </li>
+</ul>
+<ul class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3 sl-margin-08rem-08rem-0rem-08rem sl-background-color-white sl-flex-row-center-center sl-padding-08rem sl-margin-left sl-border-radius-08rem">
+    <li style="width: 100%;">
+        <div class="sl-flex-row-center-space-between" id="address">
+            <span class="sl-font-color-gray ">我的地址</span>
+            <div><img src="../assets/images/方向右.png" alt="" style="width: 1rem;height: 1rem;"></div>
+        </div>
+    </li>
+</ul>
+
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" style="border-top: 2px solid #E5E5E5;">
+    <ul class=" am-navbar-nav am-cf am-avg-sm-4 ">
+        <li >
+            <a href="commodity.html" class="">
+                <img src="../assets/images/bottomNav/首页.png" alt="">
+                <span class="am-navbar-label  sl-icon-color-6D6D6D">首页</span>
+            </a>
+        </li>
+        <!--<li >-->
+            <!--<a href="tel:18601860186" class="">-->
+                <!--<img src="../assets/images/bottomNav/搜索.png" alt="">-->
+                <!--<span class="am-navbar-label sl-icon-color-6D6D6D">搜索</span>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--<li data-am-navbar-share>-->
+            <!--<a href="my.html" class="">-->
+                <!--<img src="../assets/images/bottomNav/购物车.png" alt="">-->
+                <!--<span class="am-navbar-label sl-icon-color-6D6D6D">购物车</span>-->
+            <!--</a>-->
+        <!--</li>-->
+        <li >
+            <a href="#" class="">
+                <!--<i class="fa fa-user-o sl-icon-color-6D6D6D"></i>-->
+                <img src="../assets/images/bottomNavClick/我的.png" alt="">
+                <span class="am-navbar-label sl-color-red">我的</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    //全局变量
+    var rem = new Rem();
+    
+//    $(function () {
+//
+//    })
+    $('#address').click(function () {
+        location.href = 'addressList.html'
+    })
+    $('#boughtItem li').click(function () {
+        var index = $(this).data('index');
+        sessionStorage.setItem('index',index);
+        location.href = 'boughtList.html'
+
+    });
+    $('li.sl-bought-list').click(function () {
+        var index = $(this).data('index');
+        sessionStorage.setItem('index',index);
+        location.href = 'boughtList.html'
+    })
+</script>
+</html>

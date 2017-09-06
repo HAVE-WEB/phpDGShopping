@@ -1,0 +1,581 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>已买到宝贝</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- Amaze UI CSS -->
+    <link rel="stylesheet" href="../assets/css/amazeui.css">
+    <link rel="stylesheet" href="../assets/css/sl.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.js"></script>
+    <script src="../assets/js/myFirst.js"></script>
+    <style>
+        div.am-tabs-bd button{
+            /*border: 6px solid red;*/
+            padding: 0.2rem 0.6rem;
+            color: white;
+            background-color: red;
+            /*-webkit-border-radius: 2px;*/
+            /*-moz-border-radius: 2px;*/
+            /*border-radius: 0.8rem;*/
+        }
+
+        ::-webkit-scrollbar{
+            width: 0.1rem;
+        }
+
+    </style>
+
+</head>
+<body >
+<div class="top-div" style="width: 100%;position:fixed;top: 0px;left: 0px;z-index: 10001">
+    <div class="sl-flex-row-center-flex-start " style="background-color: red;height: 3rem;padding-left: 0.8rem;">
+        <img src="../assets/images/back.png" alt="" style="width: 1.5rem;height: 1.5rem;" onclick="goBack()">
+        <div style="color: white;" class="title">我的订单</div>
+    </div>
+</div>
+<!--<div style="background-color: white;width: 100%;margin-top: 3rem;">-->
+
+</div>
+<div style="margin-top: 3rem;">
+    <div data-am-widget="tabs" class="am-tabs am-tabs-default">
+        <!--<div class="sl-border-bottom-1px-solid-E6E6E6 search-div" style="background-color: #E3E3E3;padding: .5rem 1rem">-->
+        <!--<div class="sl-background-color-white  sl-flex-row-center-center sl-padding-2px-10px" style="border-radius: 3rem;">-->
+        <!--<input type="text" placeholder="请输入关键字" id="search" oninput="inputVal()" style="width: 90%;border: 0px;">-->
+        <!--</div>-->
+        <!--</div>-->
+        <ul class="am-tabs-nav am-cf" id="ul-1" style="position: fixed;z-index: 10002;">
+            <li class=""><a href="[data-tab-panel-0]">历史兑换</a></li>
+            <li class=""><a href="[data-tab-panel-1]">待发货</a></li>
+            <li class=""><a href="[data-tab-panel-2]">待收货</a></li>
+        </ul>
+        <div class="am-tabs-bd">
+            <div data-tab-panel-0 class="am-tab-panel">
+                <ul class="am-list" style="color: black;margin-bottom: 0rem;">
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>已收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>已收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>已收货</b>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div data-tab-panel-1 class="am-tab-panel" style="padding-right: 0rem;padding-left: 0rem;">
+                <ul class="am-list" style="color: black;margin-bottom: 0rem;">
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待发货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待发货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待发货</b>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div data-tab-panel-2 class="am-tab-panel " style="padding-right: 0rem;padding-left: 0rem;">
+                <ul class="am-list" style="color: black;margin-bottom: 0rem;">
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div  class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="sl-tab-panel">
+                            <div>
+                                <span>兑换时间：</span><b>2017-05-11</b>
+                            </div>
+                            <div>
+                                <span>商品名称：</span><b>电影票</b>
+                            </div>
+                            <div>
+                                <span>当前状态：</span><b>待收货</b>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd" style="border-bottom: 1px solid #CACACA;">兑换信息</div>
+        <div class="sl-flex-column-flex-start-center">
+            <header class="sl-header">兑换方式：积分兑换</header>
+            <div class="am-modal-bd ">
+                <table>
+                    <tr>
+                        <td style="width: 40%;">您的积分</td>
+                        <td style="width: 30%;">300</td>
+                        <td style="width: 30%;">积分</td>
+                    </tr>
+                    <tr>
+                        <td>兑换价格</td>
+                        <td></td>
+                        <td>积分</td>
+                    </tr>
+                    <tr>
+                        <td>库存</td>
+                        <td style="color: red;"><b></b></td>
+                        <td>个</td>
+                    </tr>
+                    <tr>
+                        <td>可兑换数</td>
+                        <td style="color: red;"><b></b></td>
+                        <td>个</td>
+                    </tr>
+                    <tr>
+                        <td>数量</td>
+                        <td colspan="2"><input type="number" oninput="checkVal(this)" class="am-modal-prompt-input"></td>
+                    </tr>
+                </table>
+            </div>
+            <header class="sl-header">兑换方式：兑换码兑换</header>
+            <div class="am-modal-bd" style="width: 100%;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 40%;"></td>
+                        <td style="width: 30%;"></td>
+                        <td style="width: 30%;"></td>
+                    </tr>
+                    <tr>
+                        <td >兑换码</td>
+                        <td colspan="2"><input type="number" class="am-modal-prompt-input" ></td>
+                    </tr>
+                </table>
+            </div>
+            <header class="sl-header">兑换方式：二维码兑换</header>
+            <div class="am-modal-bd" style="width: 100%;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 40%;"></td>
+                        <td style="width: 30%;"></td>
+                        <td style="width: 30%;"></td>
+                    </tr>
+                    <tr>
+                        <td >兑换码</td>
+                        <td colspan="2"><input type="number" class="am-modal-prompt-input" ></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+            <span class="am-modal-btn" data-am-modal-confirm>提交</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="sl-flex-row-center-space-around sl-padding-15px-0px-5px-0px"  style="position: fixed;z-index: 1001;top: 80%;left: 80%;display: none" id="up">
+   <div class="sl-flex-column-center-center sl-background-color-F1F1F1 "  style="height: 3rem ; width: 3rem;padding: 0.3rem;">
+       <img src="../assets/images/backTop.png" alt="" style="max-height: 100%;max-width: 100%;">
+   </div>
+</div>
+
+<!--<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " style="border-top: 2px solid #E5E5E5;">-->
+    <!--<ul class=" am-navbar-nav am-cf am-avg-sm-4 ">-->
+        <!--<li >-->
+            <!--<a href="#" class="">-->
+                <!--<img src="../assets/images/bottomNavClick/首页.png" alt="">-->
+                <!--<span class="am-navbar-label  sl-icon-color-6D6D6D">首页</span>-->
+            <!--</a>-->
+        <!--</li>-->
+        <!--&lt;!&ndash;<li >&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="" class="">&ndash;&gt;-->
+                <!--&lt;!&ndash;<img src="../assets/images/bottomNav/搜索.png" alt="">&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="am-navbar-label sl-icon-color-6D6D6D">搜索</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li data-am-navbar-share>&ndash;&gt;-->
+            <!--&lt;!&ndash;<a href="" class="">&ndash;&gt;-->
+                <!--&lt;!&ndash;<img src="../assets/images/bottomNav/购物车.png" alt="">&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="am-navbar-label sl-icon-color-6D6D6D">购物车</span>&ndash;&gt;-->
+            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;</li>&ndash;&gt;-->
+        <!--<li >-->
+            <!--<a href="my.html" class="">-->
+                <!--&lt;!&ndash;<i class="fa fa-user-o sl-icon-color-6D6D6D"></i>&ndash;&gt;-->
+                <!--<img src="../assets/images/bottomNav/我的.png" alt="">-->
+                <!--<span class="am-navbar-label  sl-font-color-red">我的</span>-->
+            <!--</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+
+
+
+
+
+
+
+</body>
+</html>
+<script>
+    //全局变量
+    var rem = new Rem();
+
+    //排序
+    $('ul.am-dropdown-content li').click(function () {
+        $(this).addClass('am-active').siblings('li').removeClass('am-active');
+    })
+
+    $(function () {
+        var $ul = $('div.am-tabs').children('ul:eq(0)');
+        var $tabBody =  $('div.am-tabs').children('div.am-tabs-bd');
+        var index = sessionStorage.getItem('index');
+        if(index !== ''){
+            $ul.children('li:eq('+index+')').addClass('am-active');
+            $ul.children('li:eq('+index+')').siblings('li').removeClass('am-active');
+            $tabBody.children('div:eq('+index+')').addClass('am-active');
+            $tabBody.children('div:eq('+index+')').siblings('div').removeClass('am-active');
+        }
+    });
+    //定位选项卡
+    $(function () {
+        var uFT = $('#ul-1').offset().top;
+        var uFL = $('#ul-1').offset().left;
+        var uW = $('div.am-tabs-bd').outerWidth();
+        var uH = $('#ul-1').outerHeight();
+        var tH = $('div.top-div').outerHeight();
+       $('#ul-1').css({
+           position: 'fixed',
+           zIndex: 10002,
+           top: uFT,
+           left: uFL,
+           width: uW,
+           height:uH,
+           right: uFL,
+       })
+        $('#ul-1').next().css({
+            marginTop: uH + tH,
+        })
+    });
+
+//    $(document).scroll(function (e) {
+//        var uFT = $('#ul-1').offset().top;
+//        var uFL = $('#ul-1').offset().left;
+//        var dT = window.pageYOffset;
+//        var topH = $('div.top-div').outerHeight();
+//        var uW = $('#ul-1').outerWidth();
+//        var uH = $('#ul-1').outerHeight();
+//        var index = -1;
+//
+////        if(uFT - dT <= topH){
+////            $('#ul-1').css({
+////                position:'fixed',
+////                top: topH,
+////                left: uFL,
+////                zIndex: 10002,
+////                width: uW,
+////                height: uH,
+////            })
+////        }else{
+////            $('#ul-1').css({
+////                position: 'inherit'
+////            });
+////
+////        }
+//        if(uFT - dT <= topH){
+//            $('#ul-1 li').each(function (i,v) {
+//                if($(this).hasClass('am-active')){
+//                    index = i;
+//                }
+//            });
+//            $('#ul-2').css({
+//                zIndex:10011,
+//                top: topH,
+//                left: uFL,
+//                width: uW,
+//                height: uH,
+//                opacity: 1,
+//            });
+//            console.log("index:"+index);
+//            $('#ul-1').css('display','none');
+////            $('#ul-1').children('li').removeClass('am-active');
+//            if(index != -1){
+//                $('#ul-2').children('li:eq('+index+')').addClass('am-active')
+//            }
+//            $('#ul-2 li').click(function () {
+//                var self = this;
+//                $(self).addClass('am-active').siblings('li').removeClass('am-active');
+//                $('#ul-2 li').each(function (i,v) {
+//                        if(self == v){
+//                            $('#ul-2').next('div.am-tabs-bd').children('div:eq('+i+')').addClass('am-active am-in')
+//                            $('#ul-2').next('div.am-tabs-bd').children('div:eq('+i+')').siblings().removeClass('am-active am-in')
+//                        }
+//                })
+//            })
+//
+//        }else{
+//            $('#ul-2 li').each(function (i,v) {
+//                if($(this).hasClass('am-active')){
+//                    index = i;
+//                }
+//            });
+//            $('#ul-2').css({
+//                zIndex: 10,
+//                width: uW,
+//                height: uH,
+//                top: topH,
+//                left: uFL,
+//                opacity: 0,
+//                backgroundColor:'red',
+//            });
+//            $('#ul-2').children('li').removeClass('am-active');
+//            if(index != -1){
+//                $('#ul-1').children('li:eq('+index+')').addClass('am-active')
+//            }
+//
+//            $('#ul-1 li').click(function () {
+//                var self = this;
+//                $(self).addClass('am-active').siblings('li').removeClass('am-active');
+//                $('#ul-1 li').each(function (i,v) {
+//                    if(self == v){
+//                        $('#ul-1').next('div.am-tabs-bd').children('div:eq('+i+')').addClass('am-active am-in')
+//                        $('#ul-1').next('div.am-tabs-bd').children('div:eq('+i+')').siblings().removeClass('am-active am-in')
+//                    }
+//                })
+//            })
+//        }
+//    });
+    //标题文字居中
+    $(function () {
+        rem.titleCenter();
+    });
+    //
+    function goBack() {
+        history.back();
+    }
+
+</script>
