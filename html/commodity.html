@@ -410,7 +410,7 @@
                 <table>
                     <tr>
                         <td style="width: 40%;">您的积分</td>
-                        <td style="width: 30%;">300</td>
+                        <td style="width: 30%;">1000</td>
                         <td style="width: 30%;">积分</td>
                     </tr>
                     <tr>
@@ -430,7 +430,7 @@
                     </tr>
                     <tr>
                         <td>数量</td>
-                        <td colspan="2"><input type="number" oninput="checkVal(this)" class="am-modal-prompt-input"></td>
+                        <td colspan="2"><input type="number" onblur="checkVal(this)" id="inputNum" value="1" class="am-modal-prompt-input"></td>
                     </tr>
                 </table>
             </div>
@@ -469,7 +469,8 @@
         </div>
     </div>
 </div>
-
+<!--兑换成功灰色层-->
+<div id="successTier" class="sl-width-percent100 sl-height-percent100"></div>
 
 
 <div class="sl-flex-row-center-space-around sl-padding-15px-0px-5px-0px"  style="position: fixed;z-index: 1001;top: 80%;left: 80%;display: none" id="up">
@@ -519,8 +520,9 @@
 <script>
     //全局变量
     var rem = new Rem();
-    var num = 0;
-    var numKC = 0;
+    var canBuyNum = 0;
+    var canBuyNum = 0;
+    var KC = 0;
     //回顶部
     $("#up").click(function () {
         $('html, body').animate({scrollTop: 0}, '500');
@@ -532,91 +534,135 @@
     })
 
     //点击兑换按钮
-    $(function () {
-        $('button').on('click', function () {
-            var  price= $(this).parent().parent().prev().find('span:eq(0)').html();
-            numKC =  $(this).parent().parent().prev().find('b').html();
-           var $tr = $('table:eq(0) tr');
-            $tr.eq(1).children('td').eq(1).html(price);//将商品价格放入到td中
-            var yourJF = parseInt($tr.eq(0).children('td').eq(1).html());//你的所有积分
-            num = parseInt(yourJF / price);
-            $tr.eq(2).children('td').eq(1).find('b').html(numKC);//你的积分可以购买的个数
-            $tr.eq(3).children('td').eq(1).find('b').html(num)//库存
-            if(num > numKC){
-                $tr.eq(4).children('td').eq(1).find('input').attr('max',numKC);
-            } else {
-                $tr.eq(4).children('td').eq(1).find('input').attr('max',num);
-            }
-
-            $('#my-prompt').modal({
-                relatedTarget: this,
-                onConfirm: function(e) {
-                    var tempNum =parseInt($.trim(e.data[0])) ;
-                    var tempNum1 =parseInt($.trim(e.data[1])) ;
-//                    console.log("f:"+tempNum+'.s:'+tempNum1);
-                    if(isNaN(tempNum)){//先判断是不是数字
-                        rem.alertInfoByState('兑换失败',1)
-                    }else{
-                        rem.alertInfoByState('兑换成功',0)
-                    }
-                },
-                onCancel: function(e) {
-                }
-            });
-        })
-    });
+//    $(function () {
+//        $('button').on('click', function () {
+//            var n = parseInt($.trim($("#inputNum").val()));
+//            $("#inputNum").val('');
+//            $("#inputNum").val(n);
+//
+//            //积分信息
+//            var  price= $(this).parent().parent().prev().find('span:eq(0)').html();
+//            KC =  $(this).parent().parent().prev().find('b').html();
+//           var $tr = $('table:eq(0) tr');
+//
+//            $tr.eq(1).children('td').eq(1).html(price);//将商品价格放入到td中
+//            var yourJF = parseInt($tr.eq(0).children('td').eq(1).html());//你的所有积分
+//            canBuyNum = parseInt(yourJF / price);
+//            $tr.eq(2).children('td').eq(1).find('b').html(KC);//你的积分可以购买的个数
+//            $tr.eq(3).children('td').eq(1).find('b').html(canBuyNum)//库存
+//            if(canBuyNum > KC){
+//                $tr.eq(4).children('td').eq(1).find('input').attr('max',KC);
+//            } else {
+//                $tr.eq(4).children('td').eq(1).find('input').attr('max',canBuyNum);
+//            }
+//
+//            $('#my-prompt').modal({
+//                relatedTarget: this,
+//                onConfirm: function(e) {
+//                    $("#inputNum").trigger('onblur');
+//                    var tempNum =parseInt($.trim(e.data[0])) ;
+//                    var tempNum1 =parseInt($.trim(e.data[1])) ;
+//                    if(flag){
+//                        if(isNaN(tempNum)){//先判断是不是数字
+//                            rem.alertInfoByState('兑换失败',1)
+//                        }else{
+//                            rem.alertInfoByState('兑换成功',0)
+//                        }
+//                    }else{
+////                        rem.alertInfoByState('兑换失败2',1)
+//                        console.log("兑换失败2");
+//                    }
+//                },
+//                onCancel: function(e) {
+//                }
+//            });
+//        })
+//    });
+    var flag = true;
     //时时刻刻检查输入框中的值
     function checkVal(self) {
-        var flag = false;
-        var f = $(self).val();
-        if(f.indexOf('.') > 0){
-            flag = true;
-        }
+        console.log("checkVal");
+        flag = true;
         var n = parseInt($(self).val());
-        if(isNaN(n) || n <= 0  ||flag){
+        if(isNaN(n) || n <= 0){
             $(self).val('');
             rem.alertInfoByState('请输入正整数',1)
+            flag = false;
         }
-        if(num > numKC){
-            if( n > numKC ){
+        if(canBuyNum > KC){
+            if( n > KC ){
                 $(self).val('');
                 rem.alertInfoByState('库存不足',1)
+                flag = false;
             }
         }else{
-            if( n > num ){
+            if( n > canBuyNum ){
                 $(self).val('');
                 rem.alertInfoByState('积分不足',1)
+                flag = false;
             }
         }
-
+        console.log("n:"+n+",canBuyNum:"+canBuyNum+",KC:"+KC);
+        console.log("flag:"+flag);
     }
 
     //点击商品列表
     $("#list li").mousedown(function (e) {
         var cX = e.pageX;//鼠标对象相对于文档对象的左边缘的位置
-
         var cY = e.pageY;//鼠标对象相对于文档对象的顶部边缘的位置
         var $b = $(this).find('button')
         var bW = $b.outerWidth();
         var bH = $b.outerHeight();
         var bX = $b.offset().left;//元素对象相对于文档对象的左边缘的位置
         var bY = $b.offset().top;//元素对象相对于文档对象的顶部边缘的位置
+        var  price= $(this).find('div.data-JF-KC').find('span:eq(0)').html();
+        var yourJF = 1000;
+        KC =  $(this).find('div.data-JF-KC').find('b').html();
+        canBuyNum = parseInt(yourJF / price);
 
         if(cX >= bX && cX <= bX + bW && cY >= bY && cY <= bY + bH){
+            var n = parseInt($.trim($("#inputNum").val()));
+            $("#inputNum").val('');
+            $("#inputNum").val(n);
 
+            var $tr = $('table:eq(0) tr');
+            $tr.eq(1).children('td').eq(1).html(price);//将商品价格放入到td中
+            var yourJF = parseInt($tr.eq(0).children('td').eq(1).html());//你的所有积分
+
+            $tr.eq(2).children('td').eq(1).find('b').html(KC);//你的积分可以购买的个数
+            $tr.eq(3).children('td').eq(1).find('b').html(canBuyNum)//库存
+            if(canBuyNum > KC){
+                $tr.eq(4).children('td').eq(1).find('input').attr('max',KC);
+            } else {
+                $tr.eq(4).children('td').eq(1).find('input').attr('max',canBuyNum);
+            }
+
+            $('#my-prompt').modal({
+                relatedTarget: this,
+                onConfirm: function(e) {
+                    $("#inputNum").trigger('onblur');
+                    var tempNum =parseInt($.trim(e.data[0])) ;
+                    var tempNum1 =parseInt($.trim(e.data[1])) ;
+                    if(flag){
+                        if(isNaN(tempNum)){//先判断是不是数字
+                            rem.alertInfoImgByState('兑换失败',1);
+                        }else{
+                            $('#successTier').show();
+                            rem.alertInfoImgByState('兑换成功',0);
+                            setTimeout(function () {
+                                $('#successTier').hide();
+                            },2000);
+                        }
+                    }else{
+                        rem.alertInfoImgByState('兑换失败',1)
+                    }
+                },
+                onCancel: function(e) {
+                }
+            });
         }else{
-
-            //图片信息
-//            var $img = $(this).children('div').children('div:eq(0)').find('img');
-//            var s = $img.attr('src');
-//            console.log('src:'+s)
-//            var i = s.lastIndexOf('.');
-//            console.log("I:"+i);
-
             //积分信息
-            var  price= $(this).find('div.data-JF-KC').find('span:eq(0)').html();
-            var KC =  $(this).find('div.data-JF-KC').find('b').html();
-            var yourJF = 300;
+           
             console.log("P:"+price+"KC:"+KC);
             sessionStorage.setItem('yourJF',yourJF);
             sessionStorage.setItem('price',price);
@@ -629,24 +675,22 @@
             }else if(t === 1){
                 location.href = 'girlFruit.html'
             }
-//            location.href = 'commodityDetail.html'
         }
-//        console.log("cx:"+cX+",cy:"+cY+',bx:'+bX+',by:'+bY+',bw:'+bW+",bh:"+bH);
-//            $(this)
-//        location.href = 'commodityDetail.html'
     });
-//    $(document).mousedown(function (e) {
-////        $(this)
-////        location.href = 'commodityDetail.html'
-//        alert('x'+e.clientX+',y:'+e.clientY)
-//        alert('sx'+e.screenX+',sy:'+e.screenY)
-//    });
-
     //标题文字居中
     $(function () {
         rem.titleCenter();
+        $('#successTier').css({
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            backgroundColor: '#A5A4A5',
+            zIndex: 10002,
+            display: 'none',
+            opacity: 0.5
+
+        })
     });
-    //
     function goBack() {
         history.back();
     }

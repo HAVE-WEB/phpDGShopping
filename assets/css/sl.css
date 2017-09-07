@@ -77,6 +77,9 @@ button{
 .sl-height-percent100{
     height:100%;
 }
+.sl-height-percent50{
+    height:50%;
+}
 .sl-flex-row-center-flex-start{
     display:flex;
     align-items: center;
@@ -116,6 +119,15 @@ button{
 }
 .sl-margin-right-5px{
     margin-right: 5px;
+}
+.sl-margin-right-06rem{
+    margin-right: .6rem;
+}
+.sl-margin-top-06rem{
+    margin-top: .6rem;
+}
+.sl-margin-top-08rem{
+    margin-top: .8rem;
 }
 .sl-margin-left-5px{
     margin-left: 5px;
@@ -157,10 +169,19 @@ button{
     /*padding: .8rem .8rem;*/
 /*}*/
 .sl-padding-08rem{
-    padding: .8rem;
-}
+     padding: .8rem;
+ }
 .sl-padding-04rem{
     padding: .4rem;
+}
+.sl-padding-02rem{
+    padding: .2rem;
+}
+.sl-padding-bottom-1rem{
+    padding-bottom: 1rem;
+}
+.sl-padding-05rem{
+    padding: .5rem;
 }
 .sl-border-radius-08rem-08rem-0rem-0rem{
      border-radius: .5rem .5rem 0rem 0rem;
@@ -182,6 +203,12 @@ button{
  }
 .sl-margin-left-02rem{
     margin-left: .2rem ;
+}
+.sl-margin-left-6rem{
+    margin-left: 6rem ;
+}
+.sl-margin-left-7rem{
+    margin-left: 7rem ;
 }
 .sl-margin-right-08rem{
     margin-right: .8rem ;
@@ -308,6 +335,15 @@ button{
 .sl-border-1px-solid-D3D3D3{
     border:1px solid #D3D3D3;
 }
+.sl-border-1px-solid-F4F4F4{
+    border:1px solid #F4F4F4;
+}
+.sl-background-color-F4F4F4{
+    background-color : #D4D4D4;
+}
+.sl-background-color-F9F9FA{
+background-color: #F9F9FA;
+}
 .sl-height-30px{
     height: 30px;
 }
@@ -347,6 +383,9 @@ button{
 }
 .sl-margin-top-3rem{
     margin-top: 3rem;
+}
+.sl-margin-top-5rem{
+    margin-top: 5rem;
 }
 .sl-margin-top-10px{
     margin-top: 10px;
@@ -437,9 +476,45 @@ button{
     width: 100%;
     height: 100%;
 }
+.sl-width-6rem{
+    width: 6rem;
+}
+.sl-height-6rem{
+    height: 6rem;
+}
+.sl-width-7rem{
+    width: 7rem;
+}
+.sl-height-7rem{
+    height: 7rem;
+}
 .sl-width-2rem{
     width: 2rem;
 }
 .sl-height-2rem{
     height: 2rem;
+}
+.sl-width-1rem{
+    width: 1rem;
+}
+.sl-height-1rem{
+    height: 1rem;
+}
+.sl-width-1dot5rem{
+    width: 1.5rem;
+}
+.sl-height-1dot5rem{
+    height: 1.5rem;
+}
+.sl-width-1dot2rem{
+    width: 1.2rem;
+}
+.sl-height-1dot2rem{
+    height: 1.2rem;
+}
+.sl-display-block{
+    display: block;
+}
+.sl-display-none{
+    display: none;
 }

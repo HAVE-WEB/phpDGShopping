@@ -158,6 +158,8 @@
 
 <!--灰色层-->
 <div id="grayTier" class="sl-width-percent100 sl-height-percent100"></div>
+<!--兑换成功灰色层-->
+<div id="successTier" class="sl-width-percent100 sl-height-percent100"></div>
 
 <div id="bottomNav" style="width: 100%;" class="sl-flex-row-center-space-between sl-navbar">
     <div style="width: 70%;background-color: white;height:3rem;color: black;" class="sl-flex-row-center-flex-start">
@@ -178,7 +180,7 @@
                         <img src="../assets/images/减.png" alt="" class="sl-width-2rem sl-height-2rem">
                     </div>
                     <div style="background-color: #F4F4F4;" class="sl-width-2rem sl-height-2rem">
-                        <input type="number" oninput="checkVal(this)" id="inputNum" value="1"  class="am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;background-color: #F4F4F4;font-weight: bold;">
+                        <input type="number" onblur="checkVal(this)" id="inputNum" value="1"  class="am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;background-color: #F4F4F4;font-weight: bold;">
                     </div>
                     <div style="background-color: #F4F4F4;margin-left: 0.4rem" class="sl-flex-row-center-center" id="add">
                         <img src="../assets/images/加.png" alt=""  class="sl-width-2rem sl-height-2rem">
@@ -243,6 +245,16 @@
             opacity: 0.5
 
         })
+        $('#successTier').css({
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            backgroundColor: '#A5A4A5',
+            zIndex: 10002,
+            display: 'none',
+            opacity: 0.5
+
+        })
     });
     //点击商品信息
     $('#commodityInfo').click(function () {
@@ -290,18 +302,18 @@
         $(this).addClass('am-active').siblings('li').removeClass('am-active');
     })
 
-//    时时刻刻检查输入框中的值
+
+//    失去焦点检查输入框中的值
+    var flag = true  ;
     function checkVal(self) {
-        var flag =true;
         var f = $(self).val();
         if(f === ''){
             $needJF.html(0);
             return;
         }
-
+        flag = true;
         var n = parseInt($(self).val());
-        console.log(f)
-        console.log(f.indexOf('.') > 0);
+        console.log(f);
         if(isNaN(n) || n <= 0  ){
             rem.alertInfoByState('请输入正整数',1)
             $(self).val('');
@@ -320,14 +332,13 @@
                 flag = false;
             }
         }
-        var needJF = n * price;
+        var needJF = parseInt($(self).val()) * price;
         if(flag){
-
             $needJF.html(needJF);
         }else{
             $needJF.html(0);
         }
-
+    console.log("flag:"+flag);
     }
     $("#bottomNav div:eq(1)").click(function () {
         $(window).resize(function() {
@@ -345,15 +356,25 @@
         $('#my-prompt').modal({
             relatedTarget: this,
             onConfirm: function(e) {
-                var v = $.trim(e.data);
-                console.log("v："+v);
+                $("#inputNum").trigger('onblur');
+                if(flag){
+                    var v = $.trim(e.data);
+                    console.log("v："+v);
 //                var tempNum =parseInt($.trim(e.data)) ;
-                if(v === ''){
-                    rem.alertInfoImgByState('兑换失败',1)
+                    if(v === ''){
+                        rem.alertInfoImgByState('兑换失败1',1)
+                    }else{
+                        $('#successTier').show();
+                        rem.alertInfoImgByState('兑换成功',0)
+                        setTimeout(function () {
+                            $('#successTier').hide();
+                        },2000);
+                        $needJF.html(0);
+                    }
                 }else{
-                    rem.alertInfoImgByState('兑换成功',0)
-                    $needJF.html(0);
+                    rem.alertInfoImgByState('兑换失败',1)
                 }
+
             },
             onCancel: function(e) {
                 $needJF.html(0);

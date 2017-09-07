@@ -56,12 +56,12 @@
         },
         weiXinBrowers: function () {//对于微信内置浏览器，得剪掉上面导航栏的高度
             $("div.sl-navbar").css({
-                            position: 'fixed',
-                            left: 0,
-                            bottom: 0,
-                            right: 0,
-                            zIndex: 1010,
-            })
+                    position: 'fixed',
+                    left: 0,
+                    bottom: 0,
+                    right: 0,
+                    zIndex: 1010,
+            });
         },
         alertInfoByState: function (msg,state) {//state:0代表成功，1代表失败
             if(typeof state !== 'number'){
@@ -99,9 +99,9 @@
             }
             var $alert;
             if(state === 0 ){
-                $alert = $('<div class="sl-alert sl-flex-column-center-center" style="background-color: #333333;position:fixed;z-index: 10011;color: white;padding: 0.5rem 1rem;-webkit-border-radius: .5rem;-moz-border-radius: .5rem;border-radius: .5rem;"><div><img src="../assets/images/成功.png" alt="" style="width: 2rem;height: 2rem;"></div><div><span style="color: white;"></span></div></div>');
+                $alert = $('<div class="sl-alert sl-flex-column-center-center" style="background-color: #333333;position:fixed;z-index: 10011;color: white;padding: 0.5rem 1.5rem;-webkit-border-radius: .5rem;-moz-border-radius: .5rem;border-radius: .5rem;"><div><img src="../assets/images/成功.png" alt="" style="width: 2rem;height: 2rem;"></div><div><span style="color: white;font-size: 1.3rem;"></span></div></div>');
             }else if(state === 1){
-                $alert = $('<div class="sl-alert sl-flex-column-center-center" style="background-color: #333333;position:fixed;z-index: 10011;color: white;padding: 0.5rem 1rem;-webkit-border-radius: .5rem;-moz-border-radius: .5rem;border-radius: .5rem;"><div><img src="../assets/images/失败.png" alt="" style="width: 2rem;height: 2rem;"></div><div><span style="color: white;"></span></div></div>');
+                $alert = $('<div class="sl-alert sl-flex-column-center-center" style="background-color: #333333;position:fixed;z-index: 10011;color: white;padding: 0.5rem 1.5rem;-webkit-border-radius: .5rem;-moz-border-radius: .5rem;border-radius: .5rem;"><div><img src="../assets/images/失败.png" alt="" style="width: 2rem;height: 2rem;"></div><div><span style="color: white;font-size: 1.3rem;"></span></div></div>');
             }
 
             var len = $('div.sl-alert').length;
@@ -111,7 +111,7 @@
                 $('div.sl-alert').find('span').html(msg);
                 $('div.sl-alert').show().css({
                     position: 'fixed',
-                    zIndex: 10020,
+                    zIndex: 20020,
                     left: screen.width/2-$('div.sl-alert').outerWidth()/2,
                     top: screen.height/2-$('div.sl-alert').outerHeight()/2 - 42,
                 });
@@ -158,10 +158,17 @@
                 if(val <= 0){
                     this.alertInfoByState('兑换数量不能小于0',1);
                     $input.val(1);
-                    return false
+                    return false;
                 }
-                return true
+                return true;
         },
+        // amDialog: function () {
+        //     $('div.am-modal-dialog').css({
+        //         left: screen.width/2-$('div.am-modal-dialog').outerWidth()/2,
+        //         top: screen.height/2-$('div.am-modal-dialog').outerHeight()/2 - 42,
+        //     });
+        // },
+
         // modalDialog: function () {
         //     var height = screen.height;
         //     var dialogH = $("div.am-modal-dialog").outerHeight();

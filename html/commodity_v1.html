@@ -189,78 +189,53 @@
         </div>
     </div>
 </div>
-<div class="sl-flex-column-center-center" style="width: 100%;background-color: white;" id="translate">
-    <div style="width: 100%;text-align: center;">商品参数</div>
-    <!--overflow: scroll;height: 12rem-->
-    <div class="sl-flex-column-flex-start-center">
-        <header class="sl-header">兑换方式：积分兑换</header>
-        <div class="am-modal-bd ">
-            <table>
-                <tr>
-                    <td style="width: 40%;">您的积分</td>
-                    <td style="width: 30%;">300</td>
-                    <td style="width: 30%;">积分</td>
-                </tr>
-                <tr>
-                    <td>兑换价格</td>
-                    <td></td>
-                    <td>积分</td>
-                </tr>
-                <tr>
-                    <td>库存</td>
-                    <td style="color: red;"><b></b></td>
-                    <td>个</td>
-                </tr>
-                <tr>
-                    <td>可兑换数</td>
-                    <td style="color: red;"><b></b></td>
-                    <td>个</td>
-                </tr>
-                <tr>
-                    <td>数量</td>
-                    <td colspan="2"><input type="number" oninput="checkVal(this)" class="am-modal-prompt-input"></td>
-                </tr>
-            </table>
+
+
+<div class="sl-flex-column-center-center sl-width-percent100 sl-background-color-white sl-display-none" style="" id="translate">
+    <div class="sl-flex-column-flex-start-center sl-border-bottom-1px-solid-D3D3D3 sl-padding-bottom-1rem" id="sl-head">
+        <div class="sl-width-percent100 sl-flex-row-flex-end-flex-end">
+            <div class="sl-width-1dot2rem sl-height-1dot2rem sl-margin-top-06rem sl-margin-right-06rem">
+                <img src="../assets/images/关闭.png" alt="" class="sl-width-percent100 sl-height-percent100" style="vertical-align:top" onclick="hideTied()">
+            </div>
         </div>
-        <header class="sl-header">兑换方式：兑换码兑换</header>
-        <div class="am-modal-bd" style="width: 100%;">
-            <table style="width: 100%;">
-                <tr>
-                    <td style="width: 40%;"></td>
-                    <td style="width: 30%;"></td>
-                    <td style="width: 30%;"></td>
-                </tr>
-                <tr>
-                    <td >兑换码</td>
-                    <td colspan="2"><input type="number" class="am-modal-prompt-input" ></td>
-                </tr>
-            </table>
-        </div>
-        <header class="sl-header">兑换方式：二维码兑换</header>
-        <div class="am-modal-bd" style="width: 100%;">
-            <table style="width: 100%;">
-                <tr>
-                    <td style="width: 40%;"></td>
-                    <td style="width: 30%;"></td>
-                    <td style="width: 30%;"></td>
-                </tr>
-                <tr>
-                    <td >兑换码</td>
-                    <td colspan="2"><input type="number" class="am-modal-prompt-input" ></td>
-                </tr>
-            </table>
+
+        <div class="sl-flex-column-flex-start-center">
+            <div class="sl-flex-row-center-flex-start">
+                <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                <span style="color: red;">120</span><span> &nbsp;积分</span>
+            </div>
+            <div class="sl-flex-row-center-center">
+                <span>库存</span><b style="color: red;">100</b><span>件</span>
+            </div>
+            <div>
+                <span>可兑换数</span><b style="color: red;">2</b><span>件</span>
+            </div>
         </div>
     </div>
-    <div style="background-color: red;color: white;width: 100%;text-align: center;padding: 0.3rem;" onclick="hideTied()">完成</div>
+
+    <div class="am-modal-bd sl-flex-column-center-center">
+        <div class="sl-flex-row-center-space-between" style="width: 100%;">
+            <span>兑换数量</span>
+            <div class="sl-flex-row-flex-end-flex-end">
+                <div style="margin-right: 0.4rem;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F9F9FA" id="minus">
+                    <img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">
+                </div>
+                <div style="" class="sl-width-2rem sl-height-2rem">
+                    <input type="number" onblur="checkVal(this)" id="inputNum" value="1"  class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;font-weight: bold;">
+                </div>
+                <div style="margin-left: 0.4rem" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F4F4F4" id="add">
+                    <img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div style="background-color: red;color: white;width: 100%;text-align: center;padding: 0.5rem;" class="sl-margin-top-5rem" onclick="hideTied()">确定</div>
 </div>
-
-
-<div class="sl-flex-row-center-space-around sl-padding-15px-0px-5px-0px"  style="position: fixed;z-index: 1001;top: 80%;left: 80%;display: none" id="up">
-   <div class="sl-flex-column-center-center sl-background-color-F1F1F1 "  style="height: 3rem ; width: 3rem;padding: 0.3rem;">
-       <img src="../assets/images/backTop.png" alt="" style="max-height: 100%;max-width: 100%;">
-   </div>
-</div>
-
 <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default " style="border-top: 2px solid #E5E5E5;">
     <ul class=" am-navbar-nav am-cf am-avg-sm-4 ">
         <li >
@@ -269,21 +244,8 @@
                 <span class="am-navbar-label  sl-font-color-red">首页</span>
             </a>
         </li>
-        <!--<li >-->
-            <!--<a href="" class="">-->
-                <!--<img src="../assets/images/bottomNav/搜索.png" alt="">-->
-                <!--<span class="am-navbar-label sl-icon-color-6D6D6D">搜索</span>-->
-            <!--</a>-->
-        <!--</li>-->
-        <!--<li data-am-navbar-share>-->
-            <!--<a href="" class="">-->
-                <!--<img src="../assets/images/bottomNav/购物车.png" alt="">-->
-                <!--<span class="am-navbar-label sl-icon-color-6D6D6D">购物车</span>-->
-            <!--</a>-->
-        <!--</li>-->
         <li >
             <a href="my.html" class="">
-                <!--<i class="fa fa-user-o sl-icon-color-6D6D6D"></i>-->
                 <img src="../assets/images/bottomNav/我的.png" alt="">
                 <span class="am-navbar-label sl-icon-color-6D6D6D">我的</span>
             </a>
@@ -293,9 +255,12 @@
 <!--灰色层-->
 <div id="grayTier"></div>
 <!--图片层-->
-<div style="width: 5rem;height: 5rem;background-color: red;" id="imgTier">
-    <img src="" alt="" style="width: 100%;height: 100%;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;">
-</div>
+<!--<div id="imgTier" class="sl-background-color-yellow sl-width-6rem sl-height-6rem sl-display-none sl-flex-row-center-center">-->
+    <div class="sl-padding-02rem sl-background-color-white sl-border-1px-solid-F4F4F4 sl-border-radius-08rem" id="imgTier">
+        <img src="" alt="" class="sl-width-percent100 sl-height-percent100 ">
+    </div>
+<!--</div>-->
+
 
 
 
@@ -306,8 +271,8 @@
 <script>
     //全局变量
     var rem = new Rem();
-    var num = 0;
-    var numKC = 0;
+    var canBuyNum = 0;
+    var KC = 0;
     var wH = screen.height;
     var wW = screen.width;
     //回顶部
@@ -318,77 +283,8 @@
     //排序
     $('ul.am-dropdown-content li').click(function () {
         $(this).addClass('am-active').siblings('li').removeClass('am-active');
-    })
+    });
 
-    //点击兑换按钮
-//    $(function () {
-//        $('button').on('click', function () {
-//            var  price= $(this).parent().parent().prev().find('span:eq(0)').html();
-//            numKC =  $(this).parent().parent().prev().find('b').html();
-//
-////            var price = parseInt($(this).prev().find('span:first').html());//获取商品价格
-////            numKC =  parseInt($(this).parent().prev().html());
-//           var $tr = $('table:eq(0) tr');
-//            $tr.eq(1).children('td').eq(1).html(price);//将商品价格放入到td中
-//            var yourJF = parseInt($tr.eq(0).children('td').eq(1).html());//你的所有积分
-//            num = parseInt(yourJF / price);
-//            $tr.eq(2).children('td').eq(1).find('b').html(numKC);//你的积分可以购买的个数
-//            $tr.eq(3).children('td').eq(1).find('b').html(num)//库存
-//            if(num > numKC){
-//                $tr.eq(4).children('td').eq(1).find('input').attr('max',numKC);
-//            } else {
-//                $tr.eq(4).children('td').eq(1).find('input').attr('max',num);
-//            }
-//
-//            var dH = $('#translate').outerHeight();
-//            $('#grayTier').show();
-//            $('#translate').animate({
-//                top: wH-dH
-//            },300);
-//
-////            $('#my-prompt').modal({
-////                relatedTarget: this,
-////                onConfirm: function(e) {
-////                    var tempNum =parseInt($.trim(e.data[0])) ;
-////                    var tempNum1 =parseInt($.trim(e.data[1])) ;
-////                    console.log("f:"+tempNum+'.s:'+tempNum1);
-////                    if(isNaN(tempNum)){//先判断是不是数字
-////                        rem.alertInfoByState('兑换失败',1)
-////                    }else{
-////                        rem.alertInfoByState('兑换成功',0)
-////                    }
-////                },
-////                onCancel: function(e) {
-//////                    alert('不想说!');
-////                }
-////            });
-//        })
-//    });
-    //时时刻刻检查输入框中的值
-    function checkVal(self) {
-        var flag = false;
-        var f = $(self).val();
-        if(f.indexOf('.') > 0){
-            flag = true;
-        }
-        var n = parseInt($(self).val());
-        if(isNaN(n) || n <= 0  ||flag){
-            $(self).val('');
-            rem.alertInfoByState('请输入正整数',1)
-        }
-        if(num > numKC){
-            if( n > numKC ){
-                $(self).val('');
-                rem.alertInfoByState('库存不足',1)
-            }
-        }else{
-            if( n > num ){
-                $(self).val('');
-                rem.alertInfoByState('积分不足',1)
-            }
-        }
-
-    }
 
     //点击商品列表
     $("#list li").mousedown(function (e) {
@@ -400,42 +296,33 @@
         var bH = $b.outerHeight();
         var bX = $b.offset().left;//元素对象相对于文档对象的左边缘的位置
         var bY = $b.offset().top;//元素对象相对于文档对象的顶部边缘的位置
+        //积分信息
+        var price = $(this).find('div.data-JF-KC').find('span:eq(0)').html();
+        KC = $(this).find('div.data-JF-KC').find('b').html();
+        var yourJF = 1000;
+        canBuyNum =  parseInt(yourJF / price);
 
         if (cX >= bX && cX <= bX + bW && cY >= bY && cY <= bY + bH) {
             var $img = $(this).children('div:eq(0)').children('div:eq(0)').find('img');
             var s = $img.attr('src');
             var $iT = $('#imgTier').find('img');
             $iT.attr('src', s);
-            var itH = $iT.outerHeight();
-            var itW = $iT.outerWidth();
-            $("#imgTier").css({
-                position: 'fixed',
-                top: wH,
-                left: (wW - itW-itW/2),
-                zIndex: 10007,
-            });
-
-            $("#translate").css({
-                position: 'fixed',
-                top: wH + itH / 2,
-                left: 0,
-                zIndex: 10006,
-            })
-
-
+            var itH = $('#imgTier').outerHeight();
             var dH = $('#translate').outerHeight();
+
+            var divArr= $('#sl-head').children('div:eq(1)').children('div');
+            divArr.eq(0).find('span:eq(0)').html(price);
+            divArr.eq(1).find('b:eq(0)').html(KC);
+            divArr.eq(2).find('b:eq(0)').html(parseInt(yourJF / price));
+
             $('#grayTier').show();
             $('#translate').animate({
-                top: wH - dH
+                bottom: 0
             }, 300);
             $('#imgTier').animate({
-                top: wH - (dH + itH / 2)
+                bottom: dH -  itH / 6 * 5
             }, 300);
         } else {
-            //积分信息
-            var price = $(this).find('div.data-JF-KC').find('span:eq(0)').html();
-            var KC = $(this).find('div.data-JF-KC').find('b').html();
-            var yourJF = 300;
             console.log("P:" + price + "KC:" + KC);
             sessionStorage.setItem('yourJF', yourJF);
             sessionStorage.setItem('price', price);
@@ -462,18 +349,28 @@
 
     //将商品信息隐藏
     $(function () {
-        $("#imgTier").css({
-            position: 'fixed',
-            top: wH,
-            left: 0,
-            zIndex: 10007,
-        });
         $("#translate").css({
             position: 'fixed',
-            top: wH,
+            bottom: -($("#translate").outerHeight() + $("#imgTier").outerHeight()/8),
             left: 0,
-            zIndex: 100005,
+            zIndex: 10005,
+            display: 'block'
         })
+
+        var  l= $('#sl-head').height();
+        var h = l * 7 / 6;
+        $("#imgTier").css({
+            position: 'fixed',
+            bottom: -h,
+            left: h/12,
+            zIndex: 10007,
+            width:  h,
+            height: h,
+            display: 'block'
+        });
+        $('#sl-head').children('div:eq(1)').css('margin-left', h+h/6);
+
+
     });
 
     //灰色一层
@@ -495,24 +392,95 @@
     $('#grayTier').on('click',function () {
         hideTied();
     }) ;
-    //点击商品信息
-    $('#commodityInfo').click(function () {
-
-        var dH = $('#translate').outerHeight();
-        $('#grayTier').show();
-        $('#translate').animate({
-            top: wH-dH
-        },300);
-    });
     //隐藏灰色层和商品信息层
     function hideTied() {
         $('#grayTier').hide();
         var $iH = $('#imgTier').outerHeight();
         $('#translate').animate({
-            top: wH+$iH/2
+            bottom: -($("#translate").outerHeight() + $("#imgTier").outerHeight()/5),
         },500);
         $('#imgTier').animate({
-            top: wH
+            bottom: -$("#imgTier").outerHeight(),
         },500);
+    }
+    //点击减按钮
+    $("#minus").click(function () {
+        var $input=  $(this).next().find('input');
+        var v = $input.val();
+        var f = rem.inputVal($input);
+        if(typeof f === 'boolean' && f == true){
+            var n  = parseInt($.trim(v)) -1;
+            if(n > 1){
+                $input.val(n);
+            }else{
+                $input.val(1);
+                $("#minus").removeClass('sl-background-color-F4F4F4').addClass('sl-background-color-F9F9FA');
+            }
+        }
+    });
+    //加按钮
+    $("#add").click(function () {
+        var $input=  $(this).prev().find('input');
+        var v = $input.val();
+        var f = rem.inputVal($input);
+        if(typeof f === 'boolean' && f == true){
+            console.log('v:'+ parseInt($.trim(v)));
+            var n  = parseInt($.trim(v)) + 1;
+            console.log("n:"+n+",canBuyNum"+canBuyNum+',KC'+KC);
+            if(n > 1){
+                $("#minus").removeClass('sl-background-color-F9F9FA').addClass('sl-background-color-F4F4F4')
+            }
+            if(canBuyNum > KC){
+                if(n > KC){
+                    rem.alertInfoByState('库存不足',1);
+                    $input.val(KC);
+                }else{
+                    $input.val(n);
+                }
+            }else{
+                if(n > canBuyNum){
+                    rem.alertInfoByState('积分不足',1);
+                    $input.val(canBuyNum);
+                }else{
+                    $input.val(n);
+                }
+            }
+        }
+    });
+    //    时时刻刻检查输入框中的值
+    function checkVal(self) {
+        var f = $(self).val();
+        var n = parseInt($(self).val());
+        console.log(f)
+        console.log(f.indexOf('.') > 0);
+        if(isNaN(n) || n <= 0  ){
+            rem.alertInfoByState('请输入正整数',1)
+            $(self).val(1);
+            $("#minus").removeClass('sl-background-color-F4F4F4').addClass('sl-background-color-F9F9FA');
+        }
+        if(canBuyNum > KC){
+            if( n > KC ){
+                rem.alertInfoByState('库存不足',1)
+                $(self).val(KC);
+                if(KC > 1){
+                    $("#minus").removeClass('sl-background-color-F9F9FA').addClass('sl-background-color-F4F4F4')
+                }else {
+                    $("#minus").removeClass('sl-background-color-F4F4F4').addClass('sl-background-color-F9F9FA');
+                }
+            }
+        }else{
+            if( n > canBuyNum ){
+                rem.alertInfoByState('积分不足',1)
+                $(self).val(canBuyNum);
+                if(canBuyNum > 1){
+                    $("#minus").removeClass('sl-background-color-F9F9FA').addClass('sl-background-color-F4F4F4')
+                }else {
+                    $("#minus").removeClass('sl-background-color-F4F4F4').addClass('sl-background-color-F9F9FA');
+                }
+            }
+        }
+        if(n == 1){
+            $("#minus").removeClass('sl-background-color-F4F4F4').addClass('sl-background-color-F9F9FA');
+        }
     }
 </script>
