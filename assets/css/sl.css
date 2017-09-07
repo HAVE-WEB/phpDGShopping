@@ -74,6 +74,12 @@ button{
  .sl-width-percent100{
      width:100%;
  }
+.sl-width-percent70{
+    width:70%;
+}
+.sl-width-percent30{
+    width:30%;
+}
 .sl-height-percent100{
     height:100%;
 }
@@ -138,8 +144,8 @@ button{
 .sl-margin-right{
     margin-right: 10px;
 }
-.sl-padding-0px{
-    padding:0px;
+.sl-padding-left-08rem{
+    padding-left:.8rem;
 }
 .sl-background-color-yellow{
     background-color: #FFCC33;
@@ -233,6 +239,9 @@ button{
 .sl-background-color-white{
     background-color: #FFFFFF;
 }
+.sl-background-color-black{
+    background-color: black;
+}
 .sl-icon-color-white{
     color: #FFFFFF;
 }
@@ -259,6 +268,9 @@ button{
 }
 .sl-font-size-8px{
     font-size:8px;
+}
+.sl-font-size-08rem{
+    font-size: .8rem;
 }
 .sl-font-size-14px{
     font-size:14px;
@@ -345,7 +357,10 @@ button{
 background-color: #F9F9FA;
 }
 .sl-height-30px{
-    height: 30px;
+     height: 30px;
+ }
+.sl-height-3rem{
+    height: 3rem;
 }
 .sl-width-30px{
     width: 30px;
@@ -417,6 +432,9 @@ background-color: #F9F9FA;
  .sl-font-color-B8B8B8{
      color: #B8B8B8;
  }
+.sl-font-color-black{
+    color: black;
+}
 .sl-font-color-D1D1D1{
     color: #D1D1D1;
 }
@@ -517,4 +535,16 @@ background-color: #F9F9FA;
 }
 .sl-display-none{
     display: none;
+}
+.sl-position-fixed{
+    position: fixed;
+}
+.sl-top-0rem{
+    top: 0rem;
+}
+.sl-left-0rem{
+    left: 0rem;
+}
+.sl-z-Index-10001{
+    z-index: 10001;
 }

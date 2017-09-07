@@ -12833,8 +12833,8 @@ tbody.am-collapse.am-in {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 49px;
-  line-height: 49px;
+  height: 3rem;
+  line-height: 3rem;
   z-index: 1010;
 }
 .am-navbar ul {
