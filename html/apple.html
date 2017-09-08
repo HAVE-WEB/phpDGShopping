@@ -200,11 +200,23 @@
 <script>
     //全局变量
     var rem = new Rem();
+//    alert("prototype_or:"+rem.or);
     var canBuy = 0;
     var KC = 0;
     var price= 0;
     var $needJF = $('#bottomNav').children('div:eq(0)').find('b');
     var wH = screen.height;
+
+//    var json = sessionStorage.getItem('prevRem');
+//    var jsonObj = JSON.parse(json);
+//    var prevRem = jsonObj.prevO;
+////    alert("prevRem"+prevRem.or);
+//    rem.or = prevRem.or;
+//    rem.titleCenter();
+
+    var or = sessionStorage.getItem('or');
+    rem.or = or;
+    rem.titleCenter();
 
     //将列表页面上的数据移动到本页面
     $(function () {
@@ -285,10 +297,6 @@
             marginBottom: h,
         })
     });
-    //标题文字居中
-    $(function () {
-        rem.titleCenter();
-    });
 
 
 
@@ -315,19 +323,19 @@
         var n = parseInt($(self).val());
         console.log(f);
         if(isNaN(n) || n <= 0  ){
-            rem.alertInfoByState('请输入正整数',1)
+            rem.alertInfoImgByState('请输入正整数',1)
             $(self).val('');
             flag = false;
         }
         if(canBuy > KC){
             if( n > KC ){
-                rem.alertInfoByState('库存不足',1)
+                rem.alertInfoImgByState('库存不足',1)
                 $(self).val('');
                 flag = false;
             }
         }else{
             if( n > canBuy ){
-                rem.alertInfoByState('积分不足',1)
+                rem.alertInfoImgByState('积分不足',1)
                 $(self).val('');
                 flag = false;
             }
@@ -362,7 +370,7 @@
                     console.log("v："+v);
 //                var tempNum =parseInt($.trim(e.data)) ;
                     if(v === ''){
-                        rem.alertInfoImgByState('兑换失败1',1)
+                        rem.alertInfoImgByState('兑换失败',1)
                     }else{
                         $('#successTier').show();
                         rem.alertInfoImgByState('兑换成功',0)
@@ -392,7 +400,7 @@
                $input.val(n);
                $needJF.html(n * price);
            }else{
-               rem.alertInfoByState('兑换数至少一个',1);
+               rem.alertInfoImgByState('兑换数至少一个',1);
                $input.val(1);
                $needJF.html(price);
            }
@@ -409,7 +417,7 @@
             var n  = parseInt($.trim(v)) + 1;
             if(canBuy > KC){
                 if(n > KC){
-                    rem.alertInfoByState('库存不足',1);
+                    rem.alertInfoImgByState('库存不足',1);
                     $input.val(KC);
                     $needJF.html(KC * price);
                 }else{
@@ -418,7 +426,7 @@
                 }
             }else{
                 if(n > canBuy){
-                    rem.alertInfoByState('积分不足',1);
+                    rem.alertInfoImgByState('积分不足',1);
                     $input.val(canBuy);
                     $needJF.html(canBuy * price);
                 }else{
@@ -430,7 +438,33 @@
     });
 //    $('.am-modal').css('di')
     function goBack() {
+
+
+//        href.location = 'commodity.html';
+//        var tempRem = sessionStorage.getItem('prevRem');
+//        console.log("type:"+typeof tempRem+",val:"+tempRem);
+//        console.log(tempRem);
+////       new Rem()tempRem
+//        console.log(tempRem.orientation);
+//        prevRem.orientation = rem.orientation;
+//        alert("goBack_apple");
+//        alert("prevRem.orientation:"+prevRem.orientation);
+//        sessionStorage.setItem('or',rem.orientation);
         history.back();
     }
+    window.addEventListener('orientationchange', function(event){
+        if ( window.orientation == 180 || window.orientation == 0) {
+//            alert("window竖屏")
+            rem.or = 'true';//true代表竖屏
+            sessionStorage.setItem('or','true');
+            rem.titleCenter();
+        }
+        if( window.orientation == 90 || window.orientation == -90) {
+//            alert("window横屏")
+            rem.or = 'false';//false代表横屏
+            sessionStorage.setItem('or','false');
+            rem.titleCenter();
+        }
+    });
 
 </script>

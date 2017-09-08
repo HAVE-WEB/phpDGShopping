@@ -520,64 +520,48 @@
 <script>
     //全局变量
     var rem = new Rem();
+    console.log(rem.or);
+    var or = sessionStorage.getItem('or');
+    alert("or:"+or);
+    if(or == null){
+        rem.or = 'true';
+        rem.titleCenter();
+    }else{
+        rem.or = or;
+        rem.titleCenter();
+    }
+
+//    alert("rem_1："+typeof rem);
+//    alert("rem_2："+rem.orientation);
+//    console.log(rem.name);
+//    console.log(Rem.prototype.name);
+//    console.log(Rem.prototype.constructor);
+//    var or = sessionStorage.getItem('or');
+//    if(or == 'undefined'){
+//        rem.or = 'true'
+//        rem.titleCenter();
+//    }else{
+//        if(or === 'false'){
+//            rem.or = 'false'
+//            rem.titleCenter();
+//        }else{
+//            rem.or = 'true'
+//            rem.titleCenter();
+//        }
+//    }
+
     var canBuyNum = 0;
     var canBuyNum = 0;
     var KC = 0;
     //回顶部
     $("#up").click(function () {
         $('html, body').animate({scrollTop: 0}, '500');
-    })
+    });
 
     //排序
     $('ul.am-dropdown-content li').click(function () {
         $(this).addClass('am-active').siblings('li').removeClass('am-active');
-    })
-
-    //点击兑换按钮
-//    $(function () {
-//        $('button').on('click', function () {
-//            var n = parseInt($.trim($("#inputNum").val()));
-//            $("#inputNum").val('');
-//            $("#inputNum").val(n);
-//
-//            //积分信息
-//            var  price= $(this).parent().parent().prev().find('span:eq(0)').html();
-//            KC =  $(this).parent().parent().prev().find('b').html();
-//           var $tr = $('table:eq(0) tr');
-//
-//            $tr.eq(1).children('td').eq(1).html(price);//将商品价格放入到td中
-//            var yourJF = parseInt($tr.eq(0).children('td').eq(1).html());//你的所有积分
-//            canBuyNum = parseInt(yourJF / price);
-//            $tr.eq(2).children('td').eq(1).find('b').html(KC);//你的积分可以购买的个数
-//            $tr.eq(3).children('td').eq(1).find('b').html(canBuyNum)//库存
-//            if(canBuyNum > KC){
-//                $tr.eq(4).children('td').eq(1).find('input').attr('max',KC);
-//            } else {
-//                $tr.eq(4).children('td').eq(1).find('input').attr('max',canBuyNum);
-//            }
-//
-//            $('#my-prompt').modal({
-//                relatedTarget: this,
-//                onConfirm: function(e) {
-//                    $("#inputNum").trigger('onblur');
-//                    var tempNum =parseInt($.trim(e.data[0])) ;
-//                    var tempNum1 =parseInt($.trim(e.data[1])) ;
-//                    if(flag){
-//                        if(isNaN(tempNum)){//先判断是不是数字
-//                            rem.alertInfoByState('兑换失败',1)
-//                        }else{
-//                            rem.alertInfoByState('兑换成功',0)
-//                        }
-//                    }else{
-////                        rem.alertInfoByState('兑换失败2',1)
-//                        console.log("兑换失败2");
-//                    }
-//                },
-//                onCancel: function(e) {
-//                }
-//            });
-//        })
-//    });
+    });
     var flag = true;
     //时时刻刻检查输入框中的值
     function checkVal(self) {
@@ -586,19 +570,19 @@
         var n = parseInt($(self).val());
         if(isNaN(n) || n <= 0){
             $(self).val('');
-            rem.alertInfoByState('请输入正整数',1)
+            rem.alertInfoImgByState('请输入正整数',1)
             flag = false;
         }
         if(canBuyNum > KC){
             if( n > KC ){
                 $(self).val('');
-                rem.alertInfoByState('库存不足',1)
+                rem.alertInfoImgByState('库存不足',1)
                 flag = false;
             }
         }else{
             if( n > canBuyNum ){
                 $(self).val('');
-                rem.alertInfoByState('积分不足',1)
+                rem.alertInfoImgByState('积分不足',1)
                 flag = false;
             }
         }
@@ -675,11 +659,17 @@
             }else if(t === 1){
                 location.href = 'girlFruit.html'
             }
+//            sessionStorage.setItem('or',rem.orientation);
+//            alert("rem:"+typeof rem);
+//            alert(typeof(Function));
+//            rem.or = 'false';
+//            var obj = {prevO: rem};
+//            sessionStorage.setItem('prevRem',JSON.stringify(obj));
         }
     });
     //标题文字居中
     $(function () {
-        rem.titleCenter();
+//        rem.titleCenter();
         $('#successTier').css({
             position: 'fixed',
             top: 0,
@@ -687,12 +677,25 @@
             backgroundColor: '#A5A4A5',
             zIndex: 10002,
             display: 'none',
-            opacity: 0.5
+            opacity: 0.5,
 
         })
     });
     function goBack() {
         history.back();
     }
-
+    window.addEventListener('orientationchange', function(event){
+        if ( window.orientation == 180 || window.orientation == 0) {
+//            alert("window竖屏")
+            rem.or = 'true';//true代表竖屏
+            sessionStorage.setItem('or','true');
+            rem.titleCenter();
+        }
+        if( window.orientation == 90 || window.orientation == -90) {
+//            alert("window横屏")
+            rem.or = 'false';//false代表横屏
+            sessionStorage.setItem('or','false');
+            rem.titleCenter();
+        }
+    });
 </script>

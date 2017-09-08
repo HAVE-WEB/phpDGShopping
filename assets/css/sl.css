@@ -236,6 +236,9 @@ button{
 .sl-margin-bottom-5px{
     margin-bottom: 5px;
 }
+.sl-margin-bottom-3rem{
+    margin-bottom: 3rem;
+}
 .sl-background-color-white{
     background-color: #FFFFFF;
 }
@@ -541,6 +544,9 @@ background-color: #F9F9FA;
 }
 .sl-top-0rem{
     top: 0rem;
+}
+.sl-bottom-0rem{
+    bottom:0rem;
 }
 .sl-left-0rem{
     left: 0rem;

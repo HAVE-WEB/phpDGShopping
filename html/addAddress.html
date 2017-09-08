@@ -67,7 +67,7 @@
         <div class="title sl-font-color-white">新增收货地址</div>
     </div>
 </div>
-<div style="margin-top: 3rem;background-color:white;">
+<div style="margin-top: 3rem;background-color:white;" class="sl-margin-bottom-3rem">
     <form id="address" action="action" method="POST" role="form" class="">
         <div  class="sl-border-bottom-1px-solid-D3D3D3 sl-padding-08rem-04rem sl-width-percent100 sl-border-shadow">
             <input type="text" placeholder="请输入收件人姓名" name="userName" class="sl-width-percent100" style="-webkit-box-shadow: none;-moz-box-shadow: none ;box-shadow: none ;" required>
@@ -90,7 +90,7 @@
             <textarea name="" id="" cols="10" rows="5" placeholder="请输入详细地址" name="detailAddress" class="sl-width-percent100" style="-webkit-box-shadow: none;-moz-box-shadow: none ;box-shadow: none ;" required></textarea>
         </div>
 
-        <button type="submit" class="sl-bottomNav sl-margin-top-3rem sl-height-3rem">提交</button>
+        <button type="submit" class="sl-bottomNav sl-height-3rem sl-position-fixed sl-bottom-0rem sl-left-0rem sl-z-Index-10001">提交</button>
     </form>
 
 </div>
@@ -173,7 +173,7 @@
                 if(msg === ''){
                     msg = this.getValidationMessage(validity);
                 }
-                rem.alertInfo(msg);
+                rem.alertInfoImgByState(msg,1);
             },
             submit: function (e) {
                 var formValidity = this.isFormValid();

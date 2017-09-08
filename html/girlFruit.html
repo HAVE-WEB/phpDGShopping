@@ -304,19 +304,19 @@
         console.log(f)
         console.log(f.indexOf('.') > 0);
         if(isNaN(n) || n <= 0  ){
-            rem.alertInfoByState('请输入正整数',1)
+            rem.alertInfoImgByState('请输入正整数',1)
             $(self).val('');
             flag = false;
         }
         if(canBuy > KC){
             if( n > KC ){
-                rem.alertInfoByState('库存不足',1)
+                rem.alertInfoImgByState('库存不足',1)
                 $(self).val('');
                 flag = false;
             }
         }else{
             if( n > canBuy ){
-                rem.alertInfoByState('积分不足',1)
+                rem.alertInfoImgByState('积分不足',1)
                 $(self).val('');
                 flag = false;
             }
@@ -376,7 +376,7 @@
                $input.val(n);
                $needJF.html(n * price);
            }else{
-               rem.alertInfoByState('兑换数至少一个',1);
+               rem.alertInfoImgByState('兑换数至少一个',1);
                $input.val(1);
                $needJF.html(price);
            }
@@ -393,7 +393,7 @@
             var n  = parseInt($.trim(v)) + 1;
             if(canBuy > KC){
                 if(n > KC){
-                    rem.alertInfoByState('库存不足',1);
+                    rem.alertInfoImgByState('库存不足',1);
                     $input.val(KC);
                     $needJF.html(KC * price);
                 }else{
@@ -402,7 +402,7 @@
                 }
             }else{
                 if(n > canBuy){
-                    rem.alertInfoByState('积分不足',1);
+                    rem.alertInfoImgByState('积分不足',1);
                     $input.val(canBuy);
                     $needJF.html(canBuy * price);
                 }else{
