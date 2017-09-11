@@ -1,0 +1,278 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>地址列表</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- Amaze UI CSS -->
+    <link rel="stylesheet" href="../assets/css/amazeui.css">
+    <link rel="stylesheet" href="../assets/css/sl.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.js"></script>
+    <script src="../assets/js/myFirst.js"></script>
+    <style>
+        ::-webkit-scrollbar{
+            width: 0.1rem;
+        }
+        input:focus{
+            outline:0px auto -webkit-focus-ring-color ;
+        }
+    </style>
+
+</head>
+<body style="background-color: #EEEEF3">
+<div class="top-div sl-width-percent100 sl-position-fixed sl-top-0rem sl-left-0rem sl-z-Index-10001">
+    <div class="sl-flex-row-center-flex-start sl-background-color-red sl-height-3rem sl-padding-left-08rem" >
+        <img src="../assets/images/back.png" class="sl-width-1dot5rem sl-height-1dot5rem"  onclick="goBack()">
+        <div class="title sl-font-color-white">地址列表</div>
+    </div>
+</div>
+<div style="padding-top: 3.8rem;" id="detailList">
+    <ul data-index="0" class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3 sl-margin-0rem-08rem-08rem-08rem sl-background-color-white sl-flex-row-center-center sl-padding-08rem sl-border-radius-08rem" >
+        <li style="width: 100%;">
+            <div class="sl-flex-row-center-space-between" >
+                <span class=" ">姓名1</span>
+                <div>17185160021</div>
+            </div>
+            <div class="sl-flex-row-center-space-between sl-margin-02rem-0rem" >
+                <div class=" " style="font-size: 0.7rem"><span>上海市</span><span>上海市</span><span>杨浦区</span><span>平凉路1500号沪东工人文化宫2楼407范在企业管理</span></div>
+            </div>
+            <div class="sl-flex-row-center-space-between sl-margin-02rem-0rem sl-border-top-2px-dashed-gray sl-padding-top-02rem" >
+                <div class="sl-flex-row-center-center">
+                    <!--<input type="radio" name="address" style="margin: 0rem;padding: 0rem;outline: 0px">-->
+                    <label class="am-radio am-nohover" style="margin-bottom: 0rem;margin-top: .3rem;">
+                        <input type="radio" name="radio1" value="" checked="checked" data-am-ucheck checked>
+                        <span class="" style="font-size: 0.7rem">设为默认地址</span>
+                    </label>
+                    <!--<span class="sl-margin-left-02rem " style="font-size: 0.7rem">设为默认地址</span>-->
+                </div>
+                <div >
+                    <button class="sl-background-color-white sl-padding-02rem-08rem sl-border-1px-solid-D3D3D3 sl-margin-right-08rem edit">编辑</button>
+                    <button class="sl-background-color-white sl-padding-02rem-08rem sl-border-1px-solid-D3D3D3 del">删除</button>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+    <ul data-index="1" class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3 sl-margin-0rem-08rem-08rem-08rem sl-background-color-white sl-flex-row-center-center sl-padding-08rem sl-border-radius-08rem" >
+        <li style="width: 100%;">
+            <div class="sl-flex-row-center-space-between" >
+                <span class=" ">姓名2</span>
+                <div>17185160021</div>
+            </div>
+            <div class="sl-flex-row-center-space-between sl-margin-02rem-0rem" >
+                <div class=" " style="font-size: 0.7rem"><span>上海市</span><span>上海市</span><span>杨浦区</span><span>平凉路1500号沪东工人文化宫2楼407范在企业管理</span></div>
+            </div>
+            <div class="sl-flex-row-center-space-between sl-margin-02rem-0rem sl-border-top-2px-dashed-gray sl-padding-top-02rem" >
+                <div class="sl-flex-row-center-center">
+                    <!--<input type="radio" name="address" style="margin: 0rem;padding: 0rem;outline: 0px">-->
+                    <label class="am-radio " style="margin-bottom: 0rem;margin-top: .3rem;">
+                        <input type="radio" name="radio1" value="" data-am-ucheck>
+                        <span class="" style="font-size: 0.7rem">设为默认地址</span>
+                    </label>
+                    <!--<span class="sl-margin-left-02rem " style="font-size: 0.7rem">设为默认地址</span>-->
+                </div>
+                <div >
+                    <button class="sl-background-color-white sl-padding-02rem-08rem sl-border-1px-solid-D3D3D3 sl-margin-right-08rem edit">编辑</button>
+                    <button class="sl-background-color-white sl-padding-02rem-08rem sl-border-1px-solid-D3D3D3 del">删除</button>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+    <ul data-index="2" class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3 sl-margin-0rem-08rem-08rem-08rem sl-background-color-white sl-flex-row-center-center sl-padding-08rem sl-border-radius-08rem" >
+        <li style="width: 100%;">
+            <div class="sl-flex-row-center-space-between" >
+                <span class=" ">姓名3</span>
+                <div>17185160021</div>
+            </div>
+            <div class="sl-flex-row-center-space-between sl-margin-02rem-0rem" >
+                <div class=" " style="font-size: 0.7rem"><span>上海市</span><span>上海市</span><span>杨浦区</span><span>平凉路1500号沪东工人文化宫2楼407范在企业管理</span></div>
+            </div>
+            <div class="sl-flex-row-center-space-between sl-margin-02rem-0rem sl-border-top-2px-dashed-gray sl-padding-top-02rem" >
+                <div class="sl-flex-row-center-center">
+                    <!--<input type="radio" name="address" style="margin: 0rem;padding: 0rem;outline: 0px">-->
+                    <label class="am-radio " style="margin-bottom: 0rem;margin-top: .3rem;">
+                        <input type="radio" name="radio1" value="" data-am-ucheck>
+                        <span class="" style="font-size: 0.7rem">设为默认地址</span>
+                    </label>
+                    <!--<span class="sl-margin-left-02rem " style="font-size: 0.7rem">设为默认地址</span>-->
+                </div>
+                <div >
+                    <button class="sl-background-color-white sl-padding-02rem-08rem sl-border-1px-solid-D3D3D3 sl-margin-right-08rem edit">编辑</button>
+                    <button class="sl-background-color-white sl-padding-02rem-08rem sl-border-1px-solid-D3D3D3 del">删除</button>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+    <ul data-index="3" class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3 sl-margin-0rem-08rem-08rem-08rem sl-background-color-white sl-flex-row-center-center sl-padding-08rem sl-border-radius-08rem" >
+        <li style="width: 100%;">
+            <div class="sl-flex-row-center-space-between" >
+                <span class=" ">姓名4</span>
+                <div>17185160021</div>
+            </div>
+            <div class="sl-flex-row-center-space-between sl-margin-02rem-0rem" >
+                <div class=" " style="font-size: 0.7rem"><span>上海市</span><span>上海市</span><span>杨浦区</span><span>平凉路1500号沪东工人文化宫2楼407范在企业管理</span></div>
+            </div>
+            <div class="sl-flex-row-center-space-between sl-margin-02rem-0rem sl-border-top-2px-dashed-gray sl-padding-top-02rem" >
+                <div class="sl-flex-row-center-center">
+                    <!--<input type="radio" name="address" style="margin: 0rem;padding: 0rem;outline: 0px">-->
+                    <label class="am-radio " style="margin-bottom: 0rem;margin-top: .3rem;">
+                        <input type="radio" name="radio1" value="" data-am-ucheck>
+                        <span class="" style="font-size: 0.7rem">设为默认地址</span>
+                    </label>
+                    <!--<span class="sl-margin-left-02rem " style="font-size: 0.7rem">设为默认地址</span>-->
+                </div>
+                <div >
+                    <button class="sl-background-color-white sl-padding-02rem-08rem sl-border-1px-solid-D3D3D3 sl-margin-right-08rem edit">编辑</button>
+                    <button class="sl-background-color-white sl-padding-02rem-08rem sl-border-1px-solid-D3D3D3 del">删除</button>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+</div>
+<div id="bottomNav" class="sl-flex-row-center-space-between sl-width-percent100 sl-height-3rem sl-navbar">
+    <div class="sl-bottomNav sl-flex-row-center-center sl-height-percent100" >
+        <span>新增收货地址</span>
+    </div>
+</div>
+
+<div class="am-modal am-modal-confirm" tabindex="-1" id="my-confirm">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">提示</div>
+        <div class="am-modal-bd">
+            确定要删除此收货地址吗？
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
+            <span class="am-modal-btn" data-am-modal-confirm>确定</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+<script>
+    //全局变量
+    var rem = new Rem();
+    var num = 0;
+    var numKC = 0;
+
+//    $(function () {
+//        var h = $('#bottomNav').outerHeight();
+//        var flag = false
+//        var pf = navigator.platform;
+//        if((pf === 'Win32') == false){
+//            flag = true;
+//        }
+//        if(flag){
+//            $('#detailList').css({
+//                marginBottom: h+42,
+//            })
+//        }else{
+//            $('#detailList').css({
+//                marginBottom: h,
+//            })
+//        }
+//
+//    });
+
+    //排序
+    $('ul.am-dropdown-content li').click(function () {
+        $(this).addClass('am-active').siblings('li').removeClass('am-active');
+    });
+
+    //标题文字居中
+    $(function () {
+        rem.titleCenter();
+//        rem.bottomNavFixed($('#bottomNav'));
+        $('#bottomNav').prev().css('padding-bottom','.4rem');
+    });
+    //
+    function goBack() {
+        history.back();
+    }
+    var flag = false;
+    //删除地址
+    $('button.del').click(function () {
+        var $ul = $(this).parents('ul');
+        flag =  $ul.find('label').hasClass('am-nohover');
+        console.log($ul.find('label')[0]);
+        console.log("flag:"+flag);
+        $('#my-confirm').modal({
+            relatedTarget: this,//这个this代表的是$('button.del')
+            onConfirm: function(options) {
+                var $ul = $(this.relatedTarget).parents('ul');//这个this代表的是$('#my-confirm')对象
+                var $sibUl = $ul.siblings('ul');
+//                console.log($ul.data('index'));
+
+//                var c = $ul.find('span').css('color');
+//                console.log(c);
+//                if(flag){
+//                    console.log("aaaa");
+                    $sibUl.eq(0).find('label').trigger('click');
+//                }
+                $ul.remove();
+            },
+            onCancel: function() {
+            }
+        });
+//        rem.modalDialog();
+    });
+
+    //编辑地址
+    $('button.edit').click(function () {
+        var $li = $(this).parents('li');
+        var $d0 = $li.children('div:eq(0)').children();
+        var $d1 = $li.children('div:eq(1)').children();
+        var userName = $d0.eq(0).html();
+        var iphone = $d0.eq(1).html();
+        var province = $d1.find('span:eq(0)').html();
+        var city = $d1.find('span:eq(1)').html();
+        var area = $d1.find('span:eq(2)').html();
+        var address = province + ' ' + city + ' ' + area;
+        var detailAddress = $d1.find('span:eq(3)').html();
+        var arrKey = ['userName','iphone','address','detailAddress'];
+        var arrData = [userName, iphone, address, detailAddress];
+        for(var i = 0;i < arrKey.length; i++){
+            sessionStorage.setItem(arrKey[i],arrData[i]);
+        }
+        location.href = 'addAddress.html';
+    })
+    //新增地址
+    $('#bottomNav').click(function () {
+        location.href = 'addAddress.html';
+    })
+</script>

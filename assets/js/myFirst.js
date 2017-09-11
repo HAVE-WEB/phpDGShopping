@@ -148,7 +148,7 @@
             }
 
             var len = $('div.sl-alert').length;
-            if(this.orientation){
+            // if(this.orientation){
                 if(len){
                     $('div.sl-alert').remove();
                     $('body').append($alert);
@@ -169,28 +169,28 @@
                         top: screen.height/2-$('div.sl-alert').outerHeight()/2 - 42,
                     });
                 }
-            }else{
-                if(len){
-                    $('div.sl-alert').remove();
-                    $('body').append($alert);
-                    $('div.sl-alert').find('span').html(msg);
-                    $('div.sl-alert').show().css({
-                        position: 'fixed',
-                        zIndex: 20020,
-                        left: screen.height/2-$('div.sl-alert').outerWidth()/2,
-                        top: screen.width/2-$('div.sl-alert').outerHeight()/2 - 42,
-                    });
-                }else{
-                    $('body').append($alert);
-                    $('div.sl-alert').find('span').html(msg);
-                    $('div.sl-alert').show().css({
-                        position: 'fixed',
-                        zIndex: 10020,
-                        left: screen.height/2-$('div.sl-alert').outerWidth()/2,
-                        top: screen.width/2-$('div.sl-alert').outerHeight()/2 - 42,
-                    });
-                }
-            }
+            // }else{
+            //     if(len){
+            //         $('div.sl-alert').remove();
+            //         $('body').append($alert);
+            //         $('div.sl-alert').find('span').html(msg);
+            //         $('div.sl-alert').show().css({
+            //             position: 'fixed',
+            //             zIndex: 20020,
+            //             left: screen.height/2-$('div.sl-alert').outerWidth()/2,
+            //             top: screen.width/2-$('div.sl-alert').outerHeight()/2 - 42,
+            //         });
+            //     }else{
+            //         $('body').append($alert);
+            //         $('div.sl-alert').find('span').html(msg);
+            //         $('div.sl-alert').show().css({
+            //             position: 'fixed',
+            //             zIndex: 10020,
+            //             left: screen.height/2-$('div.sl-alert').outerWidth()/2,
+            //             top: screen.width/2-$('div.sl-alert').outerHeight()/2 - 42,
+            //         });
+            //     }
+            // }
 
             setTimeout(function () {
                 $('div.sl-alert').hide();

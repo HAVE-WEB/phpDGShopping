@@ -63,17 +63,16 @@
 <div style=";margin-top: 3rem;">
     <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}'  >
         <ul class="am-slides">
-            <li><img src="../assets/images/fruits/pg/0/slider/pg_1.jpg" /></li>
-            <li><img src="../assets/images/fruits/pg/0/slider/pg_2.jpg" /></li>
-            <li><img src="../assets/images/fruits/pg/0/slider/pg_3.jpg" /></li>
+            <li><img src="../assets/images/fruits/gng/0/slider/gng_1.jpg" /></li>
+            <li><img src="../assets/images/fruits/gng/0/slider/gng_2.jpg" /></li>
+            <li><img src="../assets/images/fruits/gng/0/slider/gng_3.jpg" /></li>
         </ul>
     </div>
 </div>
 <div style="padding: 0.3rem;color: #AEAEAE;" id="info">
-    <div class="am-text-truncate" style="color: black;">智利嘎啦果6个115g以上/个</div>
-    <!--<span style="color: black;font-size: 1.2rem"> Canon/佳能 EOS 80D套机(18-135mm)中<br>高端专业数码单反相机</span>-->
+    <div class="am-text-truncate" style="color: black;">吉林长白山菇娘果500g</div>
     <div class="sl-flex-row-center-space-between" style="font-size: 0.8rem;">
-        <div class="sl-flex-row-center-flex-start" style="margin-left: 0.4rem;width: 33%;text-align: left">
+        <div class="sl-flex-row-center-flex-start" style="margin-left: 0.4rem;width: 33%;;text-align: left">
             <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
             <span style="color: red;font-size: 1.4rem;">10</span>
             <span> &nbsp;积分</span>
@@ -93,7 +92,7 @@
             <span>库存: </span><b style="color: red;"></b>
         </div>
         <div class="sl-width-33percent-align-right">
-            <span>可兑换数: </span><b style="color: red;margin-right: 0.2rem;"></b>
+            <span>可兑换数: </span><b style="color: red;margin-right: 0.2rem;">0</b>
         </div>
     </div>
 </div>
@@ -108,25 +107,22 @@
 </div>
 <div class="sl-flex-column-center-center" id="detailList">
     <div class="">
-        <img src="../assets/images/fruits/pg/0/detail/pg_1.jpg" alt="" style="width: 100%;height: 100%;">
+        <img src="../assets/images/fruits/gng/0/detail/gng_1.jpg" alt="" style="width: 100%;height: 100%;">
     </div>
     <div class="">
-        <img src="../assets/images/fruits/pg/0/detail/pg_2.jpg" alt="" style="width: 100%;height: 100%;">
+        <img src="../assets/images/fruits/gng/0/detail/gng_2.jpg" alt="" style="width: 100%;height: 100%;">
     </div>
     <div class="">
-        <img src="../assets/images/fruits/pg/0/detail/pg_3.jpg" alt="" style="width: 100%;height: 100%;">
+        <img src="../assets/images/fruits/gng/0/detail/gng_3.jpg" alt="" style="width: 100%;height: 100%;">
     </div>
     <div class="">
-        <img src="../assets/images/fruits/pg/0/detail/pg_4.jpg" alt="" style="width: 100%;height: 100%;">
+        <img src="../assets/images/fruits/gng/0/detail/gng_4.jpg" alt="" style="width: 100%;height: 100%;">
     </div>
     <div class="">
-        <img src="../assets/images/fruits/pg/0/detail/pg_5.jpg" alt="" style="width: 100%;height: 100%;">
+        <img src="../assets/images/fruits/gng/0/detail/gng_5.jpg" alt="" style="width: 100%;height: 100%;">
     </div>
     <div class="">
-        <img src="../assets/images/fruits/pg/0/detail/pg_6.jpg" alt="" style="width: 100%;height: 100%;">
-    </div>
-    <div class="">
-        <img src="../assets/images/fruits/pg/0/detail/pg_7.jpg" alt="" style="width: 100%;height: 100%;">
+        <img src="../assets/images/fruits/gng/0/detail/gng_6.jpg" alt="" style="width: 100%;height: 100%;">
     </div>
 </div>
 
@@ -160,7 +156,6 @@
 <div id="grayTier" class="sl-width-percent100 sl-height-percent100"></div>
 <!--兑换成功灰色层-->
 <div id="successTier" class="sl-width-percent100 sl-height-percent100"></div>
-
 <div id="bottomNav" class="sl-flex-row-center-space-between sl-navbar sl-height-3rem sl-width-percent100">
     <div class="sl-flex-row-center-flex-start sl-height-percent100 sl-font-color-black sl-background-color-white sl-width-percent100 sl-width-percent70">
         <span class="sl-font-size-08rem sl-font-color-black sl-margin-left-08rem">花费的积分&nbsp;&nbsp;:</span><b class="sl-font-size-08rem sl-font-color-red sl-margin-left-08rem" >0</b>
@@ -187,7 +182,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="am-modal-footer">
             <span class="am-modal-btn" data-am-modal-cancel>取消</span>
@@ -200,23 +194,11 @@
 <script>
     //全局变量
     var rem = new Rem();
-//    alert("prototype_or:"+rem.or);
     var canBuy = 0;
     var KC = 0;
     var price= 0;
     var $needJF = $('#bottomNav').children('div:eq(0)').find('b');
     var wH = screen.height;
-
-//    var json = sessionStorage.getItem('prevRem');
-//    var jsonObj = JSON.parse(json);
-//    var prevRem = jsonObj.prevO;
-////    alert("prevRem"+prevRem.or);
-//    rem.or = prevRem.or;
-//    rem.titleCenter();
-
-//    var or = sessionStorage.getItem('or');
-//    rem.or = or;
-//    rem.titleCenter();
 
     //将列表页面上的数据移动到本页面
     $(function () {
@@ -227,20 +209,18 @@
        var $tr = $('#info');
        $tr.children().eq(1).find('span').eq(0).html(price);
        $tr.children().eq(2).children('div').eq(0).find('b').eq(0).html(yourJF);
-        $tr.children('div:eq(2)').children('div:eq(1)').find('b:eq(0)').html(KC);
 //       $tr.children().eq(2).children('div').eq(0).find('b').eq(1).html(KC);
-        $tr.children('div:eq(2)').children('div:eq(2)').find('b:eq(0)').html(canBuy);
+        $tr.children('div:eq(2)').children('div:eq(1)').find('b:eq(0)').html(KC);
+       $tr.children('div:eq(2)').children('div:eq(2)').find('b:eq(0)').html(canBuy);
     });
     //将商品信息隐藏
     $(function () {
-        var dH = $('#translate').outerHeight();
        $("#translate").css({
            position: 'fixed',
+           bottom: -$("#translate").outerHeight(),
            left: 0,
-           bottom: -dH,
            right: 0,
-           zIndex:10005,
-       })
+       }).css('z-index',10005)
     });
     //灰色一层
     $(function () {
@@ -249,14 +229,11 @@
             position: 'fixed',
             top: 0,
             left: 0,
-            bottom: 0,
-            right: 0,
             backgroundColor: '#A5A4A5',
             zIndex: 10002,
             display: 'none',
             opacity: 0.5
-
-        })
+        });
         $('#successTier').css({
             position: 'fixed',
             top: 0,
@@ -287,15 +264,18 @@
     function hideTied() {
         $('#grayTier').hide();
         $('#translate').animate({
-            bottom: -$('#translate').outerHeight()
+            bottom:-$("#translate").outerHeight(),
         },300);
     }
-    //
     $(function () {
         var h = $('#bottomNav').outerHeight();
         $('#detailList').css({
             marginBottom: h,
         })
+    });
+    //标题文字居中
+    $(function () {
+        rem.titleCenter();
     });
 
 
@@ -310,18 +290,19 @@
         $(this).addClass('am-active').siblings('li').removeClass('am-active');
     })
 
-
-//    失去焦点检查输入框中的值
-    var flag = true  ;
+//    时时刻刻检查输入框中的值
+    var flag =true;
     function checkVal(self) {
+        flag =true;
         var f = $(self).val();
         if(f === ''){
             $needJF.html(0);
             return;
         }
-        flag = true;
+
         var n = parseInt($(self).val());
-        console.log(f);
+        console.log(f)
+        console.log(f.indexOf('.') > 0);
         if(isNaN(n) || n <= 0  ){
             rem.alertInfoImgByState('请输入正整数',1)
             $(self).val('');
@@ -340,18 +321,16 @@
                 flag = false;
             }
         }
-        var needJF = parseInt($(self).val()) * price;
+        var needJF =parseInt($(self).val()) * price;
         if(flag){
+
             $needJF.html(needJF);
         }else{
             $needJF.html(0);
         }
-    console.log("flag:"+flag);
+
     }
     $("#bottomNav div:eq(1)").click(function () {
-        $(window).resize(function() {
-            $('.main').height(HEIGHT);
-        });
         var n = parseInt($.trim($("#inputNum").val()));
         if(isNaN(n)){
             $needJF.html(0);
@@ -364,16 +343,13 @@
         $('#my-prompt').modal({
             relatedTarget: this,
             onConfirm: function(e) {
-                $("#inputNum").trigger('onblur');
                 if(flag){
                     var v = $.trim(e.data);
-                    console.log("v："+v);
-//                var tempNum =parseInt($.trim(e.data)) ;
                     if(v === ''){
                         rem.alertInfoImgByState('兑换失败',1)
                     }else{
                         $('#successTier').show();
-                        rem.alertInfoImgByState('兑换成功',0)
+                        rem.alertInfoImgByState('兑换成功',0);
                         setTimeout(function () {
                             $('#successTier').hide();
                         },2000);
@@ -382,13 +358,13 @@
                 }else{
                     rem.alertInfoImgByState('兑换失败',1)
                 }
-
             },
             onCancel: function(e) {
                 $needJF.html(0);
             }
         });
-    })
+//        rem.amDialog();
+    });
     //点击减按钮
     $("#minus").click(function () {
         var $input=  $(this).next().find('input');
@@ -438,33 +414,7 @@
     });
 //    $('.am-modal').css('di')
     function goBack() {
-
-
-//        href.location = 'commodity.html';
-//        var tempRem = sessionStorage.getItem('prevRem');
-//        console.log("type:"+typeof tempRem+",val:"+tempRem);
-//        console.log(tempRem);
-////       new Rem()tempRem
-//        console.log(tempRem.orientation);
-//        prevRem.orientation = rem.orientation;
-//        alert("goBack_apple");
-//        alert("prevRem.orientation:"+prevRem.orientation);
-//        sessionStorage.setItem('or',rem.orientation);
         history.back();
     }
-    window.addEventListener('orientationchange', function(event){
-        if ( window.orientation == 180 || window.orientation == 0) {
-//            alert("window竖屏")
-            rem.or = 'true';//true代表竖屏
-            sessionStorage.setItem('or','true');
-            rem.titleCenter();
-        }
-        if( window.orientation == 90 || window.orientation == -90) {
-//            alert("window横屏")
-            rem.or = 'false';//false代表横屏
-            sessionStorage.setItem('or','false');
-            rem.titleCenter();
-        }
-    });
 
 </script>
