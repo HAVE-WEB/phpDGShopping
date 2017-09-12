@@ -49,53 +49,66 @@
                 $(":submit").css("font-size","1rem");
                 $(":button").css("font-size","1rem");
             },
+        // titleCenter: function () {
+        //     // console.log($("body").find('div').hasClass('top-div'))
+        //
+        //     if($("body").find('div').hasClass('top-div')){
+        //         var $i = $(".top-div").find('img');//i图标对象
+        //         var $div = $('.top-div .title');//标题对象
+        //         var leftI = $i.offset().left;
+        //         var wI = $i.outerWidth();
+        //         var wDiv = $div.outerWidth();
+        //         var wWindow = 0;
+        //         // var o =;
+        //         // console.log(this.prototype.or);
+        //         // console.log(Rem.prototype.or);
+        //         // console.log(this.or);
+        //         // console.log(this.or === 'true');
+        //         // console.log("b:"+this.or === 'true'+"val:"+this.or);
+        //         if(this.or === 'true'){
+        //             wWindow = screen.width;
+        //         }else{
+        //             wWindow = screen.height;
+        //         }
+        //         // if(this.orientation){
+        //         //     // alert("类型"+typeof this.orientation+"竖屏:"+this.orientation);
+        //         //     wWindow = screen.width;//屏幕宽度
+        //         // }else{
+        //         //     // alert("类型"+typeof this.orientation+"横屏:"+this.orientation);
+        //         //     // alert("横屏:"+this.orientation);
+        //         //     wWindow = screen.height;//屏幕宽度
+        //         // }
+        //         var marginLeft = wWindow/2-leftI-wI-wDiv/2;
+        //         if($div){
+        //             $div.css('margin-left',marginLeft);
+        //         }
+        //     }
+        //
+        //
+        // },
         titleCenter: function () {
-            // console.log($("body").find('div').hasClass('top-div'))
-
-            if($("body").find('div').hasClass('top-div')){
-                var $i = $(".top-div").find('img');//i图标对象
-                var $div = $('.top-div .title');//标题对象
-                var leftI = $i.offset().left;
-                var wI = $i.outerWidth();
-                var wDiv = $div.outerWidth();
-                var wWindow = 0;
-                // var o =;
-                // console.log(this.prototype.or);
-                // console.log(Rem.prototype.or);
-                // console.log(this.or);
-                // console.log(this.or === 'true');
-                // console.log("b:"+this.or === 'true'+"val:"+this.or);
-                if(this.or === 'true'){
-                    wWindow = screen.width;
-                }else{
-                    wWindow = screen.height;
-                }
-                // if(this.orientation){
-                //     // alert("类型"+typeof this.orientation+"竖屏:"+this.orientation);
-                //     wWindow = screen.width;//屏幕宽度
-                // }else{
-                //     // alert("类型"+typeof this.orientation+"横屏:"+this.orientation);
-                //     // alert("横屏:"+this.orientation);
-                //     wWindow = screen.height;//屏幕宽度
-                // }
-                var marginLeft = wWindow/2-leftI-wI-wDiv/2;
-                if($div){
-                    $div.css('margin-left',marginLeft);
-                }
+            var $div = $('.top-div .title');//标题对象
+            var $img = $('.top-div img');
+            if($div){
+                $div.css({
+                    position: 'absolute',
+                    width: '100%',
+                    textAlign: 'center',
+                    zIndex: '100'
+                });
+            }
+            if($img){
+                $img.css({
+                    position: 'absolute',
+                    // width: '100%',
+                    // textAlign: 'center',
+                    zIndex: '101',
+                    left: '.4rem'
+                });
             }
 
-
         },
-        // titleCenterLandScape: function () {
-        //     var wWindow = screen.height;//屏幕宽度
-        //     var $i = $(".top-div").find('img');//i图标对象
-        //     var $div = $('.top-div .title');//标题对象
-        //     var leftI = $i.offset().left;
-        //     var wI = $i.outerWidth();
-        //     var wDiv = $div.outerWidth();
-        //     var marginLeft = wWindow/2-leftI-wI-wDiv/2;
-        //     $div.css('margin-left',marginLeft);
-        // },
+
         weiXinBrowers: function () {//对于微信内置浏览器，得剪掉上面导航栏的高度
             $("div.sl-navbar").css({
                     position: 'fixed',

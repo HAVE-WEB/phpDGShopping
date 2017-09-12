@@ -57,7 +57,7 @@
 </head>
 <body>
 <div class="top-div sl-width-percent100 sl-position-fixed sl-top-0rem sl-left-0rem sl-z-Index-10001">
-    <div class="sl-flex-row-center-flex-start sl-background-color-red sl-height-3rem sl-padding-left-08rem" >
+    <div class="sl-flex-row-center-flex-start sl-background-color-red sl-height-3rem" >
         <img src="../assets/images/back.png" class="sl-width-1dot5rem sl-height-1dot5rem"  onclick="goBack()">
         <div class="title sl-font-color-white">福利清单</div>
     </div>
@@ -521,16 +521,16 @@
 <script>
     //全局变量
     var rem = new Rem();
-    console.log(rem.or);
-    var or = sessionStorage.getItem('or');
-    alert("or:"+or);
-    if(or == null){
-        rem.or = 'true';
-        rem.titleCenter();
-    }else{
-        rem.or = or;
-        rem.titleCenter();
-    }
+//    console.log(rem.or);
+//    var or = sessionStorage.getItem('or');
+////    alert("or:"+or);
+//    if(or == null){
+//        rem.or = 'true';
+//        rem.titleCenter();
+//    }else{
+//        rem.or = or;
+//        rem.titleCenter();
+//    }
 
 //    alert("rem_1："+typeof rem);
 //    alert("rem_2："+rem.orientation);
