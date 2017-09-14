@@ -132,6 +132,9 @@ button{
 .sl-margin-top-06rem{
     margin-top: .6rem;
 }
+.sl-margin-top-1rem{
+    margin-top: 1rem;
+}
 .sl-margin-top-08rem{
     margin-top: .8rem;
 }
@@ -187,7 +190,13 @@ button{
     padding-bottom: 1rem;
 }
 .sl-padding-05rem{
-    padding: .5rem;
+     padding: .5rem;
+ }
+.sl-padding-bottom-49px{
+    padding-bottom: 49px;
+}
+.sl-padding-0rem{
+    padding: 0rem;
 }
 .sl-border-radius-08rem-08rem-0rem-0rem{
      border-radius: .5rem .5rem 0rem 0rem;
@@ -238,6 +247,15 @@ button{
 }
 .sl-margin-bottom-3rem{
     margin-bottom: 3rem;
+}
+.sl-margin-bottom-49px{
+     margin-bottom: 49px;
+ }
+.sl-margin-bottom-4rem{
+    margin-bottom: 5rem;
+}
+.sl-margin-bottom-0px{
+    margin-bottom: 0px;
 }
 .sl-background-color-white{
     background-color: #FFFFFF;
@@ -335,6 +353,9 @@ button{
 .sl-padding-top-10px{
     padding-top: 10px;
 }
+.sl-padding-top-1rem{
+    padding-top: 1rem;
+}
 .sl-padding-right-10px{
     padding-right: 10px;
 }
@@ -423,6 +444,9 @@ background-color: #F9F9FA;
 .sl-background-color-FFCC00{
     background-color: #FFCC00;
 }
+.sl-background-color-F4F5F7{
+    background-color: #F4F5F7;
+}
 .sl-background-color-FFCCCC{
     background-color: #FFCCCC;
 }
@@ -456,8 +480,9 @@ background-color: #F9F9FA;
     padding: .2rem;
 }
 .sl-margin-05rem{
-    padding:0.5rem 0rem;
+    margin:0.5rem;
 }
+
 .sl-header{
     color: red;
     margin-left: 0.6rem;
@@ -542,15 +567,52 @@ background-color: #F9F9FA;
 .sl-position-fixed{
     position: fixed;
 }
+.sl-position-absolute{
+    position: absolute;
+}
+.sl-position-relative{
+    position: relative;
+}
 .sl-top-0rem{
     top: 0rem;
 }
+.sl-top-3rem{
+    top: 3rem;
+}
+.sl-right-0rem{
+    right: 0rem;
+}
 .sl-bottom-0rem{
     bottom:0rem;
+}
+.sl-bottom-49px{
+    bottom: 49px;
 }
 .sl-left-0rem{
     left: 0rem;
 }
 .sl-z-Index-10001{
     z-index: 10001;
+}
+.sl-z-Index-10002{
+    z-index: 10002;
+}
+.sl-z-Index-10003{
+    z-index: 10003;
+}
+.sl-z-Index-10004{
+    z-index: 10004;
+}
+.sl-z-Index-101{
+    z-index: 101;
+}
+.sl-z-Index-102{
+    z-index: 102;
+}
+.sl-z-Index-103{
+    z-index: 103;
+}
+.am-list > li{
+    text-align: center;
+    border-width: 1px 1px 1px 0px ;
 }

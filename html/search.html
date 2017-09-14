@@ -1,0 +1,685 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>首页</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- Amaze UI CSS -->
+    <link rel="stylesheet" href="../assets/css/amazeui.css">
+    <link rel="stylesheet" href="../assets/css/sl.css">
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/amazeui.js"></script>
+    <script src="../assets/js/myFirst.js"></script>
+    <style>
+        /*div.am-tabs-bd button{*/
+            /*!*border: 6px solid red;*!*/
+            /*padding: 0.2rem 0.6rem;*/
+            /*color: white;*/
+            /*background-color: red;*/
+            /*!*-webkit-border-radius: 2px;*!*/
+            /*!*-moz-border-radius: 2px;*!*/
+            /*!*border-radius: 0.8rem;*!*/
+        /*}*/
+
+        /*::-webkit-scrollbar{*/
+            /*width: 0.1rem;*/
+        /*}*/
+        /*定义滚动条宽高及背景，宽高分别对应横竖滚动条的尺寸*/
+       ::-webkit-scrollbar{
+            width: 5px;
+            height: 5px;
+            background-color: #f5f5f5;
+        }
+        /*定义滚动条的轨道，内阴影及圆角*/
+        ::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            border-radius: 10px;
+            background-color: #f5f5f5;
+        }
+        /*定义滑块，内阴影及圆角*/
+        ::-webkit-scrollbar-thumb{
+            /*width: 10px;*/
+            height: 20px;
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #555;
+        }
+    </style>
+
+</head>
+<body class="sl-background-color-F4F5F7">
+
+<div class="top-div sl-width-percent100 sl-position-fixed sl-top-0rem sl-left-0rem sl-z-Index-10001">
+    <div class="sl-flex-row-center-flex-start sl-background-color-red sl-height-3rem" >
+        <!--<img src="../assets/images/back.png" class="sl-width-1dot5rem sl-height-1dot5rem"  onclick="goBack()">-->
+        <div class="title sl-font-color-white">搜索页面</div>
+    </div>
+</div>
+<!--<div class=" sl-width-percent100 sl-height-percent100 sl-padding-bottom-49px sl-margin-top-3rem">-->
+    <div class="am-g  sl-width-percent100 sl-height-percent100 sl-position-absolute sl-left-0rem sl-right-0rem sl-top-3rem sl-bottom-49px ">
+        <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-position-relative sl-padding-0rem" style="overflow:auto;" id="typeList">
+            <ul class="am-list" style="margin-bottom: 49px" >
+                <li data-index="0" style="background-color: #F4F5F7;border-right: 0px;"><a href="#">手镯1</a></li>
+                <li data-index="1"><a href="#">饰品</a></li>
+                <li data-index="2"><a href="#">蛋面裸石</a></li>
+                <li data-index="3"><a href="#">杂项</a></li>
+                <li data-index="4"><a href="#">新品</a></li>
+                <li data-index="5"><a href="#">张炳光</a></li>
+                <li data-index="6"><a href="#">名家作品</a></li>
+                <li data-index="7"><a href="#">超值推荐</a></li>
+                <li data-index="8"><a href="#">收藏臻品</a></li>
+                <li data-index="9"><a href="#">活动专场</a></li>
+                <li data-index="10"><a href="#">石料</a></li>
+                <li data-index="11"><a href="#">饰品</a></li>
+                <li data-index="12"><a href="#">蛋面裸石</a></li>
+                <li data-index="13"><a href="#">杂项</a></li>
+                <li data-index="14"><a href="#">新品</a></li>
+                <li data-index="15"><a href="#">张炳光</a></li>
+                <li data-index="16"><a href="#">名家作品</a></li>
+                <li data-index="17"><a href="#">超值推荐</a></li>
+                <li data-index="18"><a href="#">收藏臻品</a></li>
+                <li data-index="19"><a href="#">活动专场3</a></li>
+                <li data-index="20"><a href="#">石料2</a></li>
+            </ul>
+        </div>
+        <div class="am-u-sm-9 am-u-md-9 am-u-lg-9 sl-position-relative sl-padding-top-1rem" style="overflow:auto" id="rightList">
+            <div class="sl-flex-column-flex-start-center sl-position-relative sl-display-block">
+                <div class="sl-height-6rem sl-width-percent100">
+                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                </div>
+                <div class="sl-flex-row-center-space-between sl-width-percent100 sl-margin-02rem-0rem">
+                    <span>热门分类</span>
+                </div>
+                <div class="sl-background-color-white ">
+                    <ul class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3">
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">和田玉</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">和田玉</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">和田玉</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">和田玉</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">和田玉</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">和田玉</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="sl-flex-column-flex-start-center sl-position-relative sl-display-none">
+                <div class="sl-height-6rem sl-width-percent100">
+                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                </div>
+                <div class="sl-flex-row-center-space-between sl-width-percent100 sl-margin-02rem-0rem">
+                    <span>热门分类</span>
+                </div>
+                <div class="sl-background-color-white ">
+                    <ul class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3">
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li> <li class="sl-flex-column-center-center sl-padding-05rem">
+                        <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                        <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                    </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">饰品</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="sl-flex-column-flex-start-center sl-position-relative sl-display-none">
+                <div class="sl-height-6rem sl-width-percent100">
+                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                </div>
+                <div class="sl-flex-row-center-space-between sl-width-percent100 sl-margin-02rem-0rem">
+                    <span>热门分类</span>
+                </div>
+                <div class="sl-background-color-white ">
+                    <ul class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3">
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">蛋面裸石</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">蛋面裸石</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">蛋面裸石</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">蛋面裸石</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">蛋面裸石</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">蛋面裸石</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="sl-flex-column-flex-start-center sl-position-relative sl-display-none">
+                <div class="sl-height-6rem sl-width-percent100">
+                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                </div>
+                <div class="sl-flex-row-center-space-between sl-width-percent100 sl-margin-02rem-0rem">
+                    <span>热门分类</span>
+                </div>
+                <div class="sl-background-color-white ">
+                    <ul class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3">
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">杂项</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">杂项</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">杂项</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">杂项</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">杂项</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">杂项</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="sl-flex-column-flex-start-center sl-position-relative sl-display-none">
+                <div class="sl-height-6rem sl-width-percent100">
+                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                </div>
+                <div class="sl-flex-row-center-space-between sl-width-percent100 sl-margin-02rem-0rem">
+                    <span>热门分类</span>
+                </div>
+                <div class="sl-background-color-white ">
+                    <ul class="am-avg-sm-3 am-avg-md-3 am-avg-lg-3">
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">和田玉1</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">和田玉1</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">和田玉1</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">和田玉1</div>
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <div class="sl-width-percent100 sl-height-percent100">
+                                <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                                <div class="sl-width-percent100 " style="text-align: center">和田玉1</div>
+                            </div>
+
+                        </li>
+                        <li class="sl-flex-column-center-center sl-padding-05rem">
+                            <img class="sl-width-percent100 sl-height-percent100" src="../assets/images/手镯/gy.jpg" />
+                            <div class="sl-width-percent100 " style="text-align: center">和田玉1</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<!--</div>-->
+<div class="sl-flex-row-center-space-around sl-padding-15px-0px-5px-0px"  style="position: fixed;z-index: 1001;top: 80%;left: 80%;display: none" id="up">
+   <div class="sl-flex-column-center-center sl-background-color-F1F1F1 "  style="height: 3rem ; width: 3rem;padding: 0.3rem;">
+       <img src="../assets/images/backTop.png" alt="" style="max-height: 100%;max-width: 100%;">
+   </div>
+</div>
+
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default sl-navbar" style="border-top: 2px solid #E5E5E5;">
+    <ul class=" am-navbar-nav am-cf am-avg-sm-4 ">
+        <li >
+            <a href="home.html" class="">
+                <img src="../assets/images/bottomNav/首页.png" alt="">
+                <span class="am-navbar-label  sl-icon-color-6D6D6D">首页</span>
+            </a>
+        </li>
+        <li >
+            <a href="#" class="">
+                <img src="../assets/images/bottomNavClick/搜索.png" alt="">
+                <span class="am-navbar-label sl-color-red ">搜索</span>
+            </a>
+        </li>
+        <li>
+            <a href="shoppingCart.html" class="">
+                <img src="../assets/images/bottomNav/购物车.png" alt="">
+                <span class="am-navbar-label sl-icon-color-6D6D6D">购物车</span>
+            </a>
+        </li>
+        <li >
+            <a href="my.html" class="">
+                <img src="../assets/images/bottomNav/我的.png" alt="">
+                <span class="am-navbar-label sl-icon-color-6D6D6D">我的</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>
+<script>
+    //全局变量
+    var rem = new Rem();
+    var num = 0;
+    var numKC = 0;
+    var $prevLeftLi = $('ul.am-list li:first');
+    var $prevRightDiv = $("#rightList").children('div:eq(0)');
+    $(function () {
+        var p = $('html').css('font-size');
+        p = p.substring(0,2);
+        $('#typeList').css('height',screen.height- 3 * parseInt(p) -49);
+        $('#rightList').css({
+            height:(screen.height- 3 * parseInt(p) -49)+'px',
+            paddingBottom: (parseInt(p) + 49)+'px',
+        });
+    });
+    //点击左边不同的标签，右边显示不同的div
+    $('ul.am-list li').click(function () {
+        if($prevLeftLi.data('index') != $(this).data('index')){
+            $(this).css({
+                backgroundColor: '#F4F5F7',
+                borderRight: '0px'
+            });
+            $prevLeftLi.css({
+                backgroundColor: '#ffffff',
+                borderRight: '1px solid #dedede'
+            })
+            var index = $(this).data('index');
+            $prevRightDiv.removeClass('sl-display-block').addClass('sl-display-none');
+            $("#rightList").children('div:eq('+index+')').removeClass('sl-display-none').addClass('sl-display-block');
+
+            $prevLeftLi = $(this);
+            $prevRightDiv = $("#rightList").children('div:eq('+index+')')
+        }
+
+    });
+
+
+
+    //回顶部
+    $("#up").click(function () {
+        $('html, body').animate({scrollTop: 0}, '500');
+    })
+
+    //排序
+    $('ul.am-dropdown-content li').click(function () {
+        $(this).addClass('am-active').siblings('li').removeClass('am-active');
+    })
+
+    //点击兑换按钮
+    $(function () {
+        $('button').on('click', function () {
+            var  price= $(this).parent().parent().prev().find('span:eq(0)').html();
+            numKC =  $(this).parent().parent().prev().find('b').html();
+           var $tr = $('table:eq(0) tr');
+            $tr.eq(1).children('td').eq(1).html(price);//将商品价格放入到td中
+            var yourJF = parseInt($tr.eq(0).children('td').eq(1).html());//你的所有积分
+            num = parseInt(yourJF / price);
+            $tr.eq(2).children('td').eq(1).find('b').html(numKC);//你的积分可以购买的个数
+            $tr.eq(3).children('td').eq(1).find('b').html(num)//库存
+            if(num > numKC){
+                $tr.eq(4).children('td').eq(1).find('input').attr('max',numKC);
+            } else {
+                $tr.eq(4).children('td').eq(1).find('input').attr('max',num);
+            }
+
+            $('#my-prompt').modal({
+                relatedTarget: this,
+                onConfirm: function(e) {
+                    var tempNum =parseInt($.trim(e.data[0])) ;
+                    var tempNum1 =parseInt($.trim(e.data[1])) ;
+//                    console.log("f:"+tempNum+'.s:'+tempNum1);
+                    if(isNaN(tempNum)){//先判断是不是数字
+                        rem.alertInfoByState('兑换失败',1)
+                    }else{
+                        rem.alertInfoByState('兑换成功',0)
+                    }
+                },
+                onCancel: function(e) {
+                }
+            });
+        })
+    });
+    //时时刻刻检查输入框中的值
+    function checkVal(self) {
+        var flag = false;
+        var f = $(self).val();
+        if(f.indexOf('.') > 0){
+            flag = true;
+        }
+        var n = parseInt($(self).val());
+        if(isNaN(n) || n <= 0  ||flag){
+            $(self).val('');
+            rem.alertInfoByState('请输入正整数',1)
+        }
+        if(num > numKC){
+            if( n > numKC ){
+                $(self).val('');
+                rem.alertInfoByState('库存不足',1)
+            }
+        }else{
+            if( n > num ){
+                $(self).val('');
+                rem.alertInfoByState('积分不足',1)
+            }
+        }
+
+    }
+
+    //点击商品列表
+    $("#list li").mousedown(function (e) {
+        var cX = e.pageX;//鼠标对象相对于文档对象的左边缘的位置
+
+        var cY = e.pageY;//鼠标对象相对于文档对象的顶部边缘的位置
+        var $b = $(this).find('button')
+        var bW = $b.outerWidth();
+        var bH = $b.outerHeight();
+        var bX = $b.offset().left;//元素对象相对于文档对象的左边缘的位置
+        var bY = $b.offset().top;//元素对象相对于文档对象的顶部边缘的位置
+
+        if(cX >= bX && cX <= bX + bW && cY >= bY && cY <= bY + bH){
+
+        }else{
+
+            //图片信息
+//            var $img = $(this).children('div').children('div:eq(0)').find('img');
+//            var s = $img.attr('src');
+//            console.log('src:'+s)
+//            var i = s.lastIndexOf('.');
+//            console.log("I:"+i);
+
+            //积分信息
+            var  price= $(this).find('div.data-JF-KC').find('span:eq(0)').html();
+            var KC =  $(this).find('div.data-JF-KC').find('b').html();
+            var yourJF = 300;
+            console.log("P:"+price+"KC:"+KC);
+            sessionStorage.setItem('yourJF',yourJF);
+            sessionStorage.setItem('price',price);
+            sessionStorage.setItem('KC',KC);
+            var t = $(this).data('fruitType');
+            console.log("t:"+t);
+            console.log(typeof t);
+            if(t === 0){
+                location.href = 'apple.html'
+            }else if(t === 1){
+                location.href = 'girlFruit.html'
+            }
+//            location.href = 'commodityDetail.html'
+        }
+//        console.log("cx:"+cX+",cy:"+cY+',bx:'+bX+',by:'+bY+',bw:'+bW+",bh:"+bH);
+//            $(this)
+//        location.href = 'commodityDetail.html'
+    });
+//    $(document).mousedown(function (e) {
+////        $(this)
+////        location.href = 'commodityDetail.html'
+//        alert('x'+e.clientX+',y:'+e.clientY)
+//        alert('sx'+e.screenX+',sy:'+e.screenY)
+//    });
+
+    //标题文字居中
+    $(function () {
+        rem.titleCenter();
+    });
+    //
+    function goBack() {
+        history.back();
+    }
+
+</script>
