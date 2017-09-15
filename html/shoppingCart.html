@@ -1,4 +1,4 @@
-t<!doctype html>
+<!doctype html>
 <html class="no-js">
 <head>
     <meta charset="utf-8">
@@ -6,7 +6,7 @@ t<!doctype html>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>购物车7</title>
+    <title>购物车</title>
 
     <!-- Set render engine for 360 browser -->
     <meta name="renderer" content="webkit">
@@ -36,6 +36,13 @@ t<!doctype html>
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/amazeui.js"></script>
     <script src="../assets/js/myFirst.js"></script>
+
+    <link rel="stylesheet" href="../assets/css/mui.min.css">
+    <!--App自定义的css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/app.css" />
+    <script src="../assets/js/mui.min.js"></script>
+
+
     <style>
         /*div.am-tabs-bd button{*/
             /*!*border: 6px solid red;*!*/
@@ -54,149 +61,217 @@ t<!doctype html>
     </style>
 
 </head>
-<body>
+<body style="background-color: #F4F4F4">
 <div class="top-div" style="width: 100%;position:fixed;top: 0px;left: 0px;z-index: 10001">
-    <div class="sl-flex-row-center-flex-start " style="background-color: red;height: 3rem;padding-left: 0.8rem;">
-        <img src="../assets/images/back.png" alt="" style="width: 1.5rem;height: 1.5rem;" onclick="goBack()">
-        <div style="color: white;" class="title">福利清单</div>
+    <div class="sl-flex-row-center-center " style="background-color: red;height: 3rem;">
+        <!--<img src="../assets/images/back.png" alt="" style="width: 1.5rem;height: 1.5rem;" onclick="goBack()">-->
+        <div style="color: white;" class="title">购物车</div>
+    </div>
+    <div class="sl-width-percent100  sl-flex-row-center-flex-end sl-height-3rem sl-position-absolute sl-top-0rem sl-left-0rem sl-font-color-white">
+        <span class="sl-margin-right-08rem">编辑</span>
+        <span class="sl-display-none">完成</span>
     </div>
 </div>
-<div style="margin-top: 3.2rem;">
-    <ul class="am-avg-sm-2" style="background-color: white;" id="list">
-        <li data-fruit-type="0">
-            <div class="sl-margin-04rem-04rem-04rem-08rem sl-border-1px-solid-D3D3D3">
-                <div class="sl-background-color-F6F6F6 sl-flex-row-center-center sl-padding-1rem">
-                    <img src="../assets/images/fruits/pg/0/slider/pg_2.jpg" alt="" style="width: 100%;height: 100%;">
-                </div>
-                <div class="sl-border">
-                    <div class="am-text-truncate">智利嘎啦果6个115g以上/个</div>
-                    <div class="sl-flex-row-center-space-between data-JF-KC">
+<div class="mui-content sl-margin-top-3rem">
+    <form action="" class="mui-input-group">
+        <ul id="OA_task_2" class="mui-table-view">
+            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
+                <div class="mui-slider-handle">
+                    <div class="mui-table-cell sl-flex-row-center-space-between" style="display: flex;">
                         <div class="sl-flex-row-center-flex-start">
-                            <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
-                            <span style="color: red;">120</span>
-                            <span> &nbsp;积分</span>
+                            <div class="sl-flex-column-center-center">
+                                <div class="mui-checkbox mui-left">
+                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
+                                </div>
+                            </div>
+                            <div class="sl-margin-left-1dot1rem">
+                                <div>ehc旗舰店</div>
+                            </div>
                         </div>
-                        <div>
-                            <span>库存:</span><b style="color: red;">100</b>
-                        </div>
-                    </div>
-                    <div class="sl-flex-row-center-space-between">
-                        <div style="font-size: .6rem;">
-                            <span>由</span><b style="color: #44b549;">易批购商城</b><span>提供</span>
-                        </div>
-                        <div>
-                            <button class="ls-button">兑换</button>
+                        <div >
+                            <div class="sl-flex-row-center-flex-end sl-font-color-BAB9BA">
+                                <span>领券</span>
+                                <div style="width: 1px;height: 1rem;" class="sl-background-color-BAB9BA sl-margin-0rem-04rem"></div>
+                                <span >编辑</span>
+                                <span class="hidden sl-display-none" >完成</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </li>
-        <li data-fruit-type="1">
-            <div class="sl-margin-04rem-08rem-04rem-04rem sl-border-1px-solid-D3D3D3">
-                <div class="sl-background-color-F6F6F6 sl-flex-row-center-center sl-padding-1rem">
-                    <img src="../assets/images/fruits/gng/0/slider/gng_2.jpg" alt="" style="width: 100%;height: 100%;">
+            </li>
+            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
+                    <a class="mui-btn mui-btn-red"  style="padding: 0rem 0.4rem;background-color: #FE0034;">删除</a>
                 </div>
-                <div class="sl-border">
-                    <div class="am-text-truncate">吉林长白山菇娘果500g</div>
-                    <div class="sl-flex-row-center-space-between data-JF-KC">
+                <div class="mui-slider-handle">
+                    <div class="mui-table-cell sl-flex-row-flex-start-space-between" style="display: flex;">
                         <div class="sl-flex-row-center-flex-start">
-                            <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
-                            <span style="color: red;">150</span>
-                            <span> &nbsp;积分</span>
+                            <div class="sl-flex-column-center-center">
+                                <div class="mui-checkbox mui-left">
+                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
+                                </div>
+                            </div>
+                            <div class="sl-flex-row-flex-start-space-between nameHeight">
+                                <div class="sl-width-6rem sl-height-6rem sl-margin-left-1dot1rem">
+                                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                                </div>
+                                <div class="sl-margin-left-1dot1rem ">
+                                    <span class="nameWidth">德国小钢炮无线蓝牙音箱</span>
+                                    <div>
+                                        <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
+                                    </div>
+                                    <div style="font-size: .5rem" class="sl-font-color-gray">
+                                        <span>官方标配:黑色</span>
+                                    </div>
+                                </div>
+                                <div class="sl-margin-left-1dot1rem sl-display-none">
+                                    <div class="sl-flex-row-flex-end-flex-end">
+                                        <div style="margin-right: 0.4rem;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F9F9FA" id="minus">
+                                            <img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                        <div style="" class="sl-width-2rem sl-height-2rem">
+                                            <input type="number" onblur="checkVal(this)" id="inputNum" value="1" id="valInput" class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;font-weight: bold;">
+                                        </div>
+                                        <div style="margin-left: 0.4rem" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F4F4F4" id="add">
+                                            <img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <span>库存:</span><b style="color: red;">60</b>
+
+
+                        <div >
+                           <div class="sl-flex-row-center-flex-end">
+                               <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                               <span  class="sl-margin-left-02rem">21.9</span>
+                           </div>
+                            <div class="sl-flex-row-center-flex-end">
+                                <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
+                                <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sl-flex-row-center-space-between">
-                        <div style="font-size: .6rem;">
-                            <span>由</span><b style="color: #44b549;">易批购商城</b><span>提供</span>
-                        </div>
-                        <div>
-                            <button class="ls-button">兑换</button>
-                        </div>
+
                     </div>
                 </div>
-            </div>
-        </li>
-    </ul>
-</div>
-<div class="am-modal am-modal-prompt" tabindex="-1" id="my-prompt">
-    <div class="am-modal-dialog">
-        <div class="am-modal-hd" style="border-bottom: 1px solid #CACACA;">兑换信息</div>
-        <div class="sl-flex-column-flex-start-center">
-            <header class="sl-header">兑换方式：积分兑换</header>
-            <div class="am-modal-bd ">
-                <table>
-                    <tr>
-                        <td style="width: 40%;">您的积分</td>
-                        <td style="width: 30%;">300</td>
-                        <td style="width: 30%;">积分</td>
-                    </tr>
-                    <tr>
-                        <td>兑换价格</td>
-                        <td></td>
-                        <td>积分</td>
-                    </tr>
-                    <tr>
-                        <td>库存</td>
-                        <td style="color: red;"><b></b></td>
-                        <td>个</td>
-                    </tr>
-                    <tr>
-                        <td>可兑换数</td>
-                        <td style="color: red;"><b></b></td>
-                        <td>个</td>
-                    </tr>
-                    <tr>
-                        <td>数量</td>
-                        <td colspan="2"><input type="number" oninput="checkVal(this)" class="am-modal-prompt-input"></td>
-                    </tr>
-                </table>
-            </div>
-            <header class="sl-header">兑换方式：兑换码兑换</header>
-            <div class="am-modal-bd" style="width: 100%;">
-                <table style="width: 100%;">
-                    <tr>
-                        <td style="width: 40%;"></td>
-                        <td style="width: 30%;"></td>
-                        <td style="width: 30%;"></td>
-                    </tr>
-                    <tr>
-                        <td >兑换码</td>
-                        <td colspan="2"><input type="number" class="am-modal-prompt-input" ></td>
-                    </tr>
-                </table>
-            </div>
-            <header class="sl-header">兑换方式：二维码兑换</header>
-            <div class="am-modal-bd" style="width: 100%;">
-                <table style="width: 100%;">
-                    <tr>
-                        <td style="width: 40%;"></td>
-                        <td style="width: 30%;"></td>
-                        <td style="width: 30%;"></td>
-                    </tr>
-                    <tr>
-                        <td >兑换码</td>
-                        <td colspan="2"><input type="number" class="am-modal-prompt-input" ></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-        <div class="am-modal-footer">
-            <span class="am-modal-btn" data-am-modal-cancel>取消</span>
-            <span class="am-modal-btn" data-am-modal-confirm>提交</span>
-        </div>
-    </div>
+            </li>
+            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
+                    <a class="mui-btn mui-btn-red"  style="padding: 0rem 0.4rem;background-color: #FE0034;">删除</a>
+                </div>
+                <div class="mui-slider-handle">
+                    <div class="mui-table-cell sl-flex-row-flex-start-space-between" style="display: flex;">
+                        <div class="sl-flex-row-center-flex-start">
+                            <div class="sl-flex-column-center-center">
+                                <div class="mui-checkbox mui-left">
+                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
+                                </div>
+                            </div>
+                            <div class="sl-flex-row-flex-start-space-between nameHeight" id="">
+                                <div class="sl-width-6rem sl-height-6rem sl-margin-left-1dot1rem">
+                                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                                </div>
+                                <div class="sl-margin-left-1dot1rem ">
+                                    <span class="nameWidth">德国小钢炮无线蓝牙音箱</span>
+                                    <div>
+                                        <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
+                                    </div>
+                                    <div style="font-size: .5rem" class="sl-font-color-gray">
+                                        <span>官方标配:黑色</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div >
+                            <div class="sl-flex-row-center-flex-end">
+                                <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                                <span  class="sl-margin-left-02rem">21.9</span>
+                            </div>
+                            <div class="sl-flex-row-center-flex-end">
+                                <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
+                                <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </li>
+
+            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
+                    <a class="mui-btn mui-btn-red"  style="padding: 0rem 0.4rem;background-color: #FE0034;">删除</a>
+                </div>
+                <div class="mui-slider-handle">
+                    <div class="mui-table-cell">
+                        <div class="am-g">
+                            <div class="am-u-sm-1 am-u-md-1 am-u-lg-1 sl-padding-0rem sl-flex-row-center-flex-start"  >
+                                <div class="mui-checkbox mui-left">
+                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
+                                </div>
+                            </div>
+                            <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0rem-03rem">
+                                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                            </div>
+                            <div class="am-u-sm-6 am-u-md-6 am-u-lg-6 sl-padding-right-0rem sl-padding-left-03rem">
+                                <div>
+                                    <span class="">德国小钢炮无线蓝牙音箱</span>
+                                    <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
+                                    <span style="font-size: .5rem" class="sl-font-color-gray">官方标配:黑色</span>
+                                </div>
+
+                            </div>
+                            <div class="am-u-sm-2 am-u-md-2 am-u-lg-2 sl-padding-0rem">
+                                <div class="sl-flex-row-center-flex-end">
+                                    <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                                    <span  class="sl-margin-left-02rem">21.9</span>
+                                </div>
+                                <div class="sl-flex-row-center-flex-end">
+                                    <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
+                                    <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<div class="sl-flex-row-center-flex-start">-->
+                            <!--<div class="sl-flex-column-center-center">-->
+                                <!--<div class="mui-checkbox mui-left">-->
+                                    <!--<input name="checkbox" value="Item 1" type="checkbox" style="position: static;">-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="sl-flex-row-flex-start-space-between nameHeight">-->
+                                <!--<div class="sl-width-6rem sl-height-6rem sl-margin-left-1dot1rem">-->
+                                    <!--<img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">-->
+                                <!--</div>-->
+                                <!--<div class="sl-margin-left-1dot1rem">-->
+                                    <!--<div class="sl-flex-row-flex-end-flex-end">-->
+                                        <!--<div style="margin-right: 0.4rem;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F9F9FA" id="minus">-->
+                                            <!--<img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">-->
+                                        <!--</div>-->
+                                        <!--<div style="" class="sl-width-2rem sl-height-2rem">-->
+                                            <!--<input type="number" onblur="checkVal(this)"  value="1" class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;font-weight: bold;">-->
+                                        <!--</div>-->
+                                        <!--<div style="margin-left: 0.4rem" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F4F4F4" id="add">-->
+                                            <!--<img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </form>
+
 </div>
 
 
-
-<div class="sl-flex-row-center-space-around sl-padding-15px-0px-5px-0px"  style="position: fixed;z-index: 1001;top: 80%;left: 80%;display: none" id="up">
-   <div class="sl-flex-column-center-center sl-background-color-F1F1F1 "  style="height: 3rem ; width: 3rem;padding: 0.3rem;">
-       <img src="../assets/images/backTop.png" alt="" style="max-height: 100%;max-width: 100%;">
-   </div>
-</div>
 
 <div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default sl-navbar" style="border-top: 2px solid #E5E5E5;">
     <ul class=" am-navbar-nav am-cf am-avg-sm-4 ">
@@ -227,148 +302,83 @@ t<!doctype html>
         </li>
     </ul>
 </div>
-
-
-
-
-
-
-
 </body>
 </html>
 <script>
-    //全局变量
-    var rem = new Rem();
-    var num = 0;
-    var numKC = 0;
-    //回顶部
-    $("#up").click(function () {
-        $('html, body').animate({scrollTop: 0}, '500');
-    })
-
-    //排序
-    $('ul.am-dropdown-content li').click(function () {
-        $(this).addClass('am-active').siblings('li').removeClass('am-active');
-    })
-
-    //点击兑换按钮
+    var rem = new Rem;
     $(function () {
-        $('button').on('click', function () {
-            var  price= $(this).parent().parent().prev().find('span:eq(0)').html();
-            numKC =  $(this).parent().parent().prev().find('b').html();
-           var $tr = $('table:eq(0) tr');
-            $tr.eq(1).children('td').eq(1).html(price);//将商品价格放入到td中
-            var yourJF = parseInt($tr.eq(0).children('td').eq(1).html());//你的所有积分
-            num = parseInt(yourJF / price);
-            $tr.eq(2).children('td').eq(1).find('b').html(numKC);//你的积分可以购买的个数
-            $tr.eq(3).children('td').eq(1).find('b').html(num)//库存
-            if(num > numKC){
-                $tr.eq(4).children('td').eq(1).find('input').attr('max',numKC);
-            } else {
-                $tr.eq(4).children('td').eq(1).find('input').attr('max',num);
+       var w = $('.nameWidth').outerWidth();
+        $('.nameWidth').parent().css({
+            width: w,
+        })
+        ;
+        $(".nameHeight").prev().css({
+            height: $("#nameHeight").outerHeight(),
+        })
+        $(".nameHeight").next().css({
+            height: $("#nameHeight").outerHeight(),
+        });
+        var $div = $('div.am-g').children('div');
+        var amH = $div.eq(1).outerHeight();
+        for(var i =0;i< 4; i++){
+            if(i != 1){
+                $div.eq(i).css({
+                    height: amH
+                });
             }
-
-            $('#my-prompt').modal({
-                relatedTarget: this,
-                onConfirm: function(e) {
-                    var tempNum =parseInt($.trim(e.data[0])) ;
-                    var tempNum1 =parseInt($.trim(e.data[1])) ;
-//                    console.log("f:"+tempNum+'.s:'+tempNum1);
-                    if(isNaN(tempNum)){//先判断是不是数字
-                        rem.alertInfoByState('兑换失败',1)
-                    }else{
-                        rem.alertInfoByState('兑换成功',0)
-                    }
-                },
-                onCancel: function(e) {
+        }
+    });
+    mui.init();
+    (function($) {
+        var btnArray = ['确认', '取消'];
+        //$.swipeoutOpen(el,direction)//打开指定列的滑动菜单，el:指定列的dom对象，direction：取值left|right，指定打开的是左侧或右侧滑动菜单
+        //$.swipeoutClose(el);//关闭指定列的滑动菜单，el:指定列的dom对象
+        //				setTimeout(function() {
+        //					$.swipeoutOpen(document.getElementById("OA_task_1").querySelector('li:last-child'), 'left');
+        //					setTimeout(function() {
+        //						$.swipeoutClose(document.getElementById("OA_task_1").querySelector('li:last-child'));
+        //					}, 1000);
+        //				}, 1000);
+        //第一个demo，拖拽后显示操作图标，点击操作图标删除元素；
+        $('#OA_task_2').on('tap', '.mui-btn', function(event) {
+            var elem = this;
+            var li = elem.parentNode.parentNode;
+            mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+                if (e.index == 0) {
+                    li.parentNode.removeChild(li);
+                } else {
+                    setTimeout(function() {
+                        $.swipeoutClose(li);
+                    }, 0);
                 }
             });
-        })
-    });
-    //时时刻刻检查输入框中的值
-    function checkVal(self) {
-        var flag = false;
-        var f = $(self).val();
-        if(f.indexOf('.') > 0){
-            flag = true;
-        }
-        var n = parseInt($(self).val());
-        if(isNaN(n) || n <= 0  ||flag){
-            $(self).val('');
-            rem.alertInfoByState('请输入正整数',1)
-        }
-        if(num > numKC){
-            if( n > numKC ){
-                $(self).val('');
-                rem.alertInfoByState('库存不足',1)
-            }
-        }else{
-            if( n > num ){
-                $(self).val('');
-                rem.alertInfoByState('积分不足',1)
-            }
-        }
+        });
 
-    }
-
-    //点击商品列表
-    $("#list li").mousedown(function (e) {
-        var cX = e.pageX;//鼠标对象相对于文档对象的左边缘的位置
-
-        var cY = e.pageY;//鼠标对象相对于文档对象的顶部边缘的位置
-        var $b = $(this).find('button')
-        var bW = $b.outerWidth();
-        var bH = $b.outerHeight();
-        var bX = $b.offset().left;//元素对象相对于文档对象的左边缘的位置
-        var bY = $b.offset().top;//元素对象相对于文档对象的顶部边缘的位置
-
-        if(cX >= bX && cX <= bX + bW && cY >= bY && cY <= bY + bH){
-
-        }else{
-
-            //图片信息
-//            var $img = $(this).children('div').children('div:eq(0)').find('img');
-//            var s = $img.attr('src');
-//            console.log('src:'+s)
-//            var i = s.lastIndexOf('.');
-//            console.log("I:"+i);
-
-            //积分信息
-            var  price= $(this).find('div.data-JF-KC').find('span:eq(0)').html();
-            var KC =  $(this).find('div.data-JF-KC').find('b').html();
-            var yourJF = 300;
-            console.log("P:"+price+"KC:"+KC);
-            sessionStorage.setItem('yourJF',yourJF);
-            sessionStorage.setItem('price',price);
-            sessionStorage.setItem('KC',KC);
-            var t = $(this).data('fruitType');
-            console.log("t:"+t);
-            console.log(typeof t);
-            if(t === 0){
-                location.href = 'apple.html'
-            }else if(t === 1){
-                location.href = 'girlFruit.html'
-            }
-//            location.href = 'commodityDetail.html'
-        }
-//        console.log("cx:"+cX+",cy:"+cY+',bx:'+bX+',by:'+bY+',bw:'+bW+",bh:"+bH);
-//            $(this)
-//        location.href = 'commodityDetail.html'
-    });
-//    $(document).mousedown(function (e) {
-////        $(this)
-////        location.href = 'commodityDetail.html'
-//        alert('x'+e.clientX+',y:'+e.clientY)
-//        alert('sx'+e.screenX+',sy:'+e.screenY)
-//    });
-
-    //标题文字居中
-    $(function () {
-        rem.titleCenter();
-    });
-    //
-    function goBack() {
-        history.back();
-    }
-
+        //第二个demo，向左拖拽后显示操作图标，释放后自动触发的业务逻辑
+//        $('#OA_task_2').on('slideleft', '.mui-table-view-cell', function(event) {
+//            var elem = this;
+//            mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+//                if (e.index == 0) {
+//                    elem.parentNode.removeChild(elem);
+//                } else {
+//                    setTimeout(function() {
+//                        $.swipeoutClose(elem);
+//                    }, 0);
+//                }
+//            });
+//        });
+//        //第二个demo，向右拖拽后显示操作图标，释放后自动触发的业务逻辑
+//        $('#OA_task_2').on('slideright', '.mui-table-view-cell', function(event) {
+//            var elem = this;
+//            mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+//                if (e.index == 0) {
+//                    elem.parentNode.removeChild(elem);
+//                } else {
+//                    setTimeout(function() {
+//                        $.swipeoutClose(elem);
+//                    }, 0);
+//                }
+//            });
+//        });
+    })(mui);
 </script>
