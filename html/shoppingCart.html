@@ -44,6 +44,13 @@
 
 
     <style>
+        .mui-table-view:before{
+            height: 0px;
+        }
+        .mui-table-view:after{
+            height: 0px;
+        }
+
         /*div.am-tabs-bd button{*/
             /*!*border: 6px solid red;*!*/
             /*padding: 0.2rem 0.6rem;*/
@@ -73,8 +80,8 @@
     </div>
 </div>
 <div class="mui-content sl-margin-top-3rem">
-    <form action="" class="mui-input-group">
-        <ul id="OA_task_2" class="mui-table-view">
+    <form action="" class="mui-input-group" style="background-color: #F4F4F4">
+        <ul id="" class="mui-table-view">
             <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
                 <div class="mui-slider-handle">
                     <div class="mui-table-cell sl-flex-row-center-space-between" style="display: flex;">
@@ -90,117 +97,15 @@
                         </div>
                         <div >
                             <div class="sl-flex-row-center-flex-end sl-font-color-BAB9BA">
-                                <span>领券</span>
-                                <div style="width: 1px;height: 1rem;" class="sl-background-color-BAB9BA sl-margin-0rem-04rem"></div>
-                                <span >编辑</span>
-                                <span class="hidden sl-display-none" >完成</span>
+                                <!--<span>领券</span>-->
+                                <!--<div style="width: 1px;height: 1rem;" class="sl-background-color-BAB9BA sl-margin-0rem-04rem"></div>-->
+                                <a class="edit sl-font-color-BAB9BA" style="color: #BAB9BA;">编辑</a>
+                                <a class="edit sl-font-color-BAB9BA" style="display: none;color: #BAB9BA;">完成</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </li>
-            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
-                <div class="mui-slider-right mui-disabled">
-                    <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
-                    <a class="mui-btn mui-btn-red"  style="padding: 0rem 0.4rem;background-color: #FE0034;">删除</a>
-                </div>
-                <div class="mui-slider-handle">
-                    <div class="mui-table-cell sl-flex-row-flex-start-space-between" style="display: flex;">
-                        <div class="sl-flex-row-center-flex-start">
-                            <div class="sl-flex-column-center-center">
-                                <div class="mui-checkbox mui-left">
-                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
-                                </div>
-                            </div>
-                            <div class="sl-flex-row-flex-start-space-between nameHeight">
-                                <div class="sl-width-6rem sl-height-6rem sl-margin-left-1dot1rem">
-                                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
-                                </div>
-                                <div class="sl-margin-left-1dot1rem ">
-                                    <span class="nameWidth">德国小钢炮无线蓝牙音箱</span>
-                                    <div>
-                                        <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
-                                    </div>
-                                    <div style="font-size: .5rem" class="sl-font-color-gray">
-                                        <span>官方标配:黑色</span>
-                                    </div>
-                                </div>
-                                <div class="sl-margin-left-1dot1rem sl-display-none">
-                                    <div class="sl-flex-row-flex-end-flex-end">
-                                        <div style="margin-right: 0.4rem;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F9F9FA" id="minus">
-                                            <img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">
-                                        </div>
-                                        <div style="" class="sl-width-2rem sl-height-2rem">
-                                            <input type="number" onblur="checkVal(this)" id="inputNum" value="1" id="valInput" class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;font-weight: bold;">
-                                        </div>
-                                        <div style="margin-left: 0.4rem" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F4F4F4" id="add">
-                                            <img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div >
-                           <div class="sl-flex-row-center-flex-end">
-                               <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
-                               <span  class="sl-margin-left-02rem">21.9</span>
-                           </div>
-                            <div class="sl-flex-row-center-flex-end">
-                                <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
-                                <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </li>
-            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
-                <div class="mui-slider-right mui-disabled">
-                    <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
-                    <a class="mui-btn mui-btn-red"  style="padding: 0rem 0.4rem;background-color: #FE0034;">删除</a>
-                </div>
-                <div class="mui-slider-handle">
-                    <div class="mui-table-cell sl-flex-row-flex-start-space-between" style="display: flex;">
-                        <div class="sl-flex-row-center-flex-start">
-                            <div class="sl-flex-column-center-center">
-                                <div class="mui-checkbox mui-left">
-                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
-                                </div>
-                            </div>
-                            <div class="sl-flex-row-flex-start-space-between nameHeight" id="">
-                                <div class="sl-width-6rem sl-height-6rem sl-margin-left-1dot1rem">
-                                    <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
-                                </div>
-                                <div class="sl-margin-left-1dot1rem ">
-                                    <span class="nameWidth">德国小钢炮无线蓝牙音箱</span>
-                                    <div>
-                                        <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
-                                    </div>
-                                    <div style="font-size: .5rem" class="sl-font-color-gray">
-                                        <span>官方标配:黑色</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div >
-                            <div class="sl-flex-row-center-flex-end">
-                                <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
-                                <span  class="sl-margin-left-02rem">21.9</span>
-                            </div>
-                            <div class="sl-flex-row-center-flex-end">
-                                <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
-                                <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </li>
-
             <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
                 <div class="mui-slider-right mui-disabled">
                     <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
@@ -217,52 +122,249 @@
                             <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0rem-03rem">
                                     <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
                             </div>
-                            <div class="am-u-sm-6 am-u-md-6 am-u-lg-6 sl-padding-right-0rem sl-padding-left-03rem">
-                                <div>
+                            <div class="am-u-sm-6 am-u-md-6 am-u-lg-6 sl-padding-right-03rem sl-padding-left-03rem">
+                                <div >
                                     <span class="">德国小钢炮无线蓝牙音箱</span>
                                     <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
-                                    <span style="font-size: .5rem" class="sl-font-color-gray">官方标配:黑色</span>
+                                    <span style="font-size: .8rem" class="sl-font-color-gray">官方标配:黑色</span>
                                 </div>
-
+                                <div style="display: none;">
+                                    <div class="sl-flex-row-flex-end-flex-end" >
+                                        <div style="width: 20%;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem  sl-border-1px-solid-EEEEEF minus" >
+                                            <img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                        <div style="width: 60%;border-width: 1px 0px;" class="sl-border-1px-solid-EEEEEF">
+                                            <input type="number" onblur="checkVal(this)"  value="1" class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;padding: .2rem;">
+                                        </div>
+                                        <div style="width: 20%;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem  sl-border-1px-solid-EEEEEF add" >
+                                            <img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="am-u-sm-2 am-u-md-2 am-u-lg-2 sl-padding-0rem">
-                                <div class="sl-flex-row-center-flex-end">
-                                    <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
-                                    <span  class="sl-margin-left-02rem">21.9</span>
+                                <div>
+                                    <div class="sl-flex-row-center-flex-end">
+                                        <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                                        <span  class="sl-margin-left-02rem">21.9</span>
+                                    </div>
+                                    <div class="sl-flex-row-center-flex-end">
+                                        <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
+                                        <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
+                                    </div>
                                 </div>
-                                <div class="sl-flex-row-center-flex-end">
-                                    <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
-                                    <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
+                                <div style="display: none;" class="sl-height-percent100">
+                                    <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
+                                        <a href="" class="sl-font-color-white">删除</a>
+                                    </div>
                                 </div>
+
+
                             </div>
                         </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
+                    <a class="mui-btn mui-btn-red"  style="padding: 0rem 0.4rem;background-color: #FE0034;">删除</a>
+                </div>
+                <div class="mui-slider-handle">
+                    <div class="mui-table-cell">
+                        <div class="am-g">
+                            <div class="am-u-sm-1 am-u-md-1 am-u-lg-1 sl-padding-0rem sl-flex-row-center-flex-start"  >
+                                <div class="mui-checkbox mui-left">
+                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
+                                </div>
+                            </div>
+                            <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0rem-03rem">
+                                <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                            </div>
+                            <div class="am-u-sm-6 am-u-md-6 am-u-lg-6 sl-padding-right-03rem sl-padding-left-03rem">
+                                <div >
+                                    <span class="">德国小钢炮无线蓝牙音箱</span>
+                                    <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
+                                    <span style="font-size: .8rem" class="sl-font-color-gray">官方标配:黑色</span>
+                                </div>
+                                <div style="display: none;">
+                                    <div class="sl-flex-row-flex-end-flex-end" >
+                                        <div style="width: 20%;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem  sl-border-1px-solid-EEEEEF minus" >
+                                            <img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                        <div style="width: 60%;border-width: 1px 0px;" class="sl-border-1px-solid-EEEEEF">
+                                            <input type="number" onblur="checkVal(this)"  value="1" class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;padding: .2rem;">
+                                        </div>
+                                        <div style="width: 20%;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem  sl-border-1px-solid-EEEEEF add" >
+                                            <img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-u-sm-2 am-u-md-2 am-u-lg-2 sl-padding-0rem">
+                                <div>
+                                    <div class="sl-flex-row-center-flex-end">
+                                        <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                                        <span  class="sl-margin-left-02rem">21.9</span>
+                                    </div>
+                                    <div class="sl-flex-row-center-flex-end">
+                                        <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
+                                        <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
+                                    </div>
+                                </div>
+                                <div style="display: none;" class="sl-height-percent100">
+                                    <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
+                                        <a href="" class="sl-font-color-white">删除</a>
+                                    </div>
+                                </div>
 
-                        <!--<div class="sl-flex-row-center-flex-start">-->
-                            <!--<div class="sl-flex-column-center-center">-->
-                                <!--<div class="mui-checkbox mui-left">-->
-                                    <!--<input name="checkbox" value="Item 1" type="checkbox" style="position: static;">-->
-                                <!--</div>-->
-                            <!--</div>-->
-                            <!--<div class="sl-flex-row-flex-start-space-between nameHeight">-->
-                                <!--<div class="sl-width-6rem sl-height-6rem sl-margin-left-1dot1rem">-->
-                                    <!--<img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">-->
-                                <!--</div>-->
-                                <!--<div class="sl-margin-left-1dot1rem">-->
-                                    <!--<div class="sl-flex-row-flex-end-flex-end">-->
-                                        <!--<div style="margin-right: 0.4rem;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F9F9FA" id="minus">-->
-                                            <!--<img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">-->
-                                        <!--</div>-->
-                                        <!--<div style="" class="sl-width-2rem sl-height-2rem">-->
-                                            <!--<input type="number" onblur="checkVal(this)"  value="1" class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;font-weight: bold;">-->
-                                        <!--</div>-->
-                                        <!--<div style="margin-left: 0.4rem" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem sl-background-color-F4F4F4" id="add">-->
-                                            <!--<img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul id="" class="mui-table-view" style="margin-top: 0.6rem;">
+            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
+                <div class="mui-slider-handle">
+                    <div class="mui-table-cell sl-flex-row-center-space-between" style="display: flex;">
+                        <div class="sl-flex-row-center-flex-start">
+                            <div class="sl-flex-column-center-center">
+                                <div class="mui-checkbox mui-left">
+                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
+                                </div>
+                            </div>
+                            <div class="sl-margin-left-1dot1rem">
+                                <div>ehc旗舰店</div>
+                            </div>
+                        </div>
+                        <div >
+                            <div class="sl-flex-row-center-flex-end sl-font-color-BAB9BA">
+                                <!--<span>领券</span>-->
+                                <!--<div style="width: 1px;height: 1rem;" class="sl-background-color-BAB9BA sl-margin-0rem-04rem"></div>-->
+                                <a class="edit sl-font-color-BAB9BA" style="color: #BAB9BA;">编辑</a>
+                                <a class="edit sl-font-color-BAB9BA" style="display: none;color: #BAB9BA;">完成</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
+                    <a class="mui-btn mui-btn-red"  style="padding: 0rem 0.4rem;background-color: #FE0034;">删除</a>
+                </div>
+                <div class="mui-slider-handle">
+                    <div class="mui-table-cell">
+                        <div class="am-g">
+                            <div class="am-u-sm-1 am-u-md-1 am-u-lg-1 sl-padding-0rem sl-flex-row-center-flex-start"  >
+                                <div class="mui-checkbox mui-left">
+                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
+                                </div>
+                            </div>
+                            <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0rem-03rem">
+                                <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                            </div>
+                            <div class="am-u-sm-6 am-u-md-6 am-u-lg-6 sl-padding-right-03rem sl-padding-left-03rem">
+                                <div >
+                                    <span class="">德国小钢炮无线蓝牙音箱</span>
+                                    <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
+                                    <span style="font-size: .8rem" class="sl-font-color-gray">官方标配:黑色</span>
+                                </div>
+                                <div style="display: none;">
+                                    <div class="sl-flex-row-flex-end-flex-end" >
+                                        <div style="width: 20%;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem  sl-border-1px-solid-EEEEEF minus" >
+                                            <img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                        <div style="width: 60%;border-width: 1px 0px;" class="sl-border-1px-solid-EEEEEF">
+                                            <input type="number" onblur="checkVal(this)"  value="1" class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;padding: .2rem;">
+                                        </div>
+                                        <div style="width: 20%;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem  sl-border-1px-solid-EEEEEF add" >
+                                            <img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-u-sm-2 am-u-md-2 am-u-lg-2 sl-padding-0rem">
+                                <div>
+                                    <div class="sl-flex-row-center-flex-end">
+                                        <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                                        <span  class="sl-margin-left-02rem">21.9</span>
+                                    </div>
+                                    <div class="sl-flex-row-center-flex-end">
+                                        <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
+                                        <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
+                                    </div>
+                                </div>
+                                <div style="display: none;" class="sl-height-percent100">
+                                    <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
+                                        <a href="" class="sl-font-color-white">删除</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-yellow" style="padding: 0rem 0.4rem;background-color: #FE6B00;">移入<br>收藏夹</a>
+                    <a class="mui-btn mui-btn-red"  style="padding: 0rem 0.4rem;background-color: #FE0034;">删除</a>
+                </div>
+                <div class="mui-slider-handle">
+                    <div class="mui-table-cell">
+                        <div class="am-g">
+                            <div class="am-u-sm-1 am-u-md-1 am-u-lg-1 sl-padding-0rem sl-flex-row-center-flex-start"  >
+                                <div class="mui-checkbox mui-left">
+                                    <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
+                                </div>
+                            </div>
+                            <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0rem-03rem">
+                                <img src="../assets/images/手镯/shzh_1.jpg" alt="" class="sl-width-percent100 sl-height-percent100">
+                            </div>
+                            <div class="am-u-sm-6 am-u-md-6 am-u-lg-6 sl-padding-right-03rem sl-padding-left-03rem">
+                                <div >
+                                    <span class="">德国小钢炮无线蓝牙音箱</span>
+                                    <div class="am-text-truncate">迷你插卡低音炮便携音响GARINEMAX 19</div>
+                                    <span style="font-size: .8rem" class="sl-font-color-gray">官方标配:黑色</span>
+                                </div>
+                                <div style="display: none;">
+                                    <div class="sl-flex-row-flex-end-flex-end" >
+                                        <div style="width: 20%;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem  sl-border-1px-solid-EEEEEF minus" >
+                                            <img src="../assets/images/减.png" alt="" class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                        <div style="width: 60%;border-width: 1px 0px;" class="sl-border-1px-solid-EEEEEF">
+                                            <input type="number" onblur="checkVal(this)"  value="1" class="sl-background-color-F4F4F4 am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;padding: .2rem;">
+                                        </div>
+                                        <div style="width: 20%;" class="sl-flex-row-center-center sl-width-2rem sl-height-2rem  sl-border-1px-solid-EEEEEF add" >
+                                            <img src="../assets/images/加.png" alt=""  class="sl-width-percent50 sl-height-percent50">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="am-u-sm-2 am-u-md-2 am-u-lg-2 sl-padding-0rem">
+                                <div>
+                                    <div class="sl-flex-row-center-flex-end">
+                                        <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                                        <span  class="sl-margin-left-02rem">21.9</span>
+                                    </div>
+                                    <div class="sl-flex-row-center-flex-end">
+                                        <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
+                                        <span class="sl-margin-left-02rem" style="color: #BAB9BA;">2</span>
+                                    </div>
+                                </div>
+                                <div style="display: none;" class="sl-height-percent100">
+                                    <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
+                                        <a href="" class="sl-font-color-white">删除</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -307,27 +409,98 @@
 <script>
     var rem = new Rem;
     $(function () {
-       var w = $('.nameWidth').outerWidth();
-        $('.nameWidth').parent().css({
-            width: w,
-        })
-        ;
-        $(".nameHeight").prev().css({
-            height: $("#nameHeight").outerHeight(),
-        })
-        $(".nameHeight").next().css({
-            height: $("#nameHeight").outerHeight(),
+        inputHeight();
+//        $('.')
+    });
+    //计算input框的高度
+    function inputHeight() {
+        //
+        var arrMinus = $('.minus');
+        arrMinus.each(function () {
+            var $minus = $(this);
+            $minus.css({
+                height: $minus.outerWidth(),
+            });
+            $minus.nextAll('div:eq(0)').css({
+                height: $minus.outerWidth(),
+            });
+            $minus.nextAll('div:eq(0)').find('input').css({
+                lineHeight: $minus.outerWidth()+'px',
+                height: $minus.outerWidth(),
+            });
+            $minus.nextAll('div:eq(1)').css({
+                height: $minus.outerWidth(),
+            })
         });
-        var $div = $('div.am-g').children('div');
-        var amH = $div.eq(1).outerHeight();
-        for(var i =0;i< 4; i++){
-            if(i != 1){
-                $div.eq(i).css({
-                    height: amH
+        //每一个div的height
+        var arrDiv = $('div.am-g');
+        arrDiv.each(function () {
+           var $amg = $(this);
+            var amH = $amg.children('div:eq(1)').outerHeight();
+            for(var i =0;i< 4; i++){
+                if(i != 1){
+                    $amg.children('div').eq(i).css({
+                        height: amH
+                    });
+                }
+            }
+        });
+    }
+    //点击不同商铺的编辑标记时候
+    $("a.edit").click(function () {
+        $(this).css({
+            display:'none'
+        });
+        $(this).siblings('a').css({
+            display:'block'
+        });
+        var $sib = $(this).parents('li').siblings('li');
+        var $chi = $sib.find('div.am-g');
+        $chi.each(function (i,v) {
+            var $arrChi = $(this).children('div');
+            var c1 = $arrChi.eq(2);
+            var c2 = $arrChi.eq(3);
+            //商品信息div和商品个数div隐藏与显示
+            var dis = c1.children('div:eq(0)').css('display');
+            if(dis === 'block' || dis == 'undefined'){
+                c1.children('div:eq(0)').css({
+                    display: 'none'
+                });
+                c1.children('div:eq(1)').css({
+                    display: 'block'
+                });
+            }else if(dis === 'none'){
+                c1.children('div:eq(0)').css({
+                    display: 'block'
+                });
+                c1.children('div:eq(1)').css({
+                    display: 'none'
                 });
             }
-        }
+            //商品价格数量div和商品删除按钮隐藏与显示
+            var dis = c2.children('div:eq(0)').css('display');
+            if(dis === 'block' || dis == 'undefined'){
+                c2.children('div:eq(0)').css({
+                    display: 'none'
+                });
+                c2.children('div:eq(1)').css({
+                    display: 'block',
+                });
+//                $('#OA_task_2').off('slideleft', '.mui-table-view-cell');
+            }else if(dis === 'none'){
+                c2.children('div:eq(0)').css({
+                    display: 'block'
+                });
+                c2.children('div:eq(1)').css({
+                    display: 'none'
+                });
+//                $('#OA_task_2').on('slideleft', '.mui-table-view-cell');
+            }
+            inputHeight();
+        });
     });
+
+
     mui.init();
     (function($) {
         var btnArray = ['确认', '取消'];
@@ -343,7 +516,7 @@
         $('#OA_task_2').on('tap', '.mui-btn', function(event) {
             var elem = this;
             var li = elem.parentNode.parentNode;
-            mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+            mui.confirm('确认删除该条记录？', '提示信息', btnArray, function(e) {
                 if (e.index == 0) {
                     li.parentNode.removeChild(li);
                 } else {
@@ -354,18 +527,18 @@
             });
         });
 
-        //第二个demo，向左拖拽后显示操作图标，释放后自动触发的业务逻辑
+//        第二个demo，向左拖拽后显示操作图标，释放后自动触发的业务逻辑
 //        $('#OA_task_2').on('slideleft', '.mui-table-view-cell', function(event) {
 //            var elem = this;
-//            mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
-//                if (e.index == 0) {
-//                    elem.parentNode.removeChild(elem);
-//                } else {
-//                    setTimeout(function() {
-//                        $.swipeoutClose(elem);
-//                    }, 0);
-//                }
-//            });
+////            mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+////                if (e.index == 0) {
+////                    elem.parentNode.removeChild(elem);
+////                } else {
+////                    setTimeout(function() {
+////                        $.swipeoutClose(elem);
+////                    }, 0);
+////                }
+////            });
 //        });
 //        //第二个demo，向右拖拽后显示操作图标，释放后自动触发的业务逻辑
 //        $('#OA_task_2').on('slideright', '.mui-table-view-cell', function(event) {

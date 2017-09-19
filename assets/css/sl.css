@@ -120,6 +120,12 @@ button{
     color: #ff0000;
 
 }
+a:before{
+    color: #BAB9BA;
+}
+a:active{
+    color: #BAB9BA;
+}
 .sl-font-color-BAB9BA{
     color: #BAB9BA;
 }
@@ -396,6 +402,9 @@ button{
 .sl-padding-right-0rem{
     padding-right: 0rem;
 }
+.sl-padding-right-03rem{
+    padding-right: .3rem;
+}
 .sl-border-radius-percent50{
     border-radius: 50%;
 }
@@ -411,6 +420,10 @@ button{
 .sl-border-1px-solid-F4F4F4{
     border:1px solid #F4F4F4;
 }
+.sl-border-1px-solid-EEEEEF{
+    border:1px solid #EEEEEF;
+}
+
 .sl-background-color-F4F4F4{
     background-color : #D4D4D4;
 }
