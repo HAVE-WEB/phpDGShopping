@@ -399,6 +399,9 @@ a:active{
 .sl-padding-right-10px{
     padding-right: 10px;
 }
+.sl-padding-right-10px{
+    padding-right: 10px;
+}
 .sl-padding-right-0rem{
     padding-right: 0rem;
 }
@@ -586,6 +589,9 @@ background-color: #F9F9FA;
 }
 .sl-width-2rem{
     width: 2rem;
+}
+.sl-width-3rem{
+    width: 3rem;
 }
 .sl-height-2rem{
     height: 2rem;

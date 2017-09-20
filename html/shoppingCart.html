@@ -74,14 +74,14 @@
         <!--<img src="../assets/images/back.png" alt="" style="width: 1.5rem;height: 1.5rem;" onclick="goBack()">-->
         <div style="color: white;" class="title">购物车</div>
     </div>
-    <div class="sl-width-percent100  sl-flex-row-center-flex-end sl-height-3rem sl-position-absolute sl-top-0rem sl-left-0rem sl-font-color-white">
-        <span class="sl-margin-right-08rem">编辑</span>
-        <span class="sl-display-none">完成</span>
+    <div class="sl-width-percent100  sl-flex-row-center-flex-end sl-height-3rem sl-position-absolute sl-top-0rem sl-left-0rem sl-font-color-white sl-z-Index-10002">
+        <span class="top sl-margin-right-08rem" id="edit">编辑</span>
+        <span class="top sl-margin-right-08rem sl-display-none">完成</span>
     </div>
 </div>
 <div class="mui-content sl-margin-top-3rem">
-    <form action="" class="mui-input-group" style="background-color: #F4F4F4">
-        <ul id="" class="mui-table-view">
+    <form action="" class="mui-input-group" style="background-color: #F4F4F4;">
+        <ul class="mui-table-view">
             <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
                 <div class="mui-slider-handle">
                     <div class="mui-table-cell sl-flex-row-center-space-between" style="display: flex;">
@@ -113,7 +113,7 @@
                 </div>
                 <div class="mui-slider-handle">
                     <div class="mui-table-cell">
-                        <div class="am-g">
+                        <div class="am-g amg">
                             <div class="am-u-sm-1 am-u-md-1 am-u-lg-1 sl-padding-0rem sl-flex-row-center-flex-start"  >
                                 <div class="mui-checkbox mui-left">
                                     <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
@@ -155,7 +155,7 @@
                                 </div>
                                 <div style="display: none;" class="sl-height-percent100">
                                     <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
-                                        <a href="" class="sl-font-color-white">删除</a>
+                                        <div href="" class="sl-font-color-white del">删除</div>
                                     </div>
                                 </div>
 
@@ -172,7 +172,7 @@
                 </div>
                 <div class="mui-slider-handle">
                     <div class="mui-table-cell">
-                        <div class="am-g">
+                        <div class="am-g amg">
                             <div class="am-u-sm-1 am-u-md-1 am-u-lg-1 sl-padding-0rem sl-flex-row-center-flex-start"  >
                                 <div class="mui-checkbox mui-left">
                                     <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
@@ -214,7 +214,7 @@
                                 </div>
                                 <div style="display: none;" class="sl-height-percent100">
                                     <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
-                                        <a href="" class="sl-font-color-white">删除</a>
+                                        <div href="" class="sl-font-color-white del">删除</div>
                                     </div>
                                 </div>
 
@@ -225,7 +225,7 @@
                 </div>
             </li>
         </ul>
-        <ul id="" class="mui-table-view" style="margin-top: 0.6rem;">
+        <ul class="mui-table-view" style="margin-top: 0.6rem;">
             <li class="mui-table-view-cell" style="padding: 0.5rem 0.6rem;">
                 <div class="mui-slider-handle">
                     <div class="mui-table-cell sl-flex-row-center-space-between" style="display: flex;">
@@ -257,7 +257,7 @@
                 </div>
                 <div class="mui-slider-handle">
                     <div class="mui-table-cell">
-                        <div class="am-g">
+                        <div class="am-g amg">
                             <div class="am-u-sm-1 am-u-md-1 am-u-lg-1 sl-padding-0rem sl-flex-row-center-flex-start"  >
                                 <div class="mui-checkbox mui-left">
                                     <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
@@ -290,7 +290,7 @@
                                 <div>
                                     <div class="sl-flex-row-center-flex-end">
                                         <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
-                                        <span  class="sl-margin-left-02rem">21.9</span>
+                                        <span  class="sl-margin-left-02rem">20.3</span>
                                     </div>
                                     <div class="sl-flex-row-center-flex-end">
                                         <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
@@ -299,7 +299,7 @@
                                 </div>
                                 <div style="display: none;" class="sl-height-percent100">
                                     <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
-                                        <a href="" class="sl-font-color-white">删除</a>
+                                        <div  class="sl-font-color-white del">删除</div>
                                     </div>
                                 </div>
 
@@ -316,7 +316,7 @@
                 </div>
                 <div class="mui-slider-handle">
                     <div class="mui-table-cell">
-                        <div class="am-g">
+                        <div class="am-g amg">
                             <div class="am-u-sm-1 am-u-md-1 am-u-lg-1 sl-padding-0rem sl-flex-row-center-flex-start"  >
                                 <div class="mui-checkbox mui-left">
                                     <input name="checkbox" value="Item 1" type="checkbox" style="position: static;">
@@ -349,7 +349,7 @@
                                 <div>
                                     <div class="sl-flex-row-center-flex-end">
                                         <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
-                                        <span  class="sl-margin-left-02rem">21.9</span>
+                                        <span  class="sl-margin-left-02rem">20.6</span>
                                     </div>
                                     <div class="sl-flex-row-center-flex-end">
                                         <img src="../assets/images/乘号.png" alt="" style="width: .6rem;height: .6rem;">
@@ -358,11 +358,9 @@
                                 </div>
                                 <div style="display: none;" class="sl-height-percent100">
                                     <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
-                                        <a href="" class="sl-font-color-white">删除</a>
+                                        <div  class="sl-font-color-white del">删除</div>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -370,12 +368,68 @@
             </li>
         </ul>
     </form>
+    <div style="display: none;">
+        <div style="height: 30rem;" class="sl-background-color-white sl-flex-column-center-center">
+            <div class="sl-flex-row-center-center">
+                <div style="width: 6rem;height: 2px;" class="sl-background-color-BAB9BA sl-margin-right-08rem"></div>
+                <div class="sl-height-3rem sl-width-3rem sl-margin-right-08rem">
+                    <img src="../assets/images/空购物车.png" class="sl-width-percent100 sl-height-percent100" alt="">
+                </div>
+                <div style="width: 6rem;height: 2px;"  class="sl-background-color-BAB9BA"></div>
+            </div>
+            <div class="sl-flex-column-center-center sl-font-color-BAB9BA">
+                <span> 购物车还是空的</span>
+                <span>去挑几件中意的商品吧</span>
 
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="sl-position-fixed sl-bottom-49px sl-left-0rem sl-width-percent100 sl-background-color-white"  style="padding-left: .6rem;border-top: 1px solid #ECECEC;height: 3.2rem;" id="jiesuan">
+    <div class="am-g com ">
+        <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0rem sl-flex-row-center-flex-start"  >
+            <div class="mui-checkbox mui-left">
+                <input name="checkbox" value="Item 1" type="checkbox" style="position: static;" id="selectAll">
+            </div>
+            <div style="margin-left: 1.1rem;">全选</div>
+        </div>
+        <div class="am-u-sm-6 am-u-md-6 am-u-lg-6  sl-padding-left-03rem sl-padding-right-10px">
+            <div class="sl-flex-row-center-flex-end sl-height-percent100">
+                <div style="display: none;font-size: .8rem;" class="sl-font-color-BAB9BA sl-font-size-08rem">不含运费&nbsp;&nbsp;</div>
+                <div class="" style="font-size: .8rem;">合计:&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                <img src="../assets/images/money.png" alt="" style="width: 1rem;height: 1rem;">
+                <span class="sl-font-color-red">0</span>
+            </div>
+            <div style="display: none;">
+                <div class="sl-flex-row-flex-end-flex-end" >
+                </div>
+            </div>
+        </div>
+        <div class="am-u-sm-3 am-u-md-3 am-u-lg-3 sl-padding-0rem  sl-flex-row-center-center">
+            <div  class="sl-width-percent100 sl-height-percent100">
+                <div class="sl-flex-row-center-center sl-background-color-red sl-height-percent100 sl-font-color-white">
+                    <span>结算</span>
+                    <span>(</span>
+                    <span>0</span>
+                    <span>)</span>
+                </div>
+            </div>
+            <div style="display: none;" class="sl-height-percent100">
+                <div class="sl-background-color-red sl-height-percent100 sl-flex-row-center-center" >
+                    <div href="" class="sl-font-color-white del">删除</div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 </div>
 
 
 
-<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default sl-navbar" style="border-top: 2px solid #E5E5E5;">
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default sl-navbar" style="border-top: 1px solid #E5E5E5;">
     <ul class=" am-navbar-nav am-cf am-avg-sm-4 ">
         <li >
             <a href="home.html" class="">
@@ -433,7 +487,7 @@
             })
         });
         //每一个div的height
-        var arrDiv = $('div.am-g');
+        var arrDiv = $('div.amg');
         arrDiv.each(function () {
            var $amg = $(this);
             var amH = $amg.children('div:eq(1)').outerHeight();
@@ -445,6 +499,14 @@
                 }
             }
         });
+        //计算结算的高度
+        var comDiv = $('div.com');
+        var parentH = comDiv.parent().outerHeight();
+        comDiv.children('div').each(function () {
+            $(this).css({
+                height: parentH,
+            })
+        });
     }
     //点击不同商铺的编辑标记时候
     $("a.edit").click(function () {
@@ -455,7 +517,7 @@
             display:'block'
         });
         var $sib = $(this).parents('li').siblings('li');
-        var $chi = $sib.find('div.am-g');
+        var $chi = $sib.find('div.amg');
         $chi.each(function (i,v) {
             var $arrChi = $(this).children('div');
             var c1 = $arrChi.eq(2);
@@ -500,6 +562,170 @@
         });
     });
 
+    //checkbox的点击事件
+    $('form input[type="checkbox"]').click(function () {
+//        console.log("checked:"+$(this)[0].checked);
+        var self = $(this);//当前点击的元素
+        var $ul = self.parents('ul.mui-table-view');
+        var arrUl = self.parents('form').children('ul');
+        var arrCheck = $ul.find('input[type="checkbox"]');//一个店铺的店铺名称的checkbox和店铺的商品的checkbox
+        var subCheck = $ul.find('input[type="checkbox"]:gt(0)');//一个店铺商品的checkbox
+        //点击一个，重新计算所有店铺的信息
+
+        //计算单个店铺checkbox的选中与不选中情况
+//        console.log("l:"+arrCheck.length);
+//        console.log("sub:"+subCheck.length);
+        arrCheck.each(function (i,v) {
+            var s = $(this);//数组中的元素
+            if(i == 0){
+                if(self[0] == s[0]){
+//                    console.log("I;"+i);
+                    for(var k = 1;k< arrCheck.length;k++){
+//                    console.log(self[0].checked);
+                        if(self[0].checked){
+                            arrCheck.get(k).checked=true;
+                        }else{
+                            arrCheck.get(k).checked=false;
+                        }
+                    }
+                }
+            }else{
+                var x = 0;//子复选框没有被选中的个数
+                subCheck.each(function (j) {
+                    var flag = false;
+                    if(subCheck.get(j).checked){
+                        flag = true;
+                    }else{
+                        flag = false;
+                        x++;
+                    }
+                    if(j == subCheck.length -1){
+//                        console.log("flag:"+flag+",x:"+x)
+                        if(flag && x == 0){
+                            arrCheck.get(0).checked = true;
+                        }else{
+                            arrCheck.get(0).checked = false;
+                        }
+                    }
+                });
+            }
+        })
+        moneyAll();
+    });
+    //删除按钮
+    $('div.del').click(function (e) {
+       var parentLi = $(this).parents('li');
+       var parentUl = $(this).parents('ul');
+        parentLi.remove();
+       var  arrLi = parentUl.children('li');
+//       console.log("Lenght:"+arrLi.length);
+       if(arrLi.length < 2){
+           parentUl.remove();
+       }
+       moneyAll();
+       hideCart();
+    });
+    //点击全选checkbox
+    $('#selectAll').click(function () {
+       var f = $(this)[0].checked;
+       var arrUl = $('form').children('ul');
+       if(f){
+//           moneyAll();
+           var numAll = 0;//选中多少中商品
+           var priceAll = 0;//选中商品的价格
+           arrUl.each(function () {
+               var $ul = $(this);
+               var tempNum = $ul.children('li').length;
+               numAll += tempNum -1;
+               $ul.children('li').each(function (i) {
+                   var self = $(this);
+                   self.find('input[type="checkbox"]')[0].checked = true;
+                   if(i > 0){
+                       var numPrice = self.find('div.am-g.amg').children('div:eq(3)').children('div:eq(0)');
+                       var p = numPrice.find('span:eq(0)').html();//这个商品的价格
+                       var n = numPrice.find('span:eq(1)').html();//买了多少个商品
+                       var tempMoney = parseFloat(p) * parseFloat(n);
+                       priceAll += tempMoney;
+                   }
+
+               })
+           })
+           var $com = $('div.am-g.com').children('div');
+           $com.eq(1).children('div:eq(0)').children('div:eq(0)').css('display','block');
+           $com.eq(1).find('span:eq(0)').html(Math.round(priceAll*100)/100);
+           $com.eq(2).find('span:eq(2)').html(numAll);
+       }else {
+           arrUl.each(function () {
+               var $ul = $(this);
+               $ul.children('li').each(function () {
+                   $(this).find('input[type="checkbox"]')[0].checked = false;
+               })
+           })
+           var $com = $('div.am-g.com').children('div');
+           $com.eq(1).children('div:eq(0)').children('div:eq(0)').css('display','none');
+           $com.eq(1).find('span:eq(0)').html(0);
+           $com.eq(2).find('span:eq(2)').html(0);
+       }
+    });
+   $('span.top').click(function () {
+//       alert('aa')
+       $(this).css({
+           display:'none'
+       });
+       $(this).siblings('span').css({
+           display:'block'
+       });
+   }) ;
+
+
+    //计算总共的钱
+    function moneyAll() {
+        var arrUl = $('form').children('ul');
+        var numAll = 0;//总共多少中商品
+        var checkNum = 0;//商品是被选中的个数
+        var priceAll = 0;//选中商品的价格
+        arrUl.each(function () {
+            var $ul = $(this);
+            var tempNum = $ul.children('li').length;
+            numAll += tempNum -1;
+            $ul.children('li').each(function (i) {
+                var self = $(this);
+                if(i > 0){
+                    var status = self.find('input[type="checkbox"]')[0].checked;
+                    if(status){
+                        checkNum++;
+                        var numPrice = self.find('div.am-g.amg').children('div:eq(3)').children('div:eq(0)');
+                        var p = numPrice.find('span:eq(0)').html();//这个商品的价格
+                        var n = numPrice.find('span:eq(1)').html();//买了多少个商品
+                        var tempMoney = parseFloat(p) * parseFloat(n);
+                        console.log("tempMoney_"+i+":"+tempMoney);
+                        priceAll += tempMoney;
+                    }
+                }
+            })
+        })
+        var $com = $('div.am-g.com').children('div');
+        $com.eq(1).children('div:eq(0)').children('div:eq(0)').css('display','block');
+        $com.eq(1).find('span:eq(0)').html(Math.round(priceAll*100)/100);
+        $com.eq(2).find('span:eq(2)').html(checkNum);
+        if(numAll == checkNum){
+            $('#selectAll')[0].checked = true;
+        }else{
+            $('#selectAll')[0].checked = false;
+        }
+    }
+    //隐藏form，显示空购物车
+    function hideCart() {
+        var uL = $('form').children('ul').length;
+        if(uL == 0){
+            $('form').css('display','none');
+            $('form').next().css('display','block');
+            $('div.top-div').children('div:eq(1)').css('display','none');
+            $('#jiesuan').css('display','none');
+        }
+
+    }
+
 
     mui.init();
     (function($) {
@@ -513,19 +739,33 @@
         //					}, 1000);
         //				}, 1000);
         //第一个demo，拖拽后显示操作图标，点击操作图标删除元素；
-        $('#OA_task_2').on('tap', '.mui-btn', function(event) {
-            var elem = this;
-            var li = elem.parentNode.parentNode;
-            mui.confirm('确认删除该条记录？', '提示信息', btnArray, function(e) {
-                if (e.index == 0) {
-                    li.parentNode.removeChild(li);
-                } else {
-                    setTimeout(function() {
-                        $.swipeoutClose(li);
-                    }, 0);
-                }
+        $('form ul').each(function () {
+            var self  = $(this);
+            self.on('tap', '.mui-btn', function(event) {
+                var elem = this;
+                var li = elem.parentNode.parentNode;
+                mui.confirm('确认删除该条记录？', '提示信息', btnArray, function(e) {
+                    if (e.index == 0) {
+                        var f = li.parentNode.parentNode;
+                        var u = li.parentNode;
+                        u.removeChild(li);
+                        var l = u.children.length;
+                        console.log("l:"+l);
+                        if(l == 1){
+                            f.removeChild(u)
+                        }
+                        moneyAll();
+                        hideCart();
+                    } else {
+                        setTimeout(function() {
+                            $.swipeoutClose(li);
+                        }, 0);
+                    }
+                });
             });
-        });
+        })
+
+
 
 //        第二个demo，向左拖拽后显示操作图标，释放后自动触发的业务逻辑
 //        $('#OA_task_2').on('slideleft', '.mui-table-view-cell', function(event) {
