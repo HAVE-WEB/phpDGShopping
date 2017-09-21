@@ -11,6 +11,7 @@
     <!-- Set render engine for 360 browser -->
     <meta name="renderer" content="webkit">
 
+
     <!-- No Baidu Siteapp-->
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
@@ -37,7 +38,6 @@
     <script src="../assets/js/amazeui.js"></script>
     <script src="../assets/js/myFirst.js"></script>
     <style>
-
         ::-webkit-scrollbar{
             width: 0.1rem;
         }
@@ -48,10 +48,10 @@
 
 </head>
 <body style="background-color: #EEEEF3">
-<div class="top-div" style="width: 100%;position:fixed;top: 0px;left: 0px;z-index: 10001">
-    <div class="sl-flex-row-center-flex-start " style="background-color: red;height: 3rem;padding-left: 0.8rem;">
-        <img src="../assets/images/back.png" alt="" style="width: 1.5rem;height: 1.5rem;" onclick="goBack()">
-        <div style="color: white;" class="title">地址列表</div>
+<div class="top-div sl-width-percent100 sl-position-fixed sl-top-0rem sl-left-0rem sl-z-Index-10001">
+    <div class="sl-flex-row-center-flex-start sl-background-color-red sl-height-3rem" >
+        <img src="../assets/images/back.png" class="sl-width-1dot5rem sl-height-1dot5rem"  onclick="goBack()">
+        <div class="title sl-font-color-white">地址列表</div>
     </div>
 </div>
 <div style="padding-top: 3.8rem;" id="detailList">
@@ -160,8 +160,8 @@
         </li>
     </ul>
 </div>
-<div id="bottomNav" style="width: 100%;" class="sl-flex-row-center-space-between sl-navbar">
-    <div class="sl-bottomNav" >
+<div id="bottomNav" class="sl-flex-row-center-space-between sl-width-percent100 sl-height-3rem sl-navbar">
+    <div class="sl-bottomNav sl-flex-row-center-center sl-height-percent100" >
         <span>新增收货地址</span>
     </div>
 </div>
@@ -191,24 +191,24 @@
     var num = 0;
     var numKC = 0;
 
-    $(function () {
-        var h = $('#bottomNav').outerHeight();
-        var flag = false
-        var pf = navigator.platform;
-        if((pf === 'Win32') == false){
-            flag = true;
-        }
-        if(flag){
-            $('#detailList').css({
-                marginBottom: h+42,
-            })
-        }else{
-            $('#detailList').css({
-                marginBottom: h,
-            })
-        }
-
-    });
+//    $(function () {
+//        var h = $('#bottomNav').outerHeight();
+//        var flag = false
+//        var pf = navigator.platform;
+//        if((pf === 'Win32') == false){
+//            flag = true;
+//        }
+//        if(flag){
+//            $('#detailList').css({
+//                marginBottom: h+42,
+//            })
+//        }else{
+//            $('#detailList').css({
+//                marginBottom: h,
+//            })
+//        }
+//
+//    });
 
     //排序
     $('ul.am-dropdown-content li').click(function () {
@@ -249,8 +249,9 @@
             },
             onCancel: function() {
             }
-        })
-    })
+        });
+//        rem.modalDialog();
+    });
 
     //编辑地址
     $('button.edit').click(function () {

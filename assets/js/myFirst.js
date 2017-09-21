@@ -115,7 +115,7 @@
                     left: 0,
                     bottom: 0,
                     right: 0,
-                    zIndex: 1010,
+                    zIndex: 10010,
             });
         },
         // alertInfoByState: function (msg,state) {//state:0代表成功，1代表失败

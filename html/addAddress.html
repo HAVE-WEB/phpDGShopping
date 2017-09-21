@@ -61,13 +61,13 @@
 
 </head>
 <body style="background-color: #EEEEF3">
-<div class="top-div" style="width: 100%;position:fixed;top: 0px;left: 0px;z-index: 10001">
-    <div class="sl-flex-row-center-flex-start " style="background-color: red;height: 3rem;padding-left: 0.8rem;">
-        <img src="../assets/images/back.png" alt="" style="width: 1.5rem;height: 1.5rem;" onclick="goBack()">
-        <div style="color: white;" class="title">新增收货地址</div>
+<div class="top-div sl-width-percent100 sl-position-fixed sl-top-0rem sl-left-0rem sl-z-Index-10001">
+    <div class="sl-flex-row-center-flex-start sl-background-color-red sl-height-3rem" >
+        <img src="../assets/images/back.png" class="sl-width-1dot5rem sl-height-1dot5rem"  onclick="goBack()">
+        <div class="title sl-font-color-white">新增收货地址</div>
     </div>
 </div>
-<div style="margin-top: 3rem;background-color:white;">
+<div style="margin-top: 3rem;background-color:white;" class="sl-margin-bottom-3rem">
     <form id="address" action="action" method="POST" role="form" class="">
         <div  class="sl-border-bottom-1px-solid-D3D3D3 sl-padding-08rem-04rem sl-width-percent100 sl-border-shadow">
             <input type="text" placeholder="请输入收件人姓名" name="userName" class="sl-width-percent100" style="-webkit-box-shadow: none;-moz-box-shadow: none ;box-shadow: none ;" required>
@@ -90,7 +90,7 @@
             <textarea name="" id="" cols="10" rows="5" placeholder="请输入详细地址" name="detailAddress" class="sl-width-percent100" style="-webkit-box-shadow: none;-moz-box-shadow: none ;box-shadow: none ;" required></textarea>
         </div>
 
-        <button type="submit" class="sl-bottomNav sl-margin-top-3rem">提交</button>
+        <button type="submit" class="sl-bottomNav sl-height-3rem sl-position-fixed sl-bottom-0rem sl-left-0rem sl-z-Index-10001">提交</button>
     </form>
 
 </div>
@@ -173,7 +173,7 @@
                 if(msg === ''){
                     msg = this.getValidationMessage(validity);
                 }
-                rem.alertInfo(msg);
+                rem.alertInfoImgByState(msg,1);
             },
             submit: function (e) {
                 var formValidity = this.isFormValid();

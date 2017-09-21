@@ -54,10 +54,10 @@
 
 </head>
 <body >
-<div class="top-div" style="width: 100%;position:fixed;top: 0px;left: 0px;z-index: 10001">
-    <div class="sl-flex-row-center-flex-start " style="background-color: red;height: 3rem;padding-left: 0.8rem;">
-        <img src="../assets/images/back.png" alt="" style="width: 1.5rem;height: 1.5rem;" onclick="goBack()">
-        <div style="color: white;" class="title">商品详情</div>
+<div class="top-div sl-width-percent100 sl-position-fixed sl-top-0rem sl-left-0rem sl-z-Index-10001">
+    <div class="sl-flex-row-center-flex-start sl-background-color-red sl-height-3rem" >
+        <img src="../assets/images/back.png" class="sl-width-1dot5rem sl-height-1dot5rem"  onclick="goBack()">
+        <div class="title sl-font-color-white">商品详情</div>
     </div>
 </div>
 <div style=";margin-top: 3rem;">
@@ -154,12 +154,13 @@
 
 <!--灰色层-->
 <div id="grayTier" class="sl-width-percent100 sl-height-percent100"></div>
-
-<div id="bottomNav" style="width: 100%;" class="sl-flex-row-center-space-between sl-navbar">
-    <div style="width: 70%;background-color: white;height:3rem;color: black;" class="sl-flex-row-center-flex-start">
-        <span style="font-size: 0.8rem;color: black;margin-left: .8rem;">花费的积分&nbsp;&nbsp;:</span><b style="font-size: 0.8rem;color: red;margin-left: .8rem;">0</b>
+<!--兑换成功灰色层-->
+<div id="successTier" class="sl-width-percent100 sl-height-percent100"></div>
+<div id="bottomNav" class="sl-flex-row-center-space-between sl-navbar sl-height-3rem sl-width-percent100">
+    <div class="sl-flex-row-center-flex-start sl-height-percent100 sl-font-color-black sl-background-color-white sl-width-percent100 sl-width-percent70">
+        <span class="sl-font-size-08rem sl-font-color-black sl-margin-left-08rem">花费的积分&nbsp;&nbsp;:</span><b class="sl-font-size-08rem sl-font-color-red sl-margin-left-08rem" >0</b>
     </div>
-    <div style="width: 30%;background-color: red;text-align: center;color: white;height: 3rem;" class="sl-flex-column-center-center">
+    <div class="sl-flex-column-center-center sl-height-percent100 sl-font-color-white sl-background-color-red sl-width-percent30">
         <span>立即兑换</span>
     </div>
 </div>
@@ -169,19 +170,18 @@
         <div class="am-modal-bd sl-flex-column-center-center">
             <div class="sl-flex-row-center-space-around" style="width: 100%;">
                 <span>数量:</span>
-                <div class="sl-flex-row-center-flex-end">
+                <div class="sl-flex-row-flex-end-flex-end">
                     <div style="background-color: #F4F4F4;margin-right: 0.4rem;" class="sl-flex-row-center-center" id="minus">
-                        <img src="../assets/images/减.png" alt="" style="width: 1rem;height: 1rem;">
+                        <img src="../assets/images/减.png" alt="" class="sl-width-2rem sl-height-2rem">
                     </div>
-                    <div style="background-color: #F4F4F4">
-                        <input type="number" oninput="checkVal(this)" id="inputNum" class="am-modal-prompt-input" value="1" style="width: 2rem;height: 1rem;margin: 0px;padding: 0px;background-color: #F4F4F4;font-weight: bold;border: 0px;">
+                    <div style="background-color: #F4F4F4;" class="sl-width-2rem sl-height-2rem">
+                        <input type="number" onblur="checkVal(this)" id="inputNum" value="1"  class="am-modal-prompt-input sl-width-2rem sl-height-2rem" style="vertical-align: bottom;margin:0px;border: 0px;text-align: center;background-color: #F4F4F4;font-weight: bold;">
                     </div>
                     <div style="background-color: #F4F4F4;margin-left: 0.4rem" class="sl-flex-row-center-center" id="add">
-                        <img src="../assets/images/加.png" alt="" style="width: 1rem;height: 1rem;">
+                        <img src="../assets/images/加.png" alt=""  class="sl-width-2rem sl-height-2rem">
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="am-modal-footer">
             <span class="am-modal-btn" data-am-modal-cancel>取消</span>
@@ -233,6 +233,15 @@
             zIndex: 10002,
             display: 'none',
             opacity: 0.5
+        });
+        $('#successTier').css({
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            backgroundColor: '#A5A4A5',
+            zIndex: 10002,
+            display: 'none',
+            opacity: 0.5
 
         })
     });
@@ -260,21 +269,9 @@
     }
     $(function () {
         var h = $('#bottomNav').outerHeight();
-        var flag = false
-        var pf = navigator.platform;
-        if((pf === 'Win32') == false){
-            flag = true;
-        }
-        if(flag){
-            $('#detailList').css({
-                marginBottom: h+42,
-            })
-        }else{
-            $('#detailList').css({
-                marginBottom: h,
-            })
-        }
-
+        $('#detailList').css({
+            marginBottom: h,
+        })
     });
     //标题文字居中
     $(function () {
@@ -294,8 +291,9 @@
     })
 
 //    时时刻刻检查输入框中的值
+    var flag =true;
     function checkVal(self) {
-        var flag =true;
+        flag =true;
         var f = $(self).val();
         if(f === ''){
             $needJF.html(0);
@@ -306,24 +304,24 @@
         console.log(f)
         console.log(f.indexOf('.') > 0);
         if(isNaN(n) || n <= 0  ){
-            rem.alertInfoByState('请输入正整数',1)
+            rem.alertInfoImgByState('请输入正整数',1)
             $(self).val('');
             flag = false;
         }
         if(canBuy > KC){
             if( n > KC ){
-                rem.alertInfoByState('库存不足',1)
+                rem.alertInfoImgByState('库存不足',1)
                 $(self).val('');
                 flag = false;
             }
         }else{
             if( n > canBuy ){
-                rem.alertInfoByState('积分不足',1)
+                rem.alertInfoImgByState('积分不足',1)
                 $(self).val('');
                 flag = false;
             }
         }
-        var needJF = n * price;
+        var needJF =parseInt($(self).val()) * price;
         if(flag){
 
             $needJF.html(needJF);
@@ -345,20 +343,28 @@
         $('#my-prompt').modal({
             relatedTarget: this,
             onConfirm: function(e) {
-                var v = $.trim(e.data);
-//                var tempNum =parseInt($.trim(e.data)) ;
-                if(v === ''){
-                    rem.alertInfoImgByState('兑换失败',1)
+                if(flag){
+                    var v = $.trim(e.data);
+                    if(v === ''){
+                        rem.alertInfoImgByState('兑换失败',1)
+                    }else{
+                        $('#successTier').show();
+                        rem.alertInfoImgByState('兑换成功',0);
+                        setTimeout(function () {
+                            $('#successTier').hide();
+                        },2000);
+                        $needJF.html(0);
+                    }
                 }else{
-                    rem.alertInfoImgByState('兑换成功',0)
-                    $needJF.html(0);
+                    rem.alertInfoImgByState('兑换失败',1)
                 }
             },
             onCancel: function(e) {
                 $needJF.html(0);
             }
         });
-    })
+//        rem.amDialog();
+    });
     //点击减按钮
     $("#minus").click(function () {
         var $input=  $(this).next().find('input');
@@ -370,7 +376,7 @@
                $input.val(n);
                $needJF.html(n * price);
            }else{
-               rem.alertInfoByState('兑换数至少一个',1);
+               rem.alertInfoImgByState('兑换数至少一个',1);
                $input.val(1);
                $needJF.html(price);
            }
@@ -387,7 +393,7 @@
             var n  = parseInt($.trim(v)) + 1;
             if(canBuy > KC){
                 if(n > KC){
-                    rem.alertInfoByState('库存不足',1);
+                    rem.alertInfoImgByState('库存不足',1);
                     $input.val(KC);
                     $needJF.html(KC * price);
                 }else{
@@ -396,7 +402,7 @@
                 }
             }else{
                 if(n > canBuy){
-                    rem.alertInfoByState('积分不足',1);
+                    rem.alertInfoImgByState('积分不足',1);
                     $input.val(canBuy);
                     $needJF.html(canBuy * price);
                 }else{

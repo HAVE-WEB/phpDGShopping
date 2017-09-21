@@ -431,7 +431,10 @@ a:active{
     background-color : #D4D4D4;
 }
 .sl-background-color-F9F9FA{
-background-color: #F9F9FA;
+    background-color: #F9F9FA;
+}
+.sl-background-color-F09836{
+    background-color: #F09836;
 }
 .sl-height-30px{
      height: 30px;
